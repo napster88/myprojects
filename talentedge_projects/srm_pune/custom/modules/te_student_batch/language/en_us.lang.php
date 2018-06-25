@@ -1,0 +1,13 @@
+<?php
+// created: 2018-04-04 12:43:10
+$mod_strings = array (
+  'LBL_TE_STUDENT_BATCH_TE_STUDENT_PAYMENT_PLAN_1_FROM_TE_STUDENT_PAYMENT_PLAN_TITLE' => 'Student Payment Plan',
+  'LBL_EDITVIEW_PANEL1' => 'Enrollment',
+  'LBL_EDITVIEW_PANEL2' => 'Dispostion',
+  'LBL_DETAILVIEW_PANEL2' => 'Enrollment',
+  'LBL_BATCH1_TE_BA_BATCH_ID' => 'Batch1 (related  ID)',
+  'LBL_BATCH1' => 'Batch1',
+  'LBL_TE_DISPOSTION_STUDENT_BATCH_TE_STUDENT_BATCH_FROM_TE_DISPOSTION_STUDENT_BATCH_TITLE' => 'Dispostion',
+  'LBL_DETAILVIEW_PANEL3' => 'Upload Documents',
+  'LBL_TE_UPLOADDOCUMENT_TE_STUDENT_BATCH_FROM_TE_UPLOADDOCUMENT_TITLE' => 'Uploaded Documents List',
+);

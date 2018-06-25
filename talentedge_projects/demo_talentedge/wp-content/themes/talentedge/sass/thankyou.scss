@@ -1,0 +1,427 @@
+@import './colors';
+@import './mixin';
+
+
+@import './font-style';
+
+// proximaNova font declare
+@font-face {
+  font-family: 'te-font';
+  src: url(../fonts/te-font/te-font-Regular.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+/* Bold */
+@font-face {
+  font-family: 'te-font';
+  src: url(../fonts/te-font/te-font-Bold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+/* Light */
+@font-face {
+  font-family: 'te-font';
+  src: url(../fonts/te-font/te-font-Light.ttf);
+  font-weight: 600;
+  font-style: normal;
+}
+$te-font: 'te-font';
+
+/* ~~~~~~~~~~~~~ askpro banner ~~~~~~~~~~~~~ */
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #5a5858;
+    background-position: top left;
+    font-family: $te-font;
+    min-height: 100vh;
+}
+
+h1{
+    font-size: 40px;
+    text-transform: uppercase;
+    max-width: 748px;
+    line-height: 1.2;
+    font-weight: bold;
+    font-family: $oswalt;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+h2{
+    font-size: 35px;
+    font-family: $oswalt;
+    font-weight: bold;
+    margin-top: 0px;
+}
+h3{
+    font-size: 24px;
+    margin: 0px 0 18px;
+    font-weight: bold;
+}
+h5{
+    font-size: 18px;
+}
+h6{
+    font-size: 14px;
+}
+
+.orDivider-r{
+    font-size: 28px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+
+.no-leftpad{
+    padding-left: 0;
+}
+header#header{
+  box-shadow: none !important;
+}
+
+.btn-suibmit{
+    background-color: #f26522;
+    color: #ffffff;
+    padding: 12px 35px;
+    border: 0px;
+    border-radius: 5px;
+    min-width: 150px;
+    max-width: 260px;
+    margin-top: 0;
+    font-size: 14px;
+    display: block;
+    margin:15px auto 10px auto;
+    text-transform: uppercase;
+    &:hover{
+        text-decoration: none;
+    }
+}
+.callUs{
+    font-size: 18px;
+    span{
+
+    }
+}
+
+.navbar{
+    margin-top: 0;
+    margin-bottom: 0;
+    .navbar-brand{
+      padding-bottom: 0px;
+      float: none;
+    }
+}
+
+
+.askproSection{
+  .sectionBanner{
+      padding-bottom: 0;
+      padding-top: 0;
+      color: $white;
+      h3{
+          font-size: 24px;
+          margin: 0px 0 8px;
+          font-weight: bold;
+      }
+        p{ 
+            font-size: 14px;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+        .wrapper-btn{
+            // position: absolute;
+            padding: 20px 15px;
+            background-color: rgba(0,0,0,0.7);
+            margin-top: 32px;
+            a{
+                width: auto;
+                display: inline-block;
+                color: $white;
+                margin: 5px 0;
+                &:first-child{
+                    .fa{
+                        margin-left: 0px;
+                    }
+                }
+                .fa{
+                    padding-right: 10px;
+                    margin-left: 20px;
+                    font-size: 20px;
+                    vertical-align: sub;
+                }
+                &:hover{
+                    color: $white;
+                    text-decoration: none;
+                }
+            }
+        }
+        p.thanku-text{
+          color: $white;
+          font-weight: bold;
+          font-size: 23px;
+          // max-width: 480px;
+          // margin: 0 auto;
+          line-height: 1.2;
+          text-align: left;
+        }
+  } 
+}
+
+
+.linkedIn{
+    position: relative;
+    color: #dedddd;
+    a{
+        color: #fff;
+        font-size: 15px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        background-color: #0488B8;
+        padding-right: 15px;
+        padding-left: 15px;
+        .fa{
+            margin-right: 5px;
+        }
+    }
+}
+
+@media only screen and (min-width: 992px){
+  .askproSection .sectionBanner .wrapper-btn{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+  }
+}
+@media only screen and (max-width: 767px){
+    h1{
+        font-size: 28px;
+        line-height: 1.3;
+    }
+    h2{
+        font-size: 25px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    .wrapper-btn{
+      .callUs{
+        text-align: center;
+        font-size: 16px;
+      }
+      .left_center{
+        text-align: center;
+      }
+    }
+} 
+
+@media only screen and (max-width: 567px){
+    .col-xss-12{
+        width: 100%;
+    }
+    .form-list{
+        padding: 0px;
+    }
+    .askproSection .sectionBanner .wrapper-btn {
+        padding: 15px;
+            a{
+            text-align: center;
+            display: block;
+            clear: both;
+            margin: 15px 0;
+            .fa{
+                margin-left: 0px;
+            }
+        }
+    }
+}
+
+
+
+#gform_14{
+  margin-top: 35px;
+  ul{
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  .gform_body{
+      text-align: center;
+      margin: 0;
+      .gfield_label{
+          display: none;
+      }
+      .gfield{
+          padding: 0;
+          margin: 0 0 18px;
+          width: 33.33%;
+          display: inline-block;
+          padding: 0 10px;
+          vertical-align: top;
+          margin-bottom: 0;
+          &:first-child{
+            padding-left:0px;
+          }
+          &.description_subscribe{
+              font-size: 14px;
+              text-transform: capitalize;
+          }
+          &.gfield_error{
+              background: none !important;
+              margin-bottom: 0 !important;
+              border: none;
+          }
+          &:last-child{
+              margin-bottom: 0px;
+          }
+      }
+      .ginput_container{
+          position: relative;
+          overflow: hidden;
+          margin-top: 0;
+          input{
+            min-height: 40px;
+            padding: 0 5px;
+            color: #dedddd;
+            border: none;
+            border-bottom: 1px solid #dedddd;
+            background-color: transparent;
+            -webkit-appearance: none;
+            @include border-radius(0);
+            -webkit-appearance: none;
+            box-shadow: none;
+            margin-bottom: 0;
+            width: 100%;
+            &:hover,
+            &:focus{
+                box-shadow: none;
+                border-bottom-color: #dedddd;
+                outline: none;
+            }
+            &::-webkit-input-placeholder {
+                color: #dedddd;
+            }
+            &:-moz-placeholder {
+                /* Firefox 18- */
+                color: #dedddd;
+            }
+            &::-moz-placeholder {
+                /* Firefox 19+ */
+                color: #dedddd;
+            }
+            &:-ms-input-placeholder {
+                color: #dedddd;
+            }
+        }
+        select{
+            background: url(../images/arrow-down-grey.png) no-repeat;
+            background-position: 96% center;
+            padding-right: 30px;
+            border: none;
+            border-bottom: 1px solid #dedddd;
+            color: #dedddd;
+            width: 100%;
+            min-height: 40px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            text-indent: 1px;
+            text-overflow: '';
+            &:hover,
+            &:focus{
+                outline: none;
+            }
+            option{
+                color: #333;
+                background: #fff;
+            }
+        }
+      }
+      .ginput_container_checkbox{
+          li{
+              @include checkBox;
+              label{
+                  font-size: 13px;
+              }
+          }
+      }
+  }
+  .gform_footer {
+      margin-top: 0;
+      text-align: center;
+      padding-bottom: 0px;
+      input[type="submit"]{
+        background-color: #f26522;
+        color: #ffffff;
+        padding: 12px 35px;
+        border: 0px;
+        border-radius: 5px;
+        min-width: 150px;
+        max-width: 260px;
+        margin-top: 0;
+        font-size: 14px;
+        display: block;
+        margin: 35px auto 5px auto;
+        text-transform: uppercase;
+        &:hover{
+            text-decoration: none;
+        }
+      }
+  }
+
+  /* error message */
+  .gform_heading{
+      margin: 0;
+      span{
+          margin: 0px;
+      }
+  }
+  div{
+     &.validation_error{
+      color: $error;
+      line-height: 1.3;
+      font-weight: normal;
+      font-size: 14px;
+      text-align: left;
+      border: none;
+      margin: 0 0 10px;
+      padding: 0;
+      display: none;
+     } 
+  }
+  .gfield_description{
+      padding-top: 0;
+  }
+  .validation_message{
+      color: $error;
+      line-height: 1.3;
+      font-weight: normal;
+      font-size: 14px;
+      text-align: left;
+      background: none;
+  }
+}
+
+@media only screen and (max-width: 567px){
+  #gform_14 {
+    .gform_footer input[type="submit"]{
+      margin-top: 30px;
+    }
+      .gform_body .gfield{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 15px;
+      }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

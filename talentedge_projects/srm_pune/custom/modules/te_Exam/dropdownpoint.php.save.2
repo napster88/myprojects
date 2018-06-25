@@ -1,0 +1,174 @@
+<?php	
+
+/** listing University*/	
+if($_POST['source']=='university'){
+	global $db;
+	
+	$id=$_POST['id'];
+	$batchSql="select `pgm`.`name`,`pgm`.`id` FROM (SELECT `p`.`te_in_institutes_te_pr_programs_1te_pr_programs_idb` as `id` FROM `te_in_institutes` `i` INNER JOIN `te_in_institutes_te_pr_programs_1_c` `p` ON `i`.`id` =`p`.`te_in_institutes_te_pr_programs_1te_in_institutes_ida` where `i`.`id`='{$id}') as `p_i` INNER JOIN `te_pr_programs` `pgm` ON `p_i`.`id`= `pgm`.`id`";
+	$batchObj =$db->query($batchSql);
+	$university=array();
+	while($row =$db->fetchByAssoc($batchObj)){
+		$university[]=$row;
+	}
+	echo json_encode($university);
+}
+
+/** Fetching Course/Programs*/
+if($_POST['source']=='course'){
+	global $db;
+	
+	$id=$_POST['id'];
+	$batchSql="select `batch`.`name`,`batch`.`id` FROM (SELECT `pb`.`te_pr_programs_te_ba_batch_1te_ba_batch_idb` as `id` FROM `te_pr_programs` `p` INNER JOIN `te_pr_programs_te_ba_batch_1_c` `pb` ON `p`.`id` =`pb`.`te_pr_programs_te_ba_batch_1te_pr_programs_ida` where `p`.`id`='{$id}') as `p_b` INNER JOIN `te_ba_batch` `batch` ON `p_b`.`id`= `batch`.`id`";
+	$batchObj =$db->query($batchSql);
+	$course=array();
+	while($row =$db->fetchByAssoc($batchObj)){
+		$course[]=$row;
+	}
+	echo json_encode($course);
+}
+
+/** Fetching Semesters*/
+if($_POST['source']=='sem'){
+	global $db;
+	
+	$id=$_POST['id'];
+	$batchSql="select `sem`.`name`,`sem`.`id` FROM (SELECT `psm`.`te_pr_programs_te_te_semester_1te_te_semester_idb` as `id` FROM `te_pr_programs` `p` INNER JOIN `te_pr_programs_te_te_semester_1_c` `psm` ON `p`.`id` =`psm`.`te_pr_programs_te_te_semester_1te_pr_programs_ida` where `p`.`id`='{$id}') as `p_sm` INNER JOIN `te_te_semester` `sem` ON `p_sm`.`id`= `sem`.`id`";
+	$batchObj =$db->query($batchSql);
+	$sem=array();
+	while($row =$db->fetchByAssoc($batchObj)){
+		$sem[]=$row;
+	}
+	echo json_encode($sem);
+}
+
+/** Fetching subjects*/
+if($_POST['source']=='subject'){
+	global $db;
+	
+	$id=$_POST['id'];
+	//$batchSql="select `subj`.`name`,`subj`.`id` FROM (SELECT `smsj`.`te_te_subject_te_te_semesterte_te_subject_idb` as `id` FROM `te_te_semester` `sem` INNER JOIN `te_te_subject_te_te_semester_c` `smsj` ON `sem`.`id` =`smsj`.`te_te_subject_te_te_semesterte_te_semester_ida` where `sem`.`id`='{$id}') as `sem_sj` INNER JOIN `te_te_subject` `subj` ON `sem_sj`.`id`= `subj`.`id`";
+	$batchSql="select `subj`.`name`,`subj`.`id` FROM (SELECT `smsj`.`te_subjects_master_te_te_semester_1te_subjects_master_ida` as `id` FROM `te_te_semester` `sem` INNER JOIN `te_subjects_master_te_te_semester_1_c` `smsj` ON `sem`.`id` =`smsj`.`te_subjects_master_te_te_semester_1te_te_semester_idb` where `sem`.`id`='{$id}') as `sem_sj` INNER JOIN `te_subjects_master` `subj` ON `sem_sj`.`id`= `subj`.`id`";
+	$batchObj =$db->query($batchSql);
+	$subject=array();
+	while($row =$db->fetchByAssoc($batchObj)){
+		$subject[]=$row;
+	}
+	echo json_encode($subject);
+}
+
+/** Saving data to Exam_details table*/
+if($_POST['source']=='exam'){
+	
+	global $db;
+	$id=$_POST['id'];
+	$validate=1;
+	echo $id;
+	$sql="select * from te_Exam where id='".$id."'";
+	$exam_data=$db->query($sql);
+
+	while($Srow =$db->fetchByAssoc($exam_data)){ 
+		$studentifo[]=$Srow;
+	}
+	
+	foreach($studentifo as $stdinfo){
+		$course = json_decode(stripslashes(html_entity_decode($stdinfo['program'])));
+		$batch=json_decode(stripslashes(html_entity_decode($stdinfo['batch_val'])));
+		$subject=json_decode(stripslashes(html_entity_decode($stdinfo['Subject_val'])));
+		$semester=json_decode(stripslashes(html_entity_decode($stdinfo['semester_val'])));
+		$listdate=$stdinfo['list_date'];
+		$slots=$stdinfo['slots'];
+		$institutes_id=$stdinfo['te_in_institutes_id_c'];
+		$start_date=$stdinfo['start_date'];
+		$end_date=$stdinfo['end_date'];
+		
+		
+		$sql="select * from te_exam where (te_in_institutes_id_c='".$institutes_id."' AND (start_date='".$start_date."' AND end_date='".$end_date."'))";
+		$exam_details_check=$db->query($sql);
+		
+		echo json_encode($exam_details_check);
+		if($exam_details_check->num_rows>1){
+			$validate=0;
+			
+		}
+
+		$result=array();
+		foreach($course as $course_name){
+			foreach($batch as $batch_name){
+				$b_value=$batch_name;
+			}
+			foreach($semester as $sem){
+				$batchSql="select `subj`.`name`,`subj`.`id` FROM (SELECT `smsj`.`te_subjects_master_te_te_semester_1te_subjects_master_ida` as `id` FROM `te_te_semester` `sem` INNER JOIN `te_subjects_master_te_te_semester_1_c` `smsj` ON `sem`.`id` =`smsj`.`te_subjects_master_te_te_semester_1te_te_semester_idb` where `sem`.`id`='{$sem}') as `sem_sj` INNER JOIN `te_subjects_master` `subj` ON `sem_sj`.`id`= `subj`.`id`";
+	
+				$batchObj =$db->query($batchSql);
+				$subject=array();
+				while($row =$db->fetchByAssoc($batchObj)){
+					$subject[]=$row;
+				}
+				foreach($subject as $sub){
+					$result['course_name']=$course_name;
+					$result['batch']=$batch_name;
+					$result['semester']=$sem;
+					$result['sub']=$sub['id'];
+					
+					$data[]=$result;
+					
+				}
+			}
+		}
+		
+		//$add_column='ALTER TABLE te_EXAM ADD status INT';
+		
+		//$GLOBALS['db']->query($add_column);
+		
+		if($validate ==1){
+		echo "validate";
+	$exam="UPDATE te_Exam SET status='".$_POST['status']."' WHERE id='".$id."'";
+			
+			$GLOBALS['db']->query($exam);
+			
+			$Examdetails = 'INSERT INTO te_exams_details (id,date_modified,deleted,course,batch,semeters,subjects,start_date,exam_slots) VALUES ';
+				
+			$Examdetails_relation ='INSERT INTO te_exams_details_te_exam_c (id,date_modified,deleted,te_exams_details_te_examte_exam_ida,te_exams_details_te_examte_exams_details_idb) VALUES ';
+			
+			foreach($data as $data_value){
+				
+				global $db;
+				
+				/** Validating Duplicate exam details*/
+				
+				/*$Validate="SELECT subject_institute_id,subject_program_id,te_te_subject_te_te_semesterte_te_semester_ida from te_te_subject_te_te_semester_c s_sem INNER JOIN te_te_subject t_subj ON s_sem.te_te_subject_te_te_semesterte_te_subject_idb=t_subj.id where t_subj.id='".$data_value['sub']."'";
+				$validate_details=$db->query($Validate);
+				
+				while($Srow =$db->fetchByAssoc($validate_details)){ 
+					$validate_detail[]=$Srow;
+				}
+				foreach($validate_detail as $v_detail){
+					
+					$sql="select * from te_exams_details where (course='".$v_detail['subject_program_id']."' && semeters='".$v_detail['te_te_subject_te_te_semesterte_te_semester_ida']."') limit 1";
+					$exam_details=$db->query($sql);
+				}*/
+				
+				/**End*/
+				
+				$exam_details_ID = create_guid();
+			
+				$Examdetail[]= "('".$exam_details_ID."','".date('Y-m-d H:i:s')."','0','".$data_value['course_name']."','".$data_value['batch']."','".$data_value['semester']."','".$data_value['sub']."','".$listdate."','". $slots."'
+				)";
+				$Examdetail_relation[]="('".$exam_details_ID."_32','".date('Y-m-d H:i:s')."','0','".$id."','".$exam_details_ID."')";
+			}
+			$Examdetails.=implode(',',$Examdetail);
+		
+			$Examdetails_relation.=implode(',',$Examdetail_relation);
+			
+			$data_error=$GLOBALS['db']->Query($Examdetails);
+			$GLOBALS['db']->Query($Examdetails_relation);
+			echo "Published successfully";
+		}
+		
+		else{
+			echo "One data Already Assigned";
+		}
+	}
+}
+?>

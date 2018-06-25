@@ -1,0 +1,641 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Najez</title>
+    <meta name="description" content="Najez">
+    <meta name="keywords" content="Najez">
+    
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300|Raleway:300,400,900,700italic,700,300,600">
+    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+     <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- =======================================================
+        Theme Name: Baker
+        Theme URL: https://bootstrapmade.com/baker-free-onepage-bootstrap-theme/
+        Author: BootstrapMade.com
+        Author URL: https://bootstrapmade.com
+    ======================================================= -->
+  </head>
+  <body>
+
+    <div class="loader"></div>
+    <div id="myDiv">
+    <!--HEADER-->
+    <div class="header">
+      <div class="bg-color">
+        <header id="main-header">
+        
+			<div class="row anti">
+				<div class="col-lg-3 col-md-3 col-sm-4 col-xs-8 anti">
+					<img src="img/logo.png" class="img-responsive" alt="logo" />
+				</div>
+				<div class="col-lg-9">
+				<nav class="navbar navbar-default navbar-fixed-top"> <!-- navbar-fixed-top -->
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+				  <ul class="nav navbar-nav navbar-right">
+					<li class=""><a href="#">HOME</a></li>
+					<li class=""><a href="#service">ABOUT US</a></li>
+					<li class=""><a href="#portfolio">Services</a></li>
+					<li class=""><a href="#testimonial">DOWNLOAD APP</a></li>
+					<li><a  class="main-active" href="#contact">Contact Us</a></li>
+				  </ul>
+				</div>
+				</nav>
+				</div>
+			</div>
+        
+        </header>
+        <div class="wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="banner-info text-center wow fadeIn delay-05s col-lg-12">
+						<h2 class="bnr-sub-title">Welcome to Najez</h2>
+						<p class="bnr-para">Anywhere Anytime! Just book it online</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-xs-12 text-center"><a href="#contact"><button class="button1 head-btn">JOIN US AS A PARTNER</button></a></div>
+					<div class="col-lg-6 col-md-6 col-xs-12 text-center"><a href="#contact"><button class="button2 head-btn">JOIN US AS A USER</button></a></div>
+					<div class="overlay-detail">
+					</div>
+				</div>
+			  
+			</div>
+        </div>
+      </div>
+    </div>
+    <!--/ HEADER-->
+
+    <!--second-->
+    <section id="service" class="section-padding wow fadeInUp delay-05s">
+      <div class="container">
+        <div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 text-center">
+              <img src="img/mobile1.png" class="img-responsive">
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 content">
+			<p class="space-150"></p>
+			   <p>Najez</p>
+			   <h1>ABOUT US</h1>
+			   <h5>A 100% Saudi owned company, which is an establishing brand coming across stunningly, Najez is an amazing venture which is providing the best services across the kingdom of Saudi Arabia. Our ideal vision is to be a business leader committed to delivering excellent quality services with evolving growth and success.</h5>
+			   <div class="more_about" style="display:none;">
+				<h5>The pioneer company exceptional in creating reliable services for cab and taxi, we also attain individual retirements, implementing high quality services to meet the customer&#39;s needs successfully.</h5>
+				<h5>Najez is determined to never let our customers down with our uniqueness in having Tow cars and cargo truck for the betterment.</h5>
+				<h5>In all aspects, we are there for you 24x7 at Al-Khobar.</h5>
+				<h5>we are all set to deliver the unbeatable services, innovation, quality and assuring our commitment that is always driven by our professional class management practices.</h5>
+			   </div>
+			  
+			   <p><button class="butn about_btn1">Learn More</button><button class="butn  about_btn2" style="display:none;">Hide</button></p>
+			</div>
+		</div>
+      </div>
+    </section>
+    <!---->
+
+  
+    </section>
+    <!---->
+    <!---->
+
+     <!--third-->
+    <section id="feature" class="section-padding wow fadeIn delay-05s">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2 class="service-title pad-bt15">BENEFITS</h2>
+            <p class="sub-title pad-bt35"><i>We give you better benefits</i></p>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <div class="wrap-item text-center">
+              <div class="item-img">
+                <img src="img/icon1.png">
+                
+                <p>Better customer satisfaction</p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <div class="wrap-item text-center">
+              <div class="item-img">
+                <img src="img/icon2.png">
+              <p>Easy to use and understand</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <div class="wrap-item text-center">
+              <div class="item-img">
+                <img src="img/icon3.png">
+              <p>Incentives at its best</p>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </section>                  
+    <!---->
+
+
+
+
+    <!---->
+    <section id="portfolio" class="section-padding wow fadeInUp delay-05s">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2 class="service-title" style="color:#fff;">SERVICES</h2>
+            <p class="sub-title task "><i>a lot of amazing & cool features</i></p>
+          </div>
+        </div>
+        <div class="row images">
+           <div class="col-lg-4 content1">
+            <div class="row row-margin">
+				<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 anti">
+					<h3>SAVE YOUR ARRIVAL AND DEPARTURE LOCATION</h3>
+					<P>Save your arrival and departure points in the sophisticated application to ease the booking process.</P>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center heart anti-right">
+				  <img src="img/heart.png">
+				</div>
+			</div>
+            <div class="row row-margin">
+				<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 anti">
+					<h3>RIGHT VEHICLE JUST ONE CLICK AWAY</h3>
+					<P>You can choose any type of vehicle which fulfils your needs - small / medium/ family/ luxury.</P>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center heart anti-right">
+					<img src="img/heart.png">
+				</div>
+			</div>
+			<div class="row row-margin">
+				<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+					<h3>ANALYSING YOUR CAPTAIN</h3>
+					<P>You can have a look at your captain’s picture and rating based on customer opinions and evaluate him.</P>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center heart">
+					<img src="img/heart.png">
+				</div>
+			</div>
+            
+          </div>  
+          <div class="col-lg-4">
+            
+          </div>
+          <div class="col-lg-4 content2">
+            <div class="row row-margin">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center heart anti-left">
+					<img src="img/heart.png">
+				</div>
+				<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 anti">
+					<h3>DISCOUNTS &amp; STUNNING SERVICE</h3>
+					<P>We always strive to be competitive in the market and give you the best discounts and offers.</P>
+				</div> 
+			</div>
+            <div class="row row-margin">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center heart anti-left">
+					<img src="img/heart.png">
+				</div>
+				<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 anti">
+					<h3>TRACKING THE ROUTES</h3>
+					<P>You can have a look at your captain’s path and track him for your convenience until you reach your destination.</P>
+				</div>
+              
+			</div>
+			<div class="row row-margin">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center heart anti-left">
+					<img src="img/heart.png">
+				</div>
+				<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 anti">
+					<h3>RATE &amp; FEEDBACK</h3>
+					<P>Did you liked the ride? Rate it!<br/>Rating your captain is valuable, it gives us the assurance that the captain is fulfilling all his duties in the right manner.</P>
+				</div>
+              
+			</div> 
+            
+        </div>
+      </div>
+    </section>
+    <!---->
+    <!---->
+    <!---->
+    <section id="portfolio1" class="section-padding wow fadeInUp delay-05s">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2 class="service-title">TERMS OF USE</h2>
+            <p class="sub-title pad-bt15"><i style="color:#7f7c7c;">Get the app flow here</i></p>
+          </div>
+       </div>
+      </div><!--.container-->
+      <div class="container-fluid">
+        <div class="row">
+            <div class="loop owl-carousel owl-theme"> 
+            <div class="item"><img src="img/slide81.jpg" alt="Owl Image1" class="img-responsive"></div>
+            <div class="item"><img src="img/slide1.jpg" class="img-responsive"></div>
+            <div class="item"><img src="img/slide2.jpg" class="img-responsive"></div>
+            <div class="item"><img src="img/slide3.jpg" class="img-responsive"></div>
+            <div class="item"><img src="img/slide5.jpg" class="img-responsive"></div>
+ 
+</div>
+        </div>
+      </div>
+    </section>
+
+    <!---->
+    <!---->
+    <section id="testimonial" class=" wow fadeInUp delay-05s">
+      <div class="bg-testicolor section-padding">
+        <div class="container centered">
+        <div class="row">
+          <div class="testimonial-item col-lg-12">
+               <h1>DOWNLOAD THE APP</h1>
+                <p><i>Register to get an early access</i></p>
+          </div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center">
+				<button class="pull-right"><img src="img/android1.png"> ANDROID</button>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center">
+				<button class="pull-left"><img src="img/icon.png"> IPHONE</button>
+			</div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <!---->
+    <section id="blog" class="section-padding wow fadeInUp delay-05s">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2 class="service-title pad-bt15">BLOG</h2>
+            <p class="sub-title pad-bt15"><i style="color:#7f7c7c;">Have look our blog</i></p>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="blog-sec" style="background-color:#fafafa;">
+              <div class="blog-img">
+                <a href="">
+                  <img src="img/car.jpg" class="img-responsive">
+                </a>
+              </div>
+              <div class="blog-info">
+                <h2>QUIS AUTEM VEL EUM IURE QUI IN</h2>
+                <p>We cannot expect people to have respect for laws and orders until we teach respect to those we have entrusted to enforce those laws all the time. we always want to help people cordially.</p>
+				<hr/>
+                <a href="" class="read-more">DEC 11, 2016</a>
+                <a href="" class="read-more pull-right">READ MORE</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="blog-sec" style="background-color:#fafafa;">
+              <div class="blog-img">
+                <a href="">
+                  <img src="img/hand.jpg" class="img-responsive">
+                </a>
+              </div>
+              <div class="blog-info">
+                <h2>QUIS AUTEM VEL EUM IURE QUI IN</h2>
+                <p>We cannot expect people to have respect for laws and orders until we teach respect to those we have entrusted to enforce those laws all the time. we always want to help people cordially.</p>
+                <hr/>
+				<a href="" class="read-more">DEC 11, 2016</a>
+                <a href="" class="read-more pull-right">READ MORE</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="blog-sec" style="background-color:#fafafa;">
+              <div class="blog-img">
+                <a href="">
+                  <img src="img/car1.jpg" class="img-responsive">
+                </a>
+              </div>
+              <div class="blog-info">
+                <h2>QUIS AUTEM VEL EUM IURE QUI IN</h2>
+                <p>We cannot expect people to have respect for laws and orders until we teach respect to those we have entrusted to enforce those laws all the time. we always want to help people cordially.</p>
+                <hr/>
+				<a href="" class="read-more">DEC 11, 2016</a>
+                <a href="" class="read-more pull-right">READ MORE</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!---->
+    <section id="contact" class="section-padding wow fadeInUp delay-05s">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center white">
+            <h2 class="service-title pad-bt15" style="color:#fff; ">CONTACT US</h2>
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 anti">
+					<p class="btn1 pull-right">JOIN US AS A PARTNER</p>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 anti">
+					<p class="btn2 pull-left">JOIN US AS A USER</p>
+				</div>
+			</div>
+          </div>
+		</div>
+		<div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center crcl">
+            <hr class="hrclass">
+             <div class="circle">1</div>
+             <p>PERSONAL INFORMATION</p>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center crcl">
+		   <hr class="hrclass">
+             <div class="circle">2</div>
+             <p>PROVISIONS</p>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center crcl">
+		   <hr class="hrclass">
+             <div class="circle">3</div>
+             <p>VEHICLE INFORMATION</p>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center crcl">
+             <div class="circle">4</div>
+             <p>DOCUMENTS</p>
+          </div>
+		</div>
+		<div class="row">
+          <!-- first form start -->
+          <div class="col-lg-12">
+            <div class="contact-form" id="form1">
+                <div id="sendmessage">Your message has been sent. Thank you!</div>
+                <div id="errormessage"></div>
+                <form action="" method="post" role="form" class="contactForm">
+					<div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12 padding-right-zero">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="First Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Last Name" data-rule="email" data-msg="Please enter a valid email" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Email ID" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 col-sm-6 col-xs-12 padding-right-zero">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Password" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Mobile Number" data-rule="email" data-msg="Please enter a valid email" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Identification/Location" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12 padding-right-zero">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="DD/MM/YYYY" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="City that you want to work out *" data-rule="email" data-msg="Please enter a valid email" />
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Caption who Rhg Code" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                        </div>
+                    </div>
+					</div>
+					<div class="row" style="margin-top:0;">
+						<div class="col-md-4 col-sm-12 col-xs-12"></div>
+						<div class="col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<input type="submit" class="button3" />
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-12 col-xs-12"></div>
+					</div>
+                </form>
+              
+            </div>
+          </div>
+          <!-- first form end -->
+          <!-- second form start -->
+          <div class="col-lg-12">
+            <div class="contact-form1" id="form2" style="display:none;">
+                <div id="sendmessage">Your message has been sent. Thank you!</div>
+                <div id="errormessage"></div>
+                <form action="" method="post" role="form" class="contactForm">
+					<div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12 padding-right-zero">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="First Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Last Name" data-rule="email" data-msg="Please enter a valid email" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Email ID" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 col-sm-6 col-xs-12 padding-right-zero">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Password" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Mobile Number" data-rule="email" data-msg="Please enter a valid email" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+					<div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Gender" data-rule="email" data-msg="Please enter a valid email" />
+                        </div>
+                    </div>
+                    </div>
+					<div class="row" style="margin-top:0;">
+						<div class="col-md-4 col-sm-12 col-xs-12"></div>
+						<div class="col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<input type="submit" class="button3" />
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-12 col-xs-12"></div>
+                    </div>
+                </form>
+              
+            </div>
+          </div>
+          <!-- sencond form end -->
+
+          
+        </div>
+      </div>
+    </section>
+    <!---->
+
+
+     <section id="feature1" class="section-padding wow fadeIn delay-05s">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2 class="service-title pad-bt15">GET IN TOUCH</h2>
+          </div>
+		</div>
+		<div class="row">
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="wrap-item text-center">
+              <div class="item-img">
+                <img src="img/phone.png">
+              </div>
+              <p>Phone : +966138938333</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="wrap-item text-center">
+              <div class="item-img">
+                <img src="img/mssg.png">
+              </div>
+              <p>Email : maa@areen-sa.com</p>
+            </div>
+            
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="wrap-item text-center">
+              <div class="item-img">
+                <img src="img/web.png">
+              </div>
+              <p>Web : www.yoursite.com</p>
+            </div>
+          </div>
+        </div>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="wrap-item text-center">
+				  <div class="item-img">
+					 <a href="#"><img src="img/fb.jpg" style="margin-top: 50px;"></a>
+					  <a href="#"><img src="img/twitter.jpg" style="margin-top: 50px;"></a>
+					  <a href="#"><img src="img/google.jpg" style="margin-top: 50px;"></a>
+				  </div>
+				</div>
+			</div>
+		</div>
+      </div>
+    </section>   
+
+    
+    <!---->
+    <footer id="footer">
+      <div class="container">
+        <div class="row text-center" style="padding-top:40px;">
+          <p>&copy; 2017 yoursite. All right reserved.</p>
+          
+        </div>
+      </div>
+    </footer>
+    <!---->
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="contactform/contactform.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+
+<!-- btn  -->
+<script type="text/javascript">
+            $(document).ready(function(){
+               $('.btn1').addClass('activity');
+              $('.btn1, .button1').click(function(){
+                $(".contact-form1").hide();
+                $(".contact-form ,.crcl").show();
+                 $('.btn1').addClass('activity');
+                  $('.btn2').removeClass('activity');
+              });
+               $('.btn2, .button2').click(function(){
+                $(".contact-form ,.crcl").hide();
+                $(".contact-form1").show();
+                $('.btn1').removeClass('activity');
+                $('.btn2').addClass('activity');
+                 
+              });
+            });
+
+jQuery(document).ready(function(){
+    jQuery('.loop').owlCarousel({
+    center: true,
+    items:2,
+    loop:true,
+    margin:10,
+    responsive:{
+        600:{
+            items:4
+        }
+    }
+});
+jQuery('.owl-dot').each(function(index){
+	if(index == 2){
+		jQuery(this).click();
+	}
+});
+jQuery('.about_btn1').click(function(){
+	jQuery('.more_about').slideToggle("slow");
+	jQuery('.about_btn1').hide();
+	jQuery('.about_btn2').show();
+});
+jQuery('.about_btn2').click(function(){
+	jQuery('.more_about').slideToggle("slow");
+	jQuery('.about_btn1').show();
+	jQuery('.about_btn2').hide();
+});
+    });
+    </script>
+    
+  </body>
+</html>

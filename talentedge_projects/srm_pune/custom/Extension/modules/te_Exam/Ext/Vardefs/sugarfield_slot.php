@@ -1,0 +1,30 @@
+<?php
+$dictionary['te_Exam']['fields']['slots'] =array (
+			'name' => 'slots',
+			'vname' => 'Slots',
+			'type' => 'varchar',
+			'len' => '55',
+			'size' => '10',
+			'studio' => 'visible',
+			'required' => false, 
+			'reportable' => true, 
+			'audited' => false, 
+			'importable' => true, 
+			'duplicate_merge' => false,
+			'inline_edit' => false, 
+			);
+$dictionary['te_Exam']['fields']['status'] =array (
+			'name' => 'status',
+			'label' => 'Status',
+			'type' => 'int',
+			'help' => '',
+			'comment' => '',
+			'default_value' => '',
+			'len' => '10',
+			'size' => '5',
+			'required' => false,
+			'reportable' => true,
+			'audited' => false,
+			'importable' => 'true',
+			'duplicate_merge' => false,
+	);

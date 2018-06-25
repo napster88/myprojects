@@ -1,0 +1,192 @@
+@import './colors';
+
+/* ~~ Font family declaration ~~ */
+
+$oswalt: 'Oswald',
+sans-serif;
+$te-font: 'te-font';
+$fontLight: 300;
+$fontRegular: 400;
+$fontBold: bold;
+$baseSize: 16px;
+$titleSize: 30px;
+@mixin transition($transition) {
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -webkit-transition: $transition;
+    -ms-transition: $transition;
+    transition: $transition;
+}
+
+@mixin border-radius($radius) {
+    -moz-border-radius: $radius;
+    -o-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin opacity($opacity) {
+    -moz-opacity: $opacity;
+    -o-opacity: $opacity;
+    -webkit-opacity: $opacity;
+    -ms-opacity: $opacity;
+    opacity: $opacity;
+}
+
+@mixin transform($translateY) {
+    -webkit-transform: $translateY;
+    -ms-transform: $translateY;
+    -o-transform: $translateY;
+    transform: $translateY;
+}
+
+@mixin boxShadow($shadow) {
+    box-shadow: $shadow;
+    -ms-box-shadow: $shadow;
+    -o-box-shadow: $shadow;
+    -webkit-box-shadow: $shadow;
+}
+
+@mixin orange-btn($color) {
+    background-color: $color;
+    color: $white;
+    font-size: 18px;
+    padding: 12px 35px;
+    border: 0px;
+    &:hover {
+        background-color: $orangeHover;
+        @include transition(all 0.3s ease);
+    }
+}
+
+@mixin title-h2($color, $family, $fSize) {
+    font-size: $fSize;
+    color: $color;
+    font-family: $family;
+}
+
+@mixin materialInput($inputFontColor, $borderBottom, $hoverColor) {
+    .mat-label {
+        display: block;
+        font-size: 14px;
+        transform: translateY(25px);
+        color: $inputFontColor;
+        transition: all 0.5s;
+    }
+    .mat-input {
+        position: relative;
+        background: transparent;
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 8px 0;
+        font-size: 14px;
+    }
+    .mat-div {
+        padding: 5px 0 0 0;
+        position: relative;
+    }
+    .mat-div:after,
+    .mat-div:before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: $borderBottom;
+        bottom: 0;
+        left: 0;
+        transition: all 0.5s;
+    }
+    .mat-div::after {
+        background-color: $hoverColor;
+        transform: scaleX(0);
+    }
+    .is-active::after {
+        transform: scaleX(1);
+    }
+    .is-active .mat-label {
+        color: $hoverColor;
+    }
+    .is-completed .mat-label {
+        font-size: 14px;
+        transform: translateY(0);
+    }
+}
+
+@mixin checkBox {
+    label {
+        position: relative;
+        padding-left: 29px;
+        color: #363636;
+        cursor: pointer;
+        a{
+            color: $blueBg;
+        }
+        &:after,
+        &:before {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: inline-block;
+            @include transition(0.25s ease-in-out);
+        }
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background: #fff;
+            border: 1px solid #969696;
+            @include transition(300ms linear);
+        }
+        &:before {
+            display: none !important;
+            content: "\e929";
+            color: #fff;
+            display: inline-block;
+            font-size: 14px;
+            font-family: 'icomoon' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            z-index: 2;
+            top: 2px;
+            left: 2px;
+        }
+    }
+    input[type="checkbox"] {
+        margin-top: 0px;
+        display: none;
+        & + label {
+            &:hover {
+                // color: $orange;
+                &:after {
+                    border-color: #2FAEF8;
+                }
+            }
+        }
+        &:checked {
+            + label {
+                // color: $orange;
+                &:hover {
+                    // color: $orange;
+                }
+                &:after {
+                    background-color: #2FAEF8;
+                    border-color: #2FAEF8;
+                    @include transition(300ms linear);
+                }
+                &:before {
+                    display: block !important;
+                }
+            }
+        }
+    }
+}

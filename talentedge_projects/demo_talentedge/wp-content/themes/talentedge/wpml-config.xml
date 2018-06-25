@@ -1,0 +1,24 @@
+<wpml-config>
+	<admin-texts>
+		<key name="theme_mods_talentedge">
+			<key name="talentedge_products_title" />
+			<key name="talentedge_products_slider_title" />
+			<key name="talentedge_products_slider_subtitle" />
+			<key name="talentedge_copyright" />
+			<key name="talentedge_our_team_title" />
+			<key name="talentedge_our_team_subtitle" />
+			<key name="talentedge_about_page_video_title" />
+			<key name="talentedge_about_page_video_subtitle" />
+			<key name="talentedge_our_advantages_title" />
+			<key name="talentedge_404_title" />
+			<key name="talentedge_404_text" />
+			<key name="talentedge_404_label" />
+			<key name="talentedge_404_link" />
+			<key name="talentedge_video_title" />
+			<key name="talentedge_yt_link" />
+			<key name="talentedge_contact_page_map_shortcode" />
+			<key name="talentedge_contact_page_form_shortcode" />
+			<key name="talentedge_about_page_video_link" />
+		</key>
+	</admin-texts>
+</wpml-config>

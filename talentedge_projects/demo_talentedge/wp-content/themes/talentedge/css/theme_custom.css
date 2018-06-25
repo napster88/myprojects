@@ -1,0 +1,71 @@
+.registerdiv .userpro-field-display_name,
+.registerdiv .userpro-field-billing_city, .registerdiv .userpro-field-user_li_position, 
+.registerdiv .userpro-field-user_li_industry, .registerdiv .userpro-field-billing_first_name,
+.registerdiv .userpro-field-billing_last_name,.registerdiv .userpro-field-user_socialnetwork,
+.userpro-field.userpro-submit input.userpro-button.secondary, .registerdiv .userpro-field-user_li_linkedincheck,
+.registerdiv .userpro-field-user_li_experience, .userpro-field-billing_address_1, .userpro-field-billing_phone, #editProfile .userpro-centered, 
+#basic-user-avatar-form .description, .registerdiv .userpro-field-usereditprofile_email, .userpro-field-user_li_linkedin_email,
+.userpro-centered, .woocommerce-billing-fields label, .userpro-field-profilepicture
+, .woocommerce-shipping-fields h3, .partial_entry_warning, #gform_previous_button_1,.userpro-right
+{
+display: none !important;
+}
+#acf-field_57bc166487d17{
+    background: none;
+}
+#referralcode_field{margin:10px 0px 50px 0px;}
+
+.strength-container span.strength-plain.fill{background:#a9a9a9}
+/* Outer */
+.popup {
+    width:100%;
+    height:100%;
+    display:none;
+    position:fixed;
+    top:0px;
+    left:0px;
+    background:rgba(0,0,0,0.75);
+}
+ 
+/* Inner */
+.popup-inner {
+    max-width:700px;
+    width:90%;
+    padding:40px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+    box-shadow:0px 2px 6px rgba(0,0,0,1);
+    border-radius:3px;
+    background:#fff;
+}
+ 
+/* Close Button */
+.popup-close {
+    width:30px;
+    height:30px;
+    padding-top:4px;
+    display:inline-block;
+    position:absolute;
+    top:0px;
+    right:0px;
+    transition:ease 0.25s all;
+    -webkit-transform:translate(50%, -50%);
+    transform:translate(50%, -50%);
+    border-radius:1000px;
+    background:rgba(0,0,0,0.8);
+    font-family:Arial, Sans-Serif;
+    font-size:20px;
+    text-align:center;
+    line-height:100%;
+    color:#fff;
+}
+ 
+.popup-close:hover {
+    -webkit-transform:translate(50%, -50%) rotate(180deg);
+    transform:translate(50%, -50%) rotate(180deg);
+    background:rgba(0,0,0,1);
+    text-decoration:none;
+}

@@ -1,0 +1,31 @@
+<?php //@ Manish Gupta 
+$dictionary["te_Exam_result"]["fields"]["student_batch_id"] = array (
+        'name' => 'student_batch_id',
+        'label' => 'Student Batch Id',
+        'type' => 'varchar',
+        'help' => '',
+        'comment' => '',
+        'default_value' => '',
+        'len' => '255',
+		'size' => '20',
+        'required' => false,
+        'reportable' => true,
+        'audited' => false,
+        'importable' => 'true',
+        'duplicate_merge' => false,
+);
+$dictionary["te_Exam_result"]["fields"]["order_sequence"] = array (
+        'name' => 'order_sequence',
+        'label' => 'Order Sequence',
+        'type' => 'varchar',
+        'help' => '',
+        'comment' => '',
+        'default_value' => '',
+        'len' => '255',
+		'size' => '20',
+        'required' => false,
+        'reportable' => true,
+        'audited' => false,
+        'importable' => 'true',
+        'duplicate_merge' => false,
+);

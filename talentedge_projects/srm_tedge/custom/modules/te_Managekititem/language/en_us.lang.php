@@ -1,0 +1,7 @@
+<?php
+// created: 2018-05-04 16:45:13
+$mod_strings = array (
+  'LBL_TE_MAPITEMTODISPATCH_TE_MANAGEKITITEM_FROM_TE_MAPITEMTODISPATCH_TITLE' => 'Map Item to Dispatch',
+  'STOCK' => 'Current Stock',
+  'LBL_STENT_STOCK_ENTRY_TE_MANAGEKITITEM_FROM_STENT_STOCK_ENTRY_TITLE' => 'Stock Entry',
+);

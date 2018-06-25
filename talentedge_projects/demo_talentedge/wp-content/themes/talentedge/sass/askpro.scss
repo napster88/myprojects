@@ -1,0 +1,421 @@
+@import './colors';
+@import './mixin';
+
+/* ~~~~~~~~~~~~~ askpro banner ~~~~~~~~~~~~~ */
+
+.sectionBanner{
+    background: $blueBg;
+    padding-bottom: 20px;
+    padding-top: 20px;  
+        h1{
+            font-size: 40px;
+            text-transform: uppercase;
+            color: $white;
+            max-width: 568px;
+            line-height: 1.2;
+            font-weight: bold;
+            font-family: $oswalt;
+        }
+        h4{
+            font-size: 35px;
+            color: $white;
+            font-family: $oswalt;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+        p{ 
+            color: $white;
+            font-size: 14px;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+        .leftTeaser{
+            img{
+                max-height: 70px;
+                margin-bottom: 15px;
+            }
+        }
+        .pos_placer{
+            position: relative;
+            padding-bottom: 50px;
+            .rightTeaser{
+                position: absolute;
+                bottom: 43px;
+                right: 0;
+            }
+        }
+}
+
+.appAvailable{
+    max-width: inherit;
+    margin: 40px auto 0 auto;
+    /* text-align: right; */
+    width: auto;
+    display: inline-block;
+    float: right;
+    h3{
+        @include title-h2($white, $te-font, 20px);
+        font-weight: $fontBold;
+        max-width: 350px;
+        margin: 0 auto 14px;
+    }
+    img{
+        max-height: 50px;
+        margin: 5px 10px;
+    }
+    a{
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .sectionBanner{
+        h1 br{
+            display: none;
+        }
+    }
+}
+@media only screen and (max-width: 1023px){
+    .appAvailable{
+        padding-top: 28px;
+        margin-top: 0px;
+    }
+    .sectionBanner .leftTeaser img{
+        max-height: 44px;
+    }
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ proTask_context style 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.task_context{
+    color: $colorTitle;
+    text-align: center;
+}
+.proTask_context{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.listPro{
+    // padding-top: 35px;
+    // padding-bottom: 35px;
+    ul{
+        display: table;
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    li{
+        text-align: center;
+        padding-bottom: 20px;
+        // float: none;
+        display: inline-block;
+        vertical-align: top;
+    }
+    h2{
+        color: $blueBg;
+        font-weight: bold;
+        font-size: 23px;
+        line-height: 1.2;
+        text-align: center;
+    }
+    .fa{
+        font-size: 52px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        color: $blueBg;
+        display: inline-block;
+    }
+    p{
+        color: #919191;
+        font-size: 14px;
+    }
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Protalk videos style 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.protalkVideos{
+    h2{
+        font-size: $titleSize;
+        color: $colorTitle;
+        font-family: $oswalt;
+        font-weight: $fontBold;
+    }
+    ul{
+        display: table;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+    li{
+        margin-top: 35px;
+        margin-bottom: 10px;
+        display: inline-block;
+        // float: none;
+        text-align: left;
+        vertical-align: top;
+    }
+    .view_more{
+        display: inline-block;
+        padding: 12px 20px 10px 20px;
+        background: $blueBg;
+        color: $white;
+        font-size: 14px;
+        margin: 25px 0px 16px 0px;
+    }
+}
+
+
+.playVideo{
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    .fa{
+        font-size: 75px;
+        color: $white;
+        top: 50%;
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        @include transform(translateY(-50%));
+    }
+}
+
+.wrapVideo{
+    margin: 0 25px;
+    position: relative;
+    min-height: 220px;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .overLay{
+        position: absolute;
+        content: '';
+        display: block;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 2;
+    }        
+}
+.videoContext{
+    margin: 0 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    h3{
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 5px;
+        margin-top: 15px;
+        text-transform: uppercase;
+    }
+    h6{
+        color: #405fa3;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 14px;
+        padding-bottom: 5px;
+        min-height: 50px;
+        span{
+            display: block;
+        }
+        a{
+            display: inline-block;
+            margin: 15px 0 20px 0;
+            padding: 7px 23px 6px 23px;
+            color: #405fa3;
+            border: 1px solid #d6d6d6;
+            font-weight: normal;
+            text-transform: capitalize;
+        }
+    }
+    .content_border{
+        font-size: 14px;
+        color: $black;
+        border-top: 1px solid #ccc;
+        padding-top: 17px;
+        min-height: 100px;
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .wrapVideo{
+        margin: 0px;
+    }
+    .videoContext{
+        margin: 0px;
+        min-height: 90px;
+    }
+    .sectionBanner h1 br{
+        display: none;
+    }
+}
+
+@media only screen and  (max-width: 767px){
+    .sectionBanner {
+        .pos_placer{
+            padding-bottom:0px;
+            .rightTeaser{
+                position: static;
+                width: 100%;
+            }
+        }
+    }
+    .appAvailable{
+        float: none;
+        text-align: left;
+        img{
+            margin-left: 0px;
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) and (min-width: 769px){}
+
+
+@media only screen and (width: 768px){
+    .appAvailable{
+        img{
+            max-height: 38px;
+        }
+        h3{
+            font-size: 18px;
+        }
+    }
+}
+@media only screen and (max-width: 767px){
+    .sectionBanner {
+        h1{
+            font-size: 35px;
+            max-width: 448px;
+        }
+        h4{
+            font-size: 22px;
+        }
+        h3{
+            font-size: 22px;
+        }
+    }
+    .appAvailable{
+        text-align: left;
+        margin-left: 0px;
+        h3{
+            margin-left: 0;
+        }
+        img{
+            margin-left: 0px;
+        }
+    }
+}
+@media only screen and (max-width: 767px) and (min-width: 568px){
+    .appAvailable{
+        // float: right;
+    }
+}
+
+@media only screen and (max-width: 568px){
+    .listPro {
+        li{
+            width: 100%;
+            float: none;
+            max-width: 480px;
+            margin: 0 auto 35px auto;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        .fa{
+            padding-bottom: 5px;
+            padding-top: 5px;
+        }
+    }
+    .protalkVideos {
+        li{
+            width: 100%;
+            float: none;
+            max-width: 480px;
+            margin: 0 auto 0 auto;
+            padding-bottom: 5px;
+            padding-top: 30px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .videoContext p{
+        min-height: inherit;
+        height: inherit !important;
+    }
+
+    .appAvailable img{
+        max-height: 40px;
+    }
+}
+
+@media only screen and (width: 320px){
+    .sectionBanner h1{
+        font-size: 27px;
+    }
+}
+
+
+.getAdvice{
+    padding-top: 35px;
+    h2{
+        font-size: $titleSize;
+        color: $colorTitle;
+        font-family: $oswalt;
+        font-weight: $fontBold;
+    }
+}
+.advicer_Context{
+    margin-top: 22px; 
+    color: #5e5e5e;
+    padding-left: 55px;
+    p{
+        margin-bottom: 25px;
+        font-size: 18px;
+    }
+    h6{
+        margin-top: 15px;
+        padding-left: 20px;
+        background-image: url("../images/arrow_sup.png");
+        background-repeat: no-repeat;
+        background-position: 0 4px;
+        background-size: 11px;
+        font-size: $baseSize;
+    }
+    .view_more{
+        display: inline-block;
+        padding: 12px 20px 10px 20px;
+        background: $blueBg;
+        color: $white;
+        font-size: 14px;
+        margin: 25px 0px 16px 0px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

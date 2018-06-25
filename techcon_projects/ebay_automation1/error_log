@@ -1,0 +1,10 @@
+[12-Jun-2017 06:58:49 UTC] PHP Parse error:  syntax error, unexpected '...' (T_ELLIPSIS) in /home/techconadmin/public_html/najez/application/config/database.php on line 70
+[12-Jun-2017 06:58:52 UTC] PHP Parse error:  syntax error, unexpected '...' (T_ELLIPSIS) in /home/techconadmin/public_html/najez/application/config/database.php on line 70
+[18-Jun-2017 07:21:01 UTC] PHP Parse error:  syntax error, unexpected '$data' (T_VARIABLE), expecting function (T_FUNCTION) in /home/techconadmin/public_html/ebay_automation/application/controllers/backlogin.php on line 33
+[18-Jun-2017 07:21:29 UTC] PHP Parse error:  syntax error, unexpected '$data' (T_VARIABLE), expecting function (T_FUNCTION) in /home/techconadmin/public_html/ebay_automation/application/controllers/backlogin.php on line 33
+[18-Jun-2017 07:21:38 UTC] PHP Parse error:  syntax error, unexpected '$data' (T_VARIABLE), expecting function (T_FUNCTION) in /home/techconadmin/public_html/ebay_automation/application/controllers/backlogin.php on line 33
+[18-Jun-2017 07:26:32 UTC] PHP Parse error:  syntax error, unexpected '$data' (T_VARIABLE), expecting function (T_FUNCTION) in /home/techconadmin/public_html/ebay_automation/application/controllers/backlogin.php on line 33
+[18-Jun-2017 15:50:29 UTC] PHP Parse error:  syntax error, unexpected '$data' (T_VARIABLE), expecting function (T_FUNCTION) in /home/techconadmin/public_html/ebay_automation/application/controllers/backlogin.php on line 33
+[18-Jun-2017 15:52:15 UTC] PHP Parse error:  syntax error, unexpected '$data' (T_VARIABLE), expecting function (T_FUNCTION) in /home/techconadmin/public_html/ebay_automation/application/controllers/backlogin.php on line 33
+[18-Jun-2017 15:52:43 UTC] PHP Parse error:  syntax error, unexpected '$data' (T_VARIABLE), expecting function (T_FUNCTION) in /home/techconadmin/public_html/ebay_automation/application/controllers/backlogin.php on line 33
+[18-Jun-2017 15:52:51 UTC] PHP Parse error:  syntax error, unexpected '$data' (T_VARIABLE), expecting function (T_FUNCTION) in /home/techconadmin/public_html/ebay_automation/application/controllers/backlogin.php on line 33

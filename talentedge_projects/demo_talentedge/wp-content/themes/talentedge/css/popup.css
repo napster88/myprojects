@@ -1,0 +1,305 @@
+#privilege_member .modal-dialog, #admission_batch .modal-dialog, #payment_gateway_inner-container{
+	margin: 10% auto 0;
+}
+.modal-dialog {
+    width: 600px;
+}
+.modal-content {
+    background-color: #fff;
+    border-radius: 0;
+}
+#privilege_member .modal-content {
+    float: left;
+    border: none;
+}
+button.close{
+	background-image: url(../images/close-icon.png);
+	background-repeat: no-repeat;
+	height: 25px;
+	opacity: 1;
+	position: absolute;
+	right: 14px;
+	top: 14px;
+	width: 25px;
+	z-index: 999999;
+	outline: none;
+}
+.privilege_member_inner-container{
+	background-color: #fff;
+	padding: 0 0 25px;
+	float: left;
+}
+.privilege_member_inner_top{
+	padding: 0 45px 25px;
+	float: left;
+}
+.privilege_member_inner_top h1{
+	color: #f26522;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 28px;
+    margin: 0;
+    padding: 40px 15px 25px;
+    text-align: center;
+    text-transform: uppercase; 
+}
+.privilege_member_inner_top p{
+	color: #262525;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 16px;
+	margin: 0;
+	padding: 0 15px 30px;
+}
+.privilege_popup_form{
+	width: 100%;
+	float: left;
+	margin: 0 0 18px;
+	padding: 0 30px;
+}
+.privilege_popup_form_input{
+	float: left;
+    position: relative;
+}
+.privilege_popup_form_input input{
+	border: 1px solid #ccc;
+    color: #a7a7a7;
+    float: left;
+    font-size: 19px;
+    height: 58px;
+    line-height: 19px;
+    font-weight: 400;
+    margin: 2px 0 0;
+    outline: medium none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+.continue_btn{
+	background-color: #f26522;
+    border: 1px solid #f28a3f;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    color: #fff;
+    display: block;
+    font-size: 22px;
+    line-height: 22px;
+    margin: 0 auto;
+    outline: medium none;
+    padding: 20px 0;
+    position: relative;
+    width: 80%;
+}
+.privilege_member_inner_top .terms{
+	color: #8e8e8e;
+	font-size: 15px;
+	line-height: 15px;
+	font-weight: 400;
+	float: left;
+	padding: 0 45px;
+	margin: 25px 0 0;
+}
+.privilege_member_inner_bottom{
+	border-top: 1px solid #dedede;
+	padding: 25px 70px 0;
+}
+@media only screen and (max-width: 767px){
+	#privilege_member .modal-dialog, #admission_batch .modal-dialog, #payment_gateway_inner-container{
+	margin: 4% auto 0;
+}
+	.privilege_member_inner-container{
+		padding-bottom: 15px;
+	}
+	.modal-dialog {
+		width: auto;
+	}
+	.privilege_member_inner_top h1{
+		font-size: 24px;
+		line-height: 24px;
+		padding: 25px 0;
+	}
+	.privilege_member_inner_top p{
+		padding: 0 0 15px;
+		line-height: 18px;
+	}
+	.privilege_member_inner_top{
+		padding: 0 15px 15px;
+	}
+	.privilege_popup_form{
+		padding: 0;
+	}
+	.privilege_popup_form_input input{
+		font-size: 16px;
+
+	}
+	.privilege_member_inner_top .terms{
+		padding: 0 15px;
+		margin-top: 15px;
+	}
+	.privilege_member_inner_bottom{
+		padding: 15px 15px 0;
+	}
+	.continue_btn{
+		width: 90%;
+	}
+}
+@media only screen and (min-width: 600px)and (max-width: 767px){
+	.modal-dialog {
+		width: 480px;
+	}
+}
+/*code for admission popup*/
+.admission_batch_inner-container{
+	background-color: #fff;
+	padding: 0 35px 35px;
+	float: left;
+	width: 100%;
+}
+.admission_batch_inner-container h1{
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 24px;
+	color: #234b91;
+	display: block;
+	margin: 0;
+	padding: 35px 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+button.admission_close{
+	background-image: url(../images/close-btn-lite.png);
+	background-repeat: no-repeat;
+	height: 35px;
+	opacity: 1;
+	position: absolute;
+	right: -18px;
+	top: -18px;
+	width: 35px;
+	z-index: 999999;
+	outline: none;
+	border: none;
+	background-color: transparent;
+}
+.admission_batch_inner-container h2{
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 20px;
+	color: #424242;
+	display: block;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.popup_btn_container{
+	width: 100%;
+	padding: 35px 25px 25px;
+}
+.confirm_btn, .reject_btn{
+	background-color: #f36523;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	font-size: 22px;
+	line-height: 22px;
+	color: #fff;
+	text-align: center;
+	padding: 15px;
+	width: 200px;
+	border: 0;
+}
+.reject_btn{
+	background-color: #444;
+}
+.confirm_btn span, .reject_btn span{
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+}
+@media only screen and (max-width: 767px){
+	button.admission_close{
+		right: 5px;
+		top: 5px;
+	}
+	.admission_batch_inner-container{
+		padding: 0 15px 15px;
+	}
+	.admission_batch_inner-container h1{
+		padding: 35px 0 15px;
+	}
+	.admission_batch_inner-container h2{
+		font-size: 16px;
+	}
+	.popup_btn_container{
+		padding: 15px 0 0;
+	}
+	.confirm_btn, .reject_btn{
+		margin: 0 auto;
+		display: block;
+	}
+	.confirm_btn{
+		margin-bottom: 15px;
+	}
+}
+/*code for admission popup*/
+/*code for payment popup*/
+.payment_gateway_inner-container{
+	background-color: #fff;
+	padding: 0 0 20px;
+	float: left;
+	width: 100%;
+}
+.payment_gateway_inner-container_top{
+	padding: 0 35px 20px;
+}
+.payment_gateway_inner-container_top p{
+	color: #161616;
+	font-size: 20px;
+	line-height: 28px;
+	text-align: center;
+	margin: 0;
+	padding: 60px 0 45px;
+}
+.payment_confirmation_btn_cont{
+	overflow: hidden;
+	padding-bottom: 60px;
+}
+.cancel_btn{
+	background-color: #707070;
+    border: 1px solid #707070;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    color: #fff;
+    display: block;
+    float: left;
+    font-size: 22px;
+    line-height: 22px;
+    outline: medium none;
+    padding: 20px 0;
+    position: relative;
+    width: 80%;
+}
+.img-right{
+	float: right;
+}
+@media only screen and (max-width: 767px){
+	.payment_gateway_inner-container_top {
+    	padding: 0 15px 15px;
+	}
+	.payment_gateway_inner-container_top p{
+		font-size: 16px;
+		line-height: 22px;
+		padding: 40px 0 25px;
+	}
+	.cancel_btn{
+		width: 90%;
+		margin: 15px auto 0;
+		float: none;
+		display: block;
+	}
+	.payment_confirmation_btn_cont{
+		padding-bottom: 20px;
+	}
+}
+/*code for payment popup*/

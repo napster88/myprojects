@@ -1,0 +1,2 @@
+[12-Jun-2017 06:58:49 UTC] PHP Parse error:  syntax error, unexpected '...' (T_ELLIPSIS) in /home/techconadmin/public_html/najez/application/config/database.php on line 70
+[12-Jun-2017 06:58:52 UTC] PHP Parse error:  syntax error, unexpected '...' (T_ELLIPSIS) in /home/techconadmin/public_html/najez/application/config/database.php on line 70

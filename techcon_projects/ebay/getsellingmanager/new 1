@@ -1,0 +1,68 @@
+<?php 
+
+ 
+  
+
+	
+	insertUrl();
+	
+
+
+ function insertUrl()
+{
+	
+	
+	//$myConnection=mysqli_connect ('182.50.133.89','kapil30oct1988' ,'kapil30oct1988','jobformdb');
+
+
+	$myConnection=mysqli_connect ('localhost','root' ,'','counter_check');
+
+
+extract($_POST);
+
+
+$first_name=$_POST['your-name'];
+
+$middle_name=$_POST['middle-name'];
+
+$last_name=$_POST['last-name'];
+
+$armed=isset($_POST['armed'])?$_POST['armed']:'';
+
+$federal=isset($_POST['federal'])?$_POST['federal']:'';
+
+$veicle=isset($_POST['veicle'])?$_POST['veicle']:'';
+
+
+
+
+	$target_dir = "Resume/";
+	
+	 $file_namem=str_replace(" ","-",basename($_FILES["file_name"]["name"]));
+	$target_file = $target_dir . $file_namem;
+	$uploadOk = 1;
+	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+
+
+		 
+		if (move_uploaded_file($_FILES["file_name"]["tmp_name"], $target_file)) {
+		// echo $name=$file_namem;
+		
+		 $url=$_SERVER['SERVER_NAME'] ."/".basename(dirname($_SERVER['PHP_SELF'])).'/Resume/'.$file_namem;
+
+$query="INSERT INTO `StudentInfoForm`( `first-name`, `middle-name`, `phone`, `last-name`, `pincode_field`, `user_mail`, `experiencefile`, `specify`, `employer`, `experience`, `option1`, `option2`, `option3`, `consult`, `workus`, `armed`, `federal`, `veicle`, `message`, `human`, `created_date`) VALUES ('$first_name','$middle_name','$phone','$last_name','$pincode_field','$user_mail','$url','$specify','$employer', '$experience','$option1','$option2','$option3','$consult','$workus','$armed','$federal','$veicle','$message','$human',now())";
+
+$result = mysqli_query($myConnection,$query);
+		
+       // echo "The file ". $file_namem. " has been uploaded.";
+	   header("Location: join-us.html");
+    } else {
+        echo "Sorry, there was an error uploading your file.";
+    }
+
+
+}
+
+
+
+?>

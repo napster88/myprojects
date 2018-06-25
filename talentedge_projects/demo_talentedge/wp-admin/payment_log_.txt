@@ -1,0 +1,572 @@
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => shikha.swagata@gmail.com
+    [mobile] => 8811070996
+    [batch_crm_id] => 89843687-bc3f-b37f-7470-591204b7a4e0
+    [amount] => 10620.00
+    [tax] => 1620
+    [payment_date] => 2018-02-11
+    [payment_realized] => yes
+    [payment_source] => payu_in
+    [payment_referencenum] => b0df0810837120f5be86
+    [payment_id] => 40321
+    [discount] => 
+    [invoice_number] => 
+    [taxtype] => igst
+    [tax1] => 18
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40321&nonce=401b67a66f
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40321&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => s.mishra@bankofbaroda.com
+    [mobile] => 8696999936
+    [batch_crm_id] => 3a98e1dd-0f17-6ed2-451a-590c515a3a89
+    [amount] => 17250.00
+    [tax] => 2250
+    [payment_date] => 2017-10-26
+    [payment_realized] => yes
+    [payment_source] => other
+    [payment_referencenum] => 
+    [payment_id] => 40720
+    [discount] => 
+    [invoice_number] => 
+    [taxtype] => 
+    [tax1] => 
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40720&nonce=ecd9c4386f
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40720&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => s.mishra@bankofbaroda.com
+    [mobile] => 8696999936
+    [batch_crm_id] => 3a98e1dd-0f17-6ed2-451a-590c515a3a89
+    [amount] => 17250.00
+    [tax] => 2250
+    [payment_date] => 2017-10-26
+    [payment_realized] => yes
+    [payment_source] => other
+    [payment_referencenum] => 
+    [payment_id] => 40720
+    [discount] => 
+    [invoice_number] => 
+    [taxtype] => 
+    [tax1] => 
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40720&nonce=ecd9c4386f
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40720&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => soodboby@yahoo.co.in
+    [mobile] => 9670007210
+    [batch_crm_id] => 6356f1a3-d26e-0bd2-9fc8-5a44e5cd17f6
+    [amount] => 26550.00
+    [tax] => 4050
+    [payment_date] => 2018-01-17
+    [payment_realized] => yes
+    [payment_source] => other
+    [payment_referencenum] => 
+    [payment_id] => 40740
+    [discount] => 
+    [invoice_number] => 
+    [taxtype] => igst
+    [tax1] => 18
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40740&nonce=ecd9c4386f
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40740&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => soodboby@yahoo.co.in
+    [mobile] => 9670007210
+    [batch_crm_id] => 6356f1a3-d26e-0bd2-9fc8-5a44e5cd17f6
+    [amount] => 26550.00
+    [tax] => 4050
+    [payment_date] => 2018-01-17
+    [payment_realized] => yes
+    [payment_source] => other
+    [payment_referencenum] => 
+    [payment_id] => 40740
+    [discount] => 
+    [invoice_number] => 17-18-02-567
+    [taxtype] => igst
+    [tax1] => 18
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40740&nonce=ecd9c4386f
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40740&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => hhemalmehta@gmail.com
+    [mobile] => 9723893706
+    [batch_crm_id] => df0f2694-b97d-d2af-2c3f-59b693d12ae4
+    [amount] => 29500.00
+    [tax] => 4500
+    [payment_date] => 2018-02-02
+    [payment_realized] => yes
+    [payment_source] => other
+    [payment_referencenum] => 
+    [payment_id] => 40744
+    [discount] => 
+    [invoice_number] => 
+    [taxtype] => igst
+    [tax1] => 18
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40744&nonce=ecd9c4386f
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40744&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => hhemalmehta@gmail.com
+    [mobile] => 9723893706
+    [batch_crm_id] => df0f2694-b97d-d2af-2c3f-59b693d12ae4
+    [amount] => 29500.00
+    [tax] => 4500
+    [payment_date] => 2018-02-02
+    [payment_realized] => yes
+    [payment_source] => other
+    [payment_referencenum] => 
+    [payment_id] => 40744
+    [discount] => 
+    [invoice_number] => 
+    [taxtype] => igst
+    [tax1] => 18
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40744&nonce=ecd9c4386f
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40744&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => unlimitedreveries@gmail.com
+    [mobile] => 9999023445
+    [batch_crm_id] => df0f2694-b97d-d2af-2c3f-59b693d12ae4
+    [amount] => 29500.00
+    [tax] => 4500
+    [payment_date] => 2018-02-16
+    [payment_realized] => yes
+    [payment_source] => other
+    [payment_referencenum] => 
+    [payment_id] => 40855
+    [discount] => 
+    [invoice_number] => 
+    [taxtype] => igst
+    [tax1] => 18
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40855&nonce=4135983ca2
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40855&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => unlimitedreveries@gmail.com
+    [mobile] => 9999023445
+    [batch_crm_id] => df0f2694-b97d-d2af-2c3f-59b693d12ae4
+    [amount] => 29500.00
+    [tax] => 4500
+    [payment_date] => 2018-02-16
+    [payment_realized] => yes
+    [payment_source] => other
+    [payment_referencenum] => 
+    [payment_id] => 40855
+    [discount] => 
+    [invoice_number] => 
+    [taxtype] => igst
+    [tax1] => 18
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40855&nonce=4135983ca2
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40855&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => 
+    [mobile] => 8884224628
+    [batch_crm_id] => df0f2694-b97d-d2af-2c3f-59b693d12ae4
+    [amount] => 29500.00
+    [tax] => 4500
+    [payment_date] => 2018-02-10
+    [payment_realized] => yes
+    [payment_source] => other
+    [payment_referencenum] => 
+    [payment_id] => 40856
+    [discount] => 
+    [invoice_number] => 
+    [taxtype] => igst
+    [tax1] => 18
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40856&nonce=4135983ca2
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40856&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => 
+    [mobile] => 8884224628
+    [batch_crm_id] => df0f2694-b97d-d2af-2c3f-59b693d12ae4
+    [amount] => 29500.00
+    [tax] => 4500
+    [payment_date] => 2018-02-10
+    [payment_realized] => yes
+    [payment_source] => other
+    [payment_referencenum] => 
+    [payment_id] => 40856
+    [discount] => 
+    [invoice_number] => 17-18-02-579
+    [taxtype] => igst
+    [tax1] => 18
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40856&nonce=4135983ca2
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40856&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => arijit@datagames.com.au
+    [mobile] => 9831129515
+    [batch_crm_id] => df0f2694-b97d-d2af-2c3f-59b693d12ae4
+    [amount] => 29500.00
+    [tax] => 4500
+    [payment_date] => 2018-02-10
+    [payment_realized] => yes
+    [payment_source] => other
+    [payment_referencenum] => 
+    [payment_id] => 40857
+    [discount] => 
+    [invoice_number] => 
+    [taxtype] => igst
+    [tax1] => 18
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40857&nonce=4135983ca2
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40857&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => arijit@datagames.com.au
+    [mobile] => 9831129515
+    [batch_crm_id] => df0f2694-b97d-d2af-2c3f-59b693d12ae4
+    [amount] => 29500.00
+    [tax] => 4500
+    [payment_date] => 2018-02-10
+    [payment_realized] => yes
+    [payment_source] => other
+    [payment_referencenum] => 
+    [payment_id] => 40857
+    [discount] => 
+    [invoice_number] => 
+    [taxtype] => igst
+    [tax1] => 18
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40857&nonce=4135983ca2
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40857&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => shameenlewis@gmail.com
+    [mobile] => 7433188921
+    [batch_crm_id] => df0f2694-b97d-d2af-2c3f-59b693d12ae4
+    [amount] => 29500.00
+    [tax] => 4500
+    [payment_date] => 2018-02-01
+    [payment_realized] => yes
+    [payment_source] => other
+    [payment_referencenum] => 
+    [payment_id] => 40860
+    [discount] => 
+    [invoice_number] => 
+    [taxtype] => igst
+    [tax1] => 18
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40860&nonce=4135983ca2
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40860&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => shameenlewis@gmail.com
+    [mobile] => 7433188921
+    [batch_crm_id] => df0f2694-b97d-d2af-2c3f-59b693d12ae4
+    [amount] => 29500.00
+    [tax] => 4500
+    [payment_date] => 2018-02-01
+    [payment_realized] => yes
+    [payment_source] => other
+    [payment_referencenum] => 
+    [payment_id] => 40860
+    [discount] => 
+    [invoice_number] => 
+    [taxtype] => igst
+    [tax1] => 18
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40860&nonce=4135983ca2
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40860&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => anuragkumar2604@yahoo.com
+    [mobile] => 9899259730
+    [batch_crm_id] => 2b5fa481-602f-7e5b-b5ea-59835e0b72a2
+    [amount] => 23600.00
+    [tax] => 3600
+    [payment_date] => 2018-02-17
+    [payment_realized] => yes
+    [payment_source] => payu_in
+    [payment_referencenum] => 40aade4d53ba4cb1072a
+    [payment_id] => 40747
+    [discount] => 
+    [invoice_number] => 
+    [taxtype] => igst
+    [tax1] => 18
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40747&nonce=4a3228249f
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40747&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => avrajyotipal@gmail.com
+    [mobile] => 9724173837
+    [batch_crm_id] => 4c0d4388-69c9-a551-70c6-59f9b972e421
+    [amount] => 17700.00
+    [tax] => 2700
+    [payment_date] => 2018-02-13
+    [payment_realized] => yes
+    [payment_source] => other
+    [payment_referencenum] => 
+    [payment_id] => 40861
+    [discount] => 
+    [invoice_number] => 
+    [taxtype] => igst
+    [tax1] => 18
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40861&nonce=4135983ca2
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40861&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => avrajyotipal@gmail.com
+    [mobile] => 9724173837
+    [batch_crm_id] => 4c0d4388-69c9-a551-70c6-59f9b972e421
+    [amount] => 17700.00
+    [tax] => 2700
+    [payment_date] => 2018-02-13
+    [payment_realized] => yes
+    [payment_source] => other
+    [payment_referencenum] => 
+    [payment_id] => 40861
+    [discount] => 
+    [invoice_number] => 
+    [taxtype] => igst
+    [tax1] => 18
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40861&nonce=4135983ca2
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40861&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => karthiksripati@yahoo.com
+    [mobile] => 9666665647
+    [batch_crm_id] => 4c0d4388-69c9-a551-70c6-59f9b972e421
+    [amount] => 17700.00
+    [tax] => 2700
+    [payment_date] => 2018-02-17
+    [payment_realized] => yes
+    [payment_source] => other
+    [payment_referencenum] => 
+    [payment_id] => 40863
+    [discount] => 
+    [invoice_number] => 
+    [taxtype] => igst
+    [tax1] => 18
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40863&nonce=4135983ca2
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40863&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => karthiksripati@yahoo.com
+    [mobile] => 9666665647
+    [batch_crm_id] => 4c0d4388-69c9-a551-70c6-59f9b972e421
+    [amount] => 17700.00
+    [tax] => 2700
+    [payment_date] => 2018-02-17
+    [payment_realized] => yes
+    [payment_source] => other
+    [payment_referencenum] => 
+    [payment_id] => 40863
+    [discount] => 
+    [invoice_number] => 
+    [taxtype] => igst
+    [tax1] => 18
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40863&nonce=4135983ca2
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40863&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => gvajjala@gmail.com
+    [mobile] => 9493977993
+    [batch_crm_id] => b72e75a4-5803-3d2d-ba59-5a3bb60a0bce
+    [amount] => 35400.00
+    [tax] => 5400
+    [payment_date] => 2018-02-07
+    [payment_realized] => yes
+    [payment_source] => other
+    [payment_referencenum] => 
+    [payment_id] => 40864
+    [discount] => 
+    [invoice_number] => 
+    [taxtype] => igst
+    [tax1] => 18
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40864&nonce=4135983ca2
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40864&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => gvajjala@gmail.com
+    [mobile] => 9493977993
+    [batch_crm_id] => b72e75a4-5803-3d2d-ba59-5a3bb60a0bce
+    [amount] => 35400.00
+    [tax] => 5400
+    [payment_date] => 2018-02-07
+    [payment_realized] => yes
+    [payment_source] => other
+    [payment_referencenum] => 
+    [payment_id] => 40864
+    [discount] => 
+    [invoice_number] => 17-18-02-580
+    [taxtype] => igst
+    [tax1] => 18
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40864&nonce=4135983ca2
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40864&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => snltrivedi180@gmail.com
+    [mobile] => 8604591473
+    [batch_crm_id] => b72e75a4-5803-3d2d-ba59-5a3bb60a0bce
+    [amount] => 82600.00
+    [tax] => 12600
+    [payment_date] => 2018-02-16
+    [payment_realized] => yes
+    [payment_source] => other
+    [payment_referencenum] => 
+    [payment_id] => 40944
+    [discount] => 
+    [invoice_number] => 
+    [taxtype] => igst
+    [tax1] => 18
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40944&nonce=c603d2821a
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40944&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => snltrivedi180@gmail.com
+    [mobile] => 8604591473
+    [batch_crm_id] => b72e75a4-5803-3d2d-ba59-5a3bb60a0bce
+    [amount] => 82600.00
+    [tax] => 12600
+    [payment_date] => 2018-02-16
+    [payment_realized] => yes
+    [payment_source] => other
+    [payment_referencenum] => 
+    [payment_id] => 40944
+    [discount] => 
+    [invoice_number] => 17-18-02-601
+    [taxtype] => igst
+    [tax1] => 18
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40944&nonce=c603d2821a
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40944&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => shashwat403@gmail.com
+    [mobile] => 9082628149
+    [batch_crm_id] => 83bb5f4b-4d57-3ab0-dfd5-5991da4c5a99
+    [amount] => 29500.00
+    [tax] => 4500
+    [payment_date] => 2018-02-21
+    [payment_realized] => yes
+    [payment_source] => other
+    [payment_referencenum] => 
+    [payment_id] => 40990
+    [discount] => 
+    [invoice_number] => 
+    [taxtype] => igst
+    [tax1] => 18
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40990&nonce=c603d2821a
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40990&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)
+Array
+(
+    [action] => add
+    [currency] => INR
+    [email] => shashwat403@gmail.com
+    [mobile] => 9082628149
+    [batch_crm_id] => 83bb5f4b-4d57-3ab0-dfd5-5991da4c5a99
+    [amount] => 29500.00
+    [tax] => 4500
+    [payment_date] => 2018-02-21
+    [payment_realized] => yes
+    [payment_source] => other
+    [payment_referencenum] => 
+    [payment_id] => 40990
+    [discount] => 
+    [invoice_number] => 
+    [taxtype] => igst
+    [tax1] => 18
+    [payment_type] => 
+    [receipt_url] => https://talentedge.in/wp-admin/admin-ajax.php?action=downloadrec&post=40990&nonce=c603d2821a
+    [invoice_url] => https://talentedge.in/wp-admin/post.php?post=40990&action=edit&bewpi_action=view&nonce=ee1c319f5e
+)

@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /wp-admin/
+Disallow: */?*
+Disallow: /edit-profile/
+Disallow: /checkout/
+Disallow: /testimonial/
+Disallow: /referrals/

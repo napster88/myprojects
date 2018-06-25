@@ -1,0 +1,546 @@
+@import './colors';
+@import './mixin';
+
+h1 {
+    @include title-h2($white, $oswalt, 50px);
+    line-height: 1.4;
+    font-weight: $fontBold;
+    max-width: 730px;
+}
+h2{
+    font-size: 30px;
+    // font-family: $oswalt;
+    font-weight: bold;
+}
+h3{
+    font-size: 28px;
+    font-weight: bold;
+}
+h5{
+    font-size: 18px;
+}
+h6{
+    font-size: 14px;
+}
+.white{
+    color: $white !important;
+}
+p{
+    color: #717171;
+}
+.black-clr{
+    color: $black;
+}
+.text-blue{
+    color: $blueBg;
+}
+.margin-top-45{
+    margin-top: 45px;
+}
+.margin-bottom-45{
+    margin-bottom: 45px;
+}
+.margin-top-25{
+    margin-top: 25px;
+}
+.margin-bottom-25{
+    margin-bottom: 25px;
+}
+
+.gray_bg{
+    background: #f6f6f6 !important;
+}
+.blue_bg{
+    background-color: #244895 !important;
+}
+
+.darkOrange{
+    color: #ff6600;
+}
+.lightOrange{
+    color: #ffac0a;
+}
+.lightOrange_bg{
+    background-color: #ffac0a;  
+}
+.pad-LR-35{
+    padding-left: 35px;
+    padding-right: 35px;
+}
+.border-bottom{
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 25px;
+}
+.text-bold{
+    font-weight: bold;
+}
+
+.border-line{
+    position: relative;
+    display: inline-block;
+    padding-bottom: 4px;
+    &:after{
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        width: 36px;
+        height: 2px;
+        background-color: $blueBg;
+        content: "";
+        display: inline-block;
+    }
+    &.border-center{
+        &:after{
+            left: 50%;
+            margin-left: -18px;
+        }
+    }
+}
+
+
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Banner Section 
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+        .coverImg{
+            position: relative;
+            .zIndex2{
+                position: relative;
+                z-index: 2;
+            }
+        }
+        .overlay{
+            position: absolute;
+            content: "";
+            display: block;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1;
+        }
+        .te-banner-top {
+            background: #244895;
+            min-height: 150px;
+            color: $white;
+            .left-te {
+                padding: 26vh 0 25vh;
+                .banner-components {
+                    padding-bottom: 0;
+                    p{
+                        color: #fdf9f9;
+                        margin-top: 12px;
+                        line-height: 1.4;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                    }
+                    h1{
+                        margin: 0 auto 10px;
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width: 768px){
+            .te-banner-top .left-te{
+                padding: 50px 0 50px;
+                h3{
+                    font-size: 18px;
+                }
+                h1{
+                    font-size: 35px;
+                }
+            }
+        }
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        leadership Grid section
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    .tab-pane h2 {
+        font-size: 24px;
+    }
+        .offerSection{
+            .tab-pane{
+                padding: 20px;
+                min-width: 100%;
+                width: 100% !important;
+                border: none;
+                border-top: none;
+                p{
+                    margin-bottom: 15px;
+                    &:last-child{
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+            .nav-tabs.nav-justified{
+                border: none;
+                li{
+                    vertical-align: top;
+                    border-bottom: 1px solid #ebebeb;
+                    a{
+                        color: #6e6e6e;
+                        margin-right: 0 !important;
+                        border: none;
+                        @include border-radius(0);
+                        vertical-align: top;
+                        padding: 0 0 10px;
+                        display: inline-block;
+                        span{
+                            display: inline-block;
+                            text-align: center;
+                            font-size: 18px;
+                            position: relative;
+                            &:after{
+                              position: absolute;
+                              bottom: -10px;
+                              left: 50%;
+                              margin-left: -20px;
+                              width: 44px;
+                              height: 2px;
+                              background-color: $blueBg;
+                              content: "";
+                              display: inline-block;
+                              display: none;
+                            }
+                        }
+                        &:hover,
+                        &:focus{
+                          background: none;
+                          border: none;
+                          outline: none;
+                        }
+                    }
+                    &.active{
+                        a{
+                            color: $blueBg;
+                            border-right: none;
+                            font-weight: bold;
+                            span:after{
+                              display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .downArrow{
+          display: none;
+        }
+        @media only screen and (max-width: 991px){
+            .offerSection {
+                .tab-pane{
+                    border-top: 1px solid #f5f5f5;
+                }
+                .tab-content{
+                    .accordion-link{
+                        background: #f3f3f3;
+                        border: 1px solid #f3f3f3;
+                        @include border-radius(0);
+                        position: relative;
+                    }
+                    .tab-pane{
+                        margin-top: -10px;
+                        padding: 0px;
+                        img{
+                            padding-top: 10px;
+                        }
+                    }
+                }
+            }
+            .downArrow{
+              display: block;
+            }
+        }
+
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        leadership Grid section
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+      ul.list-contact {
+          width: 100%;
+          overflow: hidden;
+          li{
+            padding-top: 8px;
+            &:nth-child(odd){
+              padding-right: 15px;
+            }
+              display: table;
+              width: 50%;
+              float: left;
+              padding-bottom: 25px;
+              padding-top: 15px;
+              .logo-favicon{
+                  padding-right: 20px;
+                  img{
+                      max-width: 50px;
+                  }
+              }
+              .cell{
+                  display: table-cell;
+                  vertical-align: top;
+                  font-size: 14px;
+              }
+              h5{
+                  color: $blueBg;
+                  margin-bottom: 15px;
+                  font-size: 20px;
+              }
+              .contact_no{
+                  a{
+                      color: $blueBg;
+                  }
+              }
+          }
+      }
+
+      @media only screen and (min-width: 568px) and (max-width: 666px){
+        .contact_no{
+          a{
+            display: block;
+          }
+        }
+      }
+      @media only screen and (max-width: 567px){
+        ul.list-contact li {
+          width: 100%;
+          &:nth-child(odd){
+            padding-right: 0;
+          }
+          .logo-favicon {
+            img{
+              max-width: 30px;
+            }
+            + .cell{
+              padding-right: 15px;
+              font-size: 14px;
+              h5{
+                font-size: 16px;
+                margin-bottom: 8px;
+              }
+            }
+          }
+        }
+        .offerSection .tab-pane p{
+          margin-bottom: 5px;
+        }
+        .tab-pane{
+          padding-top: 15px;
+        }
+      }
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    gform style 
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+      .form-wrapper .gform_wrapper{
+        max-width: 100%;
+        padding: 0 15px 15px 15px;
+        border: 1px solid #ebebeb;
+        @include border-radius(3px);
+        max-width: 350px;
+        margin: 0 auto 0 auto;
+      }
+      #gform_15,
+      #gform_16{
+        margin-top: 15px;
+        ul{
+          list-style: none;
+          padding-left: 0;
+          margin-bottom: 0;
+          width: 100%;
+          &.gfield_checkbox {
+            text-align: left;
+          }
+        }
+        .gform_body{
+            text-align: center;
+            margin: 0;
+            .gfield_label{
+                display: none;
+            }
+            .gfield{
+                padding: 0;
+                margin: 0 0 12px;
+                width: 100%;
+                display: inline-block;
+                vertical-align: top;
+                &:first-child{
+                  padding-left:0px;
+                }
+                &.description_subscribe{
+                    font-size: 14px;
+                    text-transform: capitalize;
+                }
+                &.gfield_error{
+                    background: none !important;
+                    margin-bottom: 0 !important;
+                    border: none;
+                }
+                &:last-child{
+                    margin-bottom: 0px;
+                }
+            }
+            .ginput_container{
+                position: relative;
+                overflow: hidden;
+                margin-top: 0;
+                input,
+                textarea{
+                  min-height: 40px;
+                  padding: 0 5px;
+                  color: #333;
+                  border: none;
+                  border-bottom: 1px solid #dedddd;
+                  background-color: transparent;
+                  -webkit-appearance: none;
+                  @include border-radius(0);
+                  box-shadow: none;
+                  margin-bottom: 0;
+                  width: 100%;
+                  &:focus{
+                    box-shadow: none;
+                    border-bottom-color: $blueBg;
+                    outline: none;
+                  }
+                  &::-webkit-input-placeholder {
+                    color: #adadad;
+                  }
+                  &:-moz-placeholder {
+                      /* Firefox 18- */
+                      color: #adadad;
+                  }
+                  &::-moz-placeholder {
+                      /* Firefox 19+ */
+                      color: #adadad;
+                  }
+                  &:-ms-input-placeholder {
+                      color: #adadad;
+                  }
+              }
+              textarea{
+                height: 100px;
+                border: 1px solid #adadad;
+                margin-top: 18px;
+                color: #333;
+                &:focus{
+                  border-color: #dedddd;
+                }
+              }
+              select{
+                  background: url(../images/arrow-down-grey.png) no-repeat;
+                  background-position: 96% center;
+                  padding-right: 30px;
+                  border: none;
+                  border-bottom: 1px solid #dedddd;
+                  color: #333;
+                  width: 100%;
+                  min-height: 40px;
+                  -webkit-appearance: none;
+                  -moz-appearance: none;
+                  text-indent: 1px;
+                  text-overflow: '';
+                  &:hover,
+                  &:focus{
+                      outline: none;
+                  }
+                  option{
+                      color: #333;
+                      background: #fff;
+                  }
+              }
+            }
+            .ginput_container_checkbox{
+                li{
+                    @include checkBox;
+                    label{
+                        font-size: 13px;
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+        .gform_footer {
+            margin-top: 0;
+            padding-top: 0;
+            text-align: center;
+            padding-bottom: 0px;
+            input[type="submit"]{
+              background-color: #f26522;
+              color: #ffffff;
+              padding: 12px 35px;
+              border: 0px;
+              border-radius: 5px;
+              min-width: 150px;
+              max-width: 260px;
+              margin-top: 0;
+              font-size: 14px;
+              display: block;
+              margin:15px auto 5px auto;
+              text-transform: uppercase;
+              &:hover{
+                  text-decoration: none;
+              }
+            }
+        }
+
+        /* error message */
+        .gform_heading{
+            margin: 0;
+            span{
+                margin: 0px;
+            }
+        }
+        div{
+           &.validation_error{
+            color: $error;
+            line-height: 1.3;
+            font-weight: normal;
+            font-size: 14px;
+            text-align: left;
+            border: none;
+            margin: 0 0 10px;
+            padding: 0;
+            display: none;
+           } 
+        }
+        .gfield_description{
+            padding-top: 0;
+        }
+        .validation_message{
+            color: $error;
+            line-height: 1.3;
+            font-weight: normal;
+            font-size: 14px;
+            text-align: left;
+            background: none;
+        }
+      }
+
+      @media only screen and (max-width: 991px){
+        .form-wrapper .gform_wrapper{
+          margin-top: 20px;
+        }
+      }
+      @media only screen and (max-width: 567px){
+        #gform_15,
+        #gform_16 {
+          .gform_footer input[type="submit"]{
+            margin-top: 30px;
+          }
+            .gform_body .gfield{
+              width: 100%;
+              padding: 0;
+              margin-bottom: 15px;
+            }
+        }
+      }
+
+
+
+
+
+
+
+

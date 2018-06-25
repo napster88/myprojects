@@ -1,0 +1,30 @@
+#clients{
+    .clientsdiv .wrapper-flex{
+        display: -webkit-flexbox;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+        padding: 40px 0;
+        line-height: 1.5;
+        .col{
+            flex: 2;
+            img{
+                // max-width: 150px;
+            }
+        }
+        .clientcnt{
+            li{
+                margin-bottom: 15px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

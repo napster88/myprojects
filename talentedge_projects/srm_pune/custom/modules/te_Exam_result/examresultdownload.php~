@@ -1,0 +1,403 @@
+<?php
+if (!defined('sugarEntry')) {
+    define('sugarEntry', true);
+}
+require_once 'include/entryPoint.php';
+require_once('modules/ACL/ACLController.php');
+?>
+<!DOCTYPE html>
+<html>
+		<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<title>Exam Result</title>
+				
+				<style type="text/css">
+				.modalContentpop th, .modalContentpop td {
+					border: none;
+					padding: 0;
+					width: 240px;   
+				}
+				.modalContentpop {
+					background-color: #F6F6F6 !important;;
+					border-bottom-right-radius: 0px !important;
+					border-bottom-left-radius: 0px !important;
+					padding: 10px 30px !important;
+					overflow: auto;
+					min-height:none !important;
+				}
+				.modalContentpop input[type=text]{
+					WIDTH: 190PX !important;
+				}
+				.modalContentpop select {
+					WIDTH: 190PX !important;
+				}
+				.modalContentpop textarea {
+					WIDTH: 190PX !important;
+				}
+				.dumbBoxpop {
+					width: 80% !important;
+					position: relative;
+					margin: 0 auto;
+					background-color: white !important;
+					padding: -1px;
+					border: 2px solid #009688;
+					border-radius: 0px !important;
+				}
+				.modalHeaderpop h4 {
+					margin: 6px 0 5px 0 !important;
+					color: #fff;
+				}
+				.closeModalpop {
+					top: 7px !important;
+				}
+				.head_textpop {
+					display: inline-block;
+					max-width: 100%;
+					margin-top: 8px;
+					font-weight: 700;
+					font-size:14px;
+				}
+				.modalHeaderpop {
+					min-height: 41px !important;
+					background: #333 none repeat scroll 0 0 !important;
+					border-top-left-radius: 0px !important;
+					border-top-right-radius: 0px !important;
+					border-bottom: 2px solid #CCC!important;
+					text-align: -webkit-center;
+					text-align: center;
+					padding-top: 6px !important;
+				}
+				.vertical-offsetpop {
+					width: 85% !important;
+				}
+				.buttonpop {
+					background-color: #ef5350 !important;
+					margin: 10px 0px !important;
+					padding: 10px 115px !important;
+					font-size: 16px !important;
+				}
+				.button {
+					background-color: #ef5350 !important;
+					margin: 10px 0px !important;
+					padding: 9px 115px !important;
+					font-size: 16px !important;
+					width:30px;
+				}
+				.text {
+					margin:  7px 0px !important;
+					padding: 6px 21px !important;
+					font-size: 20px  !important;
+				}
+
+
+				</style>
+				<script type="text/javascript">
+				Calendar.setup ({
+				   inputField : "date_of_prospect_date_d",
+				   daFormat : "%Y-%m-%d %I:%M%P",
+				   button : "date_of_prospect_trigger_d",
+				   singleClick : true,
+				   dateStr : "",
+				   step : 1,
+				   weekNumbers:false,
+				});
+
+				Calendar.setup ({
+				   inputField : "date_of_callback_date_d",
+				   daFormat : "%Y-%m-%d %I:%M%P",
+				   button : "date_of_callback_trigger_d",
+				   singleClick : true,
+				   dateStr : "",
+				   step : 1,
+				   weekNumbers:false,
+				});
+
+
+				Calendar.setup ({
+				   inputField : "date_of_followup_date_d",
+				   daFormat : "%Y-%m-%d %I:%M%P",
+				   button : "date_of_followup_trigger_d",
+				   singleClick : true,
+				   dateStr : "",
+				   step : 1,
+				   weekNumbers:false,
+				});
+				
+				</script></head>
+		<body>
+				<div class="dumbBoxWrap" id="atomBox"> 
+							<div class="dumbBoxOverlay"></div>
+								<div class="dumbBox dumbBoxpop">
+									<div class="modalHeader modalHeaderpop">
+										<h4>Exam Result</h4>
+											</div>
+												<div class="modalContent modalContentpop">
+														<span id="call_status" style="color:red">&nbsp;</span>
+														<form name="search_form" id="search_form" class="search_form" method="post" action="">
+																		<table width="100%" cellspacing="0" cellpadding="0" border="0">
+																			 <tbody>
+																					<tr>      
+																						<td scope="row" nowrap="nowrap" width="1%">		
+																							<label for="batch_basic">Enter Student Enrollment ID :</label>
+																						</td>
+																						<td nowrap="nowrap" width="10%">			
+																							<input name="enroll_id" type="text" class="text"  value="" id='enroll_id' required>
+																						</td>
+																					
+																						<td  colspan="8">
+																							<input tabindex="2" title="Search" onclick="SUGAR.savedViews.setChooser();" class="button" type="submit" name="search_form" value="Submit" id="search_enrollid">
+																						</td>
+																						
+																					</tr>
+																			</tbody>
+																		</table>
+															</form>
+																																
+<?php
+			if(isset($_POST['search_form']) && !empty($_POST['search_form']) && !empty($_POST['enroll_id'])){
+					global $db;		
+					if($_POST['enroll_id']!=""){
+						$enrollID=$_POST['enroll_id'];
+						$_SESSION['registration_no']=$_POST['enroll_id'];
+								
+						$sqls="SELECT s.`name`,s.email,s.id AS studentid,s.mobile,sb.added_specialization,b.id as batch_id,b.name as course,sb.id,sb.te_pr_programs_id_c as program,sb.te_in_institutes_id_c as institute_id,sb.current_sems AS currentsemid,csem.name AS currentsemname FROM `te_student` AS s INNER JOIN te_student_te_student_batch_1_c as ssbr ON ssbr.te_student_te_student_batch_1te_student_ida=s.id INNER JOIN te_student_batch as sb ON sb.id=ssbr.te_student_te_student_batch_1te_student_batch_idb INNER JOIN te_ba_batch AS b ON b.id=sb.te_ba_batch_id_c INNER JOIN te_te_semester AS csem ON sb.current_sems = csem.id WHERE s.deleted=0 AND s.`registration_no`='".$enrollID."'";
+								
+								$studentObj =$db->query($sqls);
+								$studentifo=array();
+								while($Srow =$db->fetchByAssoc($studentObj)){ 
+								
+									  $studentifo[]=$Srow;
+									  $studentID =$Srow['studentid'];
+									  $program_id=$Srow['program'];
+									  $currenrsemID =$Srow['currentsemid'];
+									  $institute_id=$Srow['institute_id'];
+									  $_SESSION['student']=$Srow['studentid'];
+								
+								}
+
+								/* fetch Booked Subject */
+									if(!empty($studentifo)){
+											
+										$data=resultSearch($studentID);
+										
+										$Inst="SELECT allow_score,allow_grade,allow_both from te_in_institutes where id='".$institute_id."'";
+										$instObj =$db->query($Inst);
+										$instSrow =$db->fetchByAssoc($instObj);
+										
+										$course_info="select `name` from te_pr_programs where id='".$program_id."'";
+										$get_course_info=$db->query($course_info);
+										$course_row =$db->fetchByAssoc($get_course_info);
+										
+										
+										/** FETCH SEMESTER FROM COURSE ID*/
+										$sem_info="SELECT t_sem.name,t_sem.id from te_te_semester t_sem INNER JOIN te_pr_programs_te_te_semester_1_c prog_sem  ON t_sem.id=prog_sem.te_pr_programs_te_te_semester_1te_te_semester_idb where prog_sem.te_pr_programs_te_te_semester_1te_pr_programs_ida='".$program_id."'";
+										$get_sem_info=$db->query($sem_info);
+										
+										while($sem_name =$db->fetchByAssoc($get_sem_info)){
+											
+											$semesters[]=$sem_name;
+										}
+										
+										/**LIST SUBJECT FROM EACH SEMESTER ID */
+										foreach($semesters as $sem){
+											$sem_data="SELECT te_subjects_master_te_te_semester_1te_subjects_master_ida as sub_id from te_subjects_master_te_te_semester_1_c where te_subjects_master_te_te_semester_1te_te_semester_idb='".$sem['id']."'";
+											$te_te_subject=$db->query($sem_data);
+											while($subid =$db->fetchByAssoc($te_te_subject)){
+												$subjectId[$sem['id']][]=$subid['sub_id'];
+											}
+										}
+										
+										foreach($data as $sub_id=>$marks_value){
+											foreach($subjectId as $k=>$value){
+												if(in_array($sub_id,$value)){
+												
+													$sql1="select `name` from `te_te_semester` where `id`='".$k."'";
+													$te_te_subject=$db->query($sql1);
+													$sem_name =$db->fetchByAssoc($te_te_subject);
+				
+													$sem_name1[$sub_id][]=$sem_name['name'];
+												}
+											}
+											
+											foreach($marks_value as $value){
+												$marksvalue[$value['exam_type']]=$value['total_marks'];
+											}
+											
+											$data_marks[$sub_id]=$marks_value['exam_type'];
+										}
+										
+										
+										?>
+										
+										<table cellpadding="0" cellspacing="0" width="100%" border="0" class="list view table footable-loaded footable default">
+													<thead></br></br><hr>
+																			<!-- Student Personal information Display -->
+															<?php foreach($studentifo as $info){
+																
+																?>
+																			<tr height="20">
+																						<td width="30%">
+																							<strong>Name-</strong><?php echo $info['name']?><br>
+																							<strong>Email-</strong><?php echo $info['email']?><br>
+																							<strong>Course-</strong><?php echo $course_row['name']?>
+																						</td>
+																						<td>
+																							<strong>Mobile-</strong><?php echo $info['mobile']?><br>
+																							<strong>Specialization-</strong><?php echo $info['added_specialization']?><br>
+																							<strong>Current Semester-</strong><?php echo $info['currentsemname']?>
+																						</td>
+																					</tr>
+																					<br>
+																				</hr>
+																	
+																	
+																	
+									<?php  }?>
+
+									</table>							
+									<br>	
+									<?php if($data){?>
+									<table width="100%" cellspacing="1" cellpadding="1" border="1" style="border-color:blue">
+										<tr height="20">
+											<th scope="col" data-hide="phone" class="footable-visible footable-first-column" style="border: 1px solid black;">
+												<strong>Semester</strong>
+											</th>
+											<th scope="col" data-hide="phone" class="footable-visible footable-first-column" style="border: 1px solid black;">
+												<strong>Subject</strong>
+											</th>
+											<?php if($institute_id!='6bd9b29f-f4fd-c95f-466c-5afab5d415d5' && $institute_id!='9710db7f-73f2-d3e0-6227-5afab568feab'){ ?>
+												<th scope="col" data-hide="phone" class="footable-visible footable-first-column" style="border: 1px solid black;">
+													<strong>External Marks</strong>
+												</th>
+											<?php }?>
+											<?php if($institute_id!='6bd9b29f-f4fd-c95f-466c-5afab5d415d5' && $institute_id!='9710db7f-73f2-d3e0-6227-5afab568feab'){ ?>
+												<th scope="col" data-hide="phone" class="footable-visible footable-first-column" style="border: 1px solid black;">
+													<strong>Internal Marks</strong>
+												</th>
+											<?php }?>
+											<th scope="col" data-hide="phone" class="footable-visible footable-first-column" style="border: 1px solid black;">
+												<strong>Result</strong>
+											</th>
+											
+											<?php if($instSrow['allow_grade']){?>
+												<th scope="col" data-hide="phone" class="footable-visible footable-first-column" style="border: 1px solid black;">
+													<strong>Grade</strong>
+												</th>
+											<?php }?>
+											
+											<?php if($instSrow['allow_score']){?>
+												<th scope="col" data-hide="phone" class="footable-visible footable-first-column" style="border: 1px solid black;">
+													<strong>Total</strong>
+												</th>
+											<?php }?>
+										</tr>
+										
+										<?php foreach($data as $item=>$datavalue){ 
+										$internalmarks=0;
+										?>
+											<tr scope="col" data-hide="phone" class="footable-visible footable-first-column" style="border: 1px solid black;">
+											
+												<td style="border: 1px solid black;text-align:center;"><?php echo $sem_name1[$item][0] ?></td>
+												
+												<td style="border: 1px solid black;text-align:center;"><?php echo $datavalue['sub_name']?></td>
+												
+												<?php foreach($data_marks as $itemkey=>$datamarks){
+													if($item==$itemkey){
+														foreach($datamarks as $item_key=>$datamark_s){
+															
+															if($item_key=='External'){
+																$externalmarks=$datamark_s;
+															}
+															else{
+																
+																$internalmarks+=$datamark_s;
+															}
+														}?>
+														<?php if($institute_id!='6bd9b29f-f4fd-c95f-466c-5afab5d415d5' && $institute_id!='9710db7f-73f2-d3e0-6227-5afab568feab'){ ?>
+															<td scope="col" data-hide="phone" class="footable-visible footable-first-column" style="border: 1px solid black;text-align:center;">
+																	<strong><?php echo $externalmarks?></strong>
+															</td>
+															<td scope="col" data-hide="phone" class="footable-visible footable-first-column" style="border: 1px solid black;text-align:center;">
+																<strong><?php echo $internalmarks ?></strong>
+															</td>
+														<?php }?>
+													<?php }
+												}?>
+												
+												<?php if($datavalue['status']=='Pass'){?>
+												<td style="border: 1px solid black;text-align:center;color:green"><?php echo $datavalue['status']?></td>
+												<?php }else{?>
+												<td style="border: 1px solid black;text-align:center;color:red"><?php echo $datavalue['status']?></td>
+												<?php }?>
+												<?php if($instSrow['allow_grade']){?>
+													<td style="border: 1px solid black;text-align:center;"><?php echo $datavalue['grade']?></td>
+												<?php }?>
+												<?php if($instSrow['allow_score']){?>
+													<td style="border: 1px solid black;text-align:center;"><?php echo $datavalue['overallmarks']?>
+												<?php }?>
+												</td>
+											</tr>
+										<?php }?>
+										
+									</table>
+									
+									<br><br>
+									<div style="border-style:solid;border-color:''; width:20%;text-align:centre">
+									<a href="index.php?entryPoint=result_download&enrollid=<?php echo $enrollID ?>" value="" class="" target="_blank">DOWNLOAD REPORT</a>
+									</div>
+									<hr></hr>
+									<?php }else{
+										echo "Result Not found for this Student";
+									}?>
+									<br>
+										
+							<?php					
+									}
+									if(empty($studentifo)){
+										
+														echo '<script> alert("Wrong Id Or Record Not Found In dataBase Please Check")</script>';
+										}
+								
+						}
+											?>
+											
+									<?php 
+					} 
+		
+function resultSearch($studentID){
+	
+	global $db;
+	
+	$marks="SELECT te_marks.status,te_marks.description,te_marks.id,te_marks.te_te_subject_id_c,te_marks.te_exam_result_te_exammarkste_exammarks_idb,t_marks.exam_type,t_marks.total_marks ,te_marks.total_marks as overallmarks,te_marks.semester_id,te_marks.student_batch_id from (Select ter.id ,ter.status,ter.total_marks,ter.description,ter.semester_id,ter.student_batch_id,ter.te_te_subject_id_c,`te_exam_result_te_exammarkste_exammarks_idb` from te_exam_result ter INNER JOIN te_exam_result_te_exammarks_c term ON ter.id=term.te_exam_result_te_exammarkste_exam_result_ida where ter.`te_student_id_c`='".$studentID."') te_marks INNER JOIN te_exammarks t_marks ON te_marks.te_exam_result_te_exammarkste_exammarks_idb=t_marks.id";
+			$resultObj_marks =$db->query($marks);
+			
+			$result=array();
+			while($Srow =$db->fetchByAssoc($resultObj_marks)){ 
+				  $result[]=$Srow;
+			}
+			
+			foreach($result as $result_val){
+				
+				$sql1="select `name` from `te_subjects_master` where `id`='".$result_val['te_te_subject_id_c']."'";
+				$te_te_subject=$db->query($sql1);
+				
+				if($te_te_subject->num_rows>0){
+					$Srow =$db->fetchByAssoc($te_te_subject);
+					$sub_name=$Srow['name'];
+				}
+				$subject_marks['exam_result_id']=$result_val['id'];
+				$subject_marks['sub_name']=$sub_name;
+				$subject_marks['exam_type'][$result_val['exam_type']]=$result_val['total_marks'];
+			
+				$subject_marks['status']=$result_val['status'];
+				$subject_marks['grade']=$result_val['description'];
+				$subject_marks['overallmarks']=$result_val['overallmarks'];
+				$subject_marks['semester_id']=$result_val['semester_id'];
+				$subject_marks['student_batch_id']=$result_val['student_batch_id'];
+				
+				$data[$result_val['te_te_subject_id_c']]=$subject_marks;
+				
+			}
+			
+			return $data;
+}

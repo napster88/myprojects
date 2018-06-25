@@ -1,0 +1,4 @@
+ <div class="account_label_tag">
+	  
+	  <div class="card-user"><a class="button_type_link" href="https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=276924124683-3f31tmhb10kfla6jhkpdq59hrm6eovnb.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%2Febay_track%2Faccount%2Fview_user_token&state&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.readonly&response_type=code"><img src="../assets/images/add_gmail.jpg" width="100" ><div class="account_label">ADD Gmail Account</div></a>
+	 </div> </div>

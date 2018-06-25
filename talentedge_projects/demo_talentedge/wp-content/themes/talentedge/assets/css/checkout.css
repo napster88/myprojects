@@ -1,0 +1,2029 @@
+/* Fornt-end */
+/* YITH WooCommerce Multi Step Checkout */
+
+.row-centered {
+    text-align: center;
+}
+.col-centered {
+    display: inline-block;
+    vertical-align: top;
+    float: none;
+    margin-right: -4px;
+}
+.woocommerce-order-pay .container{min-height: 400px;}
+.woocommerce-order-pay .entry-content{display:none;}
+.disocuntdiv{display:none;}
+
+#checkout-wrapper.timeline-horizontal {
+    width: 100%;
+}
+ul.order_details{margin-top:20px;}
+#checkout-wrapper.timeline-vertical {
+    width: 67%;
+    float: left;
+    padding: 0 15px;
+}
+.woocommerce-checkout .woocommerce-message {display:none;}
+.woocommerce-error {
+    color: #333;
+    background-color: #f2f2f2;
+    border-color: #0b8fbf;
+    max-width: 920px;
+    margin: 20px auto 0 auto;
+}
+.woocommerce-error a {
+    color: #0b8fbf;
+    font-weight: bold;
+}
+.wizard .tab_contentdiv{margin-top:40px;}
+#form_actions {
+    text-align: right;
+}
+#course_coupon{width:58%;}
+
+#form_actions.disabled {
+    display: none;
+}
+.amountpay_msg {
+    font-size: 13px;
+    color: red;
+    padding: 5px 20px 0px 0px;
+    text-align: right;
+}
+.cerror{border-bottom:1px solid red !important;}
+.payment_options .card{
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background: #fff;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom:20px;
+    position: relative;
+}
+.payment_options .card:after{
+    bottom: -2px;
+    right: -2px;
+    height: 60px;
+    width: 50px;
+    display: block;
+    position: absolute;
+    content: "";
+    z-index: 3;
+
+    background-image: url('../../images/checkout_tick.png');
+    background-repeat: no-repeat;
+    background-position: bottom right 0px;
+    background-size: cover;
+    display: none;
+}
+.payment_options .card.active{
+        border: 2px solid #244895;
+}
+.payment_options .card.active:after{
+    display: block;
+}
+.payment_options .card h5{color:#234796;margin-bottom:10px;}
+
+#form_actions input.button.alt.prev {
+    margin-right: 5px;
+    display: none;
+}
+form.checkout.woocommerce-checkout {
+    margin-bottom: 15px;
+}
+.woocommerce-shipping-fields .form-row-wide, .woocommerce-shipping-fields .form-row-first{display:none !important;}
+.referraldiv input {
+    /* letter-spacing: 2px; */
+    font-size: 14px;
+    /* height: 33px; */
+    border-bottom: 1px solid #f2f2f2 !important;
+    /* -webkit-border-radius: 2px; */
+    -moz-border-radius: 2px;
+    /* border-radius: 2px; */
+    padding: 6px 5px;
+    border: none;
+    color:#ccc;
+}
+.referraldiv{margin-top:20px;}
+
+body.woocommerce-checkout #customer_shipping_details,
+.woocommerce-checkout-review-order-table, #talentedge-checkout-coupon, .payment_methods,
+body.woocommerce-checkout #customer_billing_details.show-login-reminder.not-logged-in,
+body.woocommerce-checkout #checkout_coupon , #order_checkout_payment{
+    display: none;
+}
+.payment_methods{display:none !important;}
+.payment_header{    margin: 0px 0px 20px 0px;
+    padding: 0;}
+.payment_header h4{text-align: left;
+    padding: 0px 20px 20px 0px;
+    font-size: 20px;
+    margin: 0px;}
+.payment_header h5{text-align: left;
+    color: #234796;
+    font-weight: bold;
+    text-transform: uppercase;}
+#checkout_timeline {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
+#checkout_timeline li {
+    transition: all 0.5s ease;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+#checkout_timeline.vertical {
+    width: 33%;
+    float: left;
+    padding: 0 15px;
+}
+
+#checkout_timeline:after {
+    clear: both;
+    display: block;
+    content: "";
+}
+
+.yith-wcms-pro #checkout_timeline li {
+    cursor: pointer;
+}
+
+#checkout_timeline.vertical li {
+    display: block;
+}
+
+.yith-wcms-pro.logged-in #checkout_timeline li#timeline-0 {
+    cursor: context-menu;
+}
+
+#checkout_timeline li:last-child {
+    padding-right: 0;
+}
+
+/* === STYLE === */
+
+#checkout_timeline {
+    display: table;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+}
+
+#checkout_timeline:not(.text) li {
+    font-size: inherit;
+}
+
+#checkout_timeline li .timeline-wrapper .timeline-step {
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: bold;
+    width: 40px;
+    text-align: center;
+    padding: 10px;
+}
+
+#checkout_timeline.style1 li .timeline-wrapper .timeline-step.with-icon img{
+    max-width: none;
+}
+
+#checkout_timeline li .timeline-wrapper .timeline-step:not(.with-icon):after {
+    content: ".";
+    display: inline;
+}
+
+#checkout_timeline.style1 li .timeline-wrapper .timeline-step:not(.with-icon):after{
+    display: none;
+}
+
+#checkout_timeline li .timeline-wrapper .timeline-label {
+    text-align: center;
+    padding: 5px !important;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    font-size: 16px;
+        text-transform: initial;
+}
+.clogo{padding:8px 0px 0px 0px;}
+.banner-headline{padding:0px !important;}
+.woocommerce{padding-bottom:10%;}
+.woocommerce-billing-fields h3, .woocommerce-billing-fields label{display:none;}
+#referralID_field{margin-bottom:30px;}
+#billing_country_field label{    padding: 10px 0px;}
+.course_details{text-align: left;}
+#checkout_timeline.vertical li .timeline-wrapper .timeline-label {
+    font-size: 15px;
+}
+
+#checkout_timeline li {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+}
+
+#checkout_timeline.horizontal li:first-child {
+    border-left: 1px solid;
+}
+
+#checkout_timeline li {
+    border-width: 0px;
+    padding-right: 10px;
+}
+
+#checkout_timeline.vertical li {
+    width: auto;
+    display: block;
+}
+
+#checkout_timeline li .timeline-wrapper {
+    position: relative;
+    text-align: left;
+    line-height: normal;
+}
+
+#checkout_timeline li .timeline-wrapper {
+      text-align: left;
+      display: table;
+      height: 100%;
+      width: 100%;
+}
+
+#checkout_timeline.vertical li .timeline-wrapper {
+    margin-bottom: 10px;
+}
+
+/* === END STYLE1 === */
+
+/* === TEXT === */
+
+#checkout_timeline.text {
+    display: block;
+    padding-bottom:50px;
+}
+
+#checkout_timeline.text li {
+    display: inline-block;
+}
+
+#checkout_timeline.text li.active {
+    color:#f26522;
+}
+
+#checkout_timeline.text li .timeline-wrapper .timeline-step {
+    display: none;
+}
+
+#checkout_timeline.horizontal.text li:not(:last-child) .timeline-wrapper:after {
+    content: "/";
+    display: inline-block;
+    margin: 0 5px;
+    font-weight: normal;
+}
+
+#checkout_timeline.text li .timeline-wrapper .timeline-label {
+    display: inline;
+}
+
+#checkout_timeline.text li .timeline-wrapper {
+    display: block;
+}
+
+#checkout_timeline.horizontal.text li:first-child {
+    border: 0
+}
+
+#checkout_timeline.vertical.text{
+    padding: 0;
+}
+
+#checkout_timeline.text.vertical li{
+    display: block;
+}
+
+
+/* === END TEXT === */
+
+/* === STYLE 1 === */
+
+#checkout_timeline.vertical.style1 li{
+    padding-right: 0;
+}
+
+#checkout_timeline.horizontal.style1 li:first-child {
+    border-left: 0;
+}
+
+/* === END STYLE 1 === */
+
+/* === STYLE 2 === */
+
+#checkout_timeline.style2 {
+    display: table;
+}
+
+#checkout_timeline.style2 li {
+    font-size: inherit;
+}
+
+#checkout_timeline.style2 li .timeline-wrapper .timeline-step {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: normal;
+}
+
+#checkout_timeline.style2 li .timeline-wrapper .timeline-step {
+    border-width: 1px;
+    border-style: solid;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    margin-top: -15px;
+    text-align: center;
+}
+
+#checkout_timeline.style2 li.active .timeline-wrapper .timeline-step {
+    border-width: 1px;
+    border-style: solid;
+}
+
+.yith-wcms-pro.logged-in #checkout_timeline li#timeline-0 {
+    cursor: context-menu;
+}
+
+#checkout_timeline.style2 li {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#checkout_timeline.horizontal.style2 li:first-child {
+    border-left: 1px solid;
+}
+
+#checkout_timeline.horizontal.style2 li {
+    border-style: solid;
+    border-width: 1px 1px 1px 0;
+}
+
+#checkout_timeline.vertical.style2 li:last-child {
+    border-bottom: 1px solid;
+}
+
+#checkout_timeline.vertical.style2 li {
+    border-style: solid;
+    border-width: 1px 1px 0 1px;
+}
+
+.show_checkout_login_reminder #checkout_timeline.horizontal.style2 li {
+    width: 20%;
+}
+
+.logged-in #checkout_timeline.horizontal.style2 li {
+    width: 25%;
+}
+
+#checkout_timeline.vertical.style2 li {
+    width: auto;
+    display: block;
+}
+
+#checkout_timeline.style2 li .timeline-wrapper {
+    position: relative;
+    text-align: left;
+    line-height: normal;
+}
+
+#checkout_timeline.horizontal.style2 li .timeline-wrapper {
+    padding: 10px 10px 10px 55px;
+}
+
+#checkout_timeline.vertical.style2 li .timeline-wrapper {
+    padding: 15px 10px 5px 55px;
+}
+
+#checkout_timeline.style2 li.active .timeline-wrapper {
+    font-weight: bold;
+}
+
+#checkout_timeline.style2 li .timeline-wrapper .timeline-step{
+    padding: 5px;
+}
+
+#checkout_timeline.style2 li .timeline-wrapper .timeline-step:after{
+    display: none;
+}
+
+/* === END STYLE2 === */
+
+/* === STYLE3 === */
+
+#checkout_timeline.style3 {
+    display: table;
+}
+
+#checkout_timeline.style3 li {
+    font-size: inherit;
+}
+
+#checkout_timeline.style3 li .timeline-wrapper .timeline-step {
+    vertical-align: middle;
+    font-weight: bold;
+    width: 20px;
+    text-align: center;
+    padding: 0;
+}
+
+#checkout_timeline.style3 li .timeline-wrapper .timeline-label{
+    text-align: left;
+    width: auto;
+}
+
+#checkout_timeline.style3 li .timeline-wrapper .timeline-step:after {
+    content: ".";
+}
+
+#checkout_timeline.style3 li .timeline-wrapper .timeline-step.with-icon:after{
+    content: "";
+}
+
+#checkout_timeline.style3 li {
+    vertical-align: middle;
+}
+
+#checkout_timeline.horizontal.style3 li:first-child {
+    border-left: 1px solid;
+}
+
+#checkout_timeline.style3 li {
+    border-style: solid;
+    border-width: 0px;
+    padding-right: 10px;
+    border: none !important;
+}
+
+#checkout_timeline.horizontal.style3 li {
+    width: 20% !important;
+}
+
+.logged-in #checkout_timeline.horizontal.style3 li {
+    width: 25% !important;
+}
+
+#checkout_timeline.vertical.style3 li {
+    width: auto;
+    display: block;
+}
+
+#checkout_timeline.style3 li .timeline-wrapper {
+    position: relative;
+    text-align: left;
+    line-height: normal;
+}
+
+#checkout_timeline.style3 li .timeline-wrapper {
+    padding: 10px;
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+#checkout_timeline.vertical.style3 li .timeline-wrapper {
+    padding: 15px 10px;
+    margin-bottom: 10px;
+}
+
+/* === END STYLE3 === */
+
+.about_paypal {
+    display: block;
+}
+
+/* === Twenty13 Hack === */
+
+.yith-wcms-pro-myaccount .entry-header,
+.yith-wcms-pro-myaccount .entry-content,
+.yith-wcms-pro-myaccount .entry-summary,
+.yith-wcms-pro-myaccount .entry-meta {
+    max-width: 1170px;
+}
+
+/* === Tank You Page Customizzation === */
+
+.yith-wcms-pro-myaccount .woocommerce h1,
+.yith-wcms-pro-myaccount .woocommerce h2,
+.yith-wcms-pro-myaccount .woocommerce h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+}
+
+.yith-wcms-pro-myaccount .woocommerce h2,
+.yith-wcms-pro-myaccount .woocommerce h3 {
+    margin-bottom: 15px;
+}
+
+.yith-wcms-pro-myaccount .yith-wcms-title {
+    width: 40%;
+    float: left;
+}
+
+.yith-wcms-pro-myaccount .order_details.yith-order-info {
+    width: 60%;
+    float: left;
+    padding: 25px;
+}
+
+.yith-wcms-pro-myaccount .woocommerce .order_details li {
+    border-right: 0;
+    font-size: 12px;
+}
+
+.yith-wcms-pro-myaccount .woocommerce table.shop_table.customer_details tbody tr th {
+    width: 25%;
+}
+
+.yith-wcms-pro-myaccount .woocommerce table.shop_table.customer_details tbody tr th,
+.yith-wcms-pro-myaccount .woocommerce table.shop_table.customer_details tbody tr td {
+    border: none;
+    color: #808080;
+    padding: 0;
+
+}
+
+.yith-wcms-pro-myaccount .woocommerce table.shop_table.customer_details tbody tr:nth-child(2n) {
+    background: none;
+}
+
+.yith-wcms-pro-myaccount .woocommerce table.shop_table.customer_details {
+    width: 30%;
+    border: none;
+}
+
+.yith-wcms-pro-myaccount .woocommerce .col2-set address,
+.yith-wcms-pro-myaccount .woocommerce-page .col2-set address {
+    font-style: normal;
+    color: #808080;
+}
+.none{display:none;}
+.amount_pay input{
+        border: none;
+    border-bottom: 1px solid #f9f9f9;
+    padding: 0px;
+    font-size: 24px;
+    font-weight: bold;
+    background: none;
+    border-bottom: 1px solid #ccc;
+}
+.amount_pay .c_headline{
+        margin: 0px 0px 10px 0px;
+    display: block;
+    font-size: 14px;
+}
+.c_headline{padding:8px 0px 0px 0px;}
+.prev-step{
+        border: 1px solid #333;
+    background: #fff;
+    color: #333;
+}
+.amount_pay{
+        background: #f2f2f2;
+    padding:20px 20px 0px 20px !important;
+    margin: 20px 0px 0px 0px !important;
+    height: 75px;
+
+}
+.amount_pay .input-icon{position: relative;    float: right;
+    width: 48%;}
+#payment .place-order .button{
+        min-width: 110px !important;
+    /* text-align: right; */
+    float: right;
+    position: absolute;
+    right: 3px;
+    width: 162px;
+    bottom: -66px;
+    margin: 0px !important;
+    height: auto;
+    box-shadow: none !important;
+}
+.step3div{
+        margin: 0px 180px 0px 0px;
+    float: right;
+}
+
+.totalamount .tax{
+    margin: 10px 0px 10px 0px;
+    overflow: hidden;
+}
+.totalamount .finalamt{clear:both;
+overflow: hidden;}
+.fleft{
+    float:left;
+    width: 50%;
+    text-align: left;
+}
+.fright{
+    float: right;
+}
+.totalamount .tax .c_headline{font-size: 14px;}
+.totalamount .tax .fright span{font-size: 20px;}
+.youpay {
+    padding-top: 12px;
+    display: inline-block;
+}
+.paymentdiv{    border: 1px solid #f9f9f9;
+	box-shadow: 0 0 10px #d0d0d0;
+    border: 1px solid #cfcfcf;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    padding: 0px 0px 30px 0px;}
+.pricelabel{
+    font-size: 24px;
+    font-weight: bold;
+}
+.coupondiv{clear:both;}
+.coupondiv h4 {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0px;
+}
+.discount_amt, .coupon_amt{text-align: right;margin-bottom:6px;}
+.discount_amt span{
+  font-size: 14px;
+}
+#applycoupon {
+    cursor: pointer;
+    border: 1px solid #666;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+        font-size: 14px;
+}
+
+.cop{border-bottom:1px solid #f2f2f2;}
+.cop .radio{
+      background: #f2f2f2;
+    display: inline-block;
+    padding: 10px 10px 10px 35px;
+    border-radius: 5px;
+        width: 45%;
+    font-size: 12px;
+    margin-top: 20px;
+}
+.paydiv .paymenttype{
+      margin: 3px 10px 0px 0px !important;
+    display: inline-block;
+    position: inherit !important;
+    clip: inherit !important;
+}
+#coupondiv b{
+    font-weight: bold;
+    color: green;
+    text-transform: uppercase;
+}
+#coupondiv .pricelabel{font-size: 20px;}
+#coupondiv{    text-align: right;}
+#coupondiv .c_headline{padding:0px;}
+.c_error{
+    font-size: 14px;
+    margin: 5px 0px 0px 0px;
+    color: red;
+}
+.remove_coupon{
+  color: #333;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.totalprice .c_headline{
+        padding: 5px 20px 0px 0px;
+    display: inline-block;
+}
+.course_info table{font-size: 14px;}
+.course_info table th{border-bottom: 1px solid #f2f2f2 !important;}
+.course_info #tab{margin:20px 0px 0px 0px;}
+#tab a{
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    border-bottom: 2px solid #fff;
+    border-radius: 0px;
+    margin: 0px 20px 10px 0px;
+    padding: 0px 10px 6px 0px;
+}
+
+.countrytext {
+    font-size: 12px;
+    text-align: left;
+    color: #717171;
+}
+
+
+.batch-Card .coursePeriod {
+  border-top: 1px solid #e3e3e3;
+  color: #262627;
+  padding: 0 20px;
+}
+.batch-Card .coursePeriod .months {
+  margin-top: 10px;
+}
+.batch-Card .coursePeriod .months b {
+  font-weight: 600;
+  display: block;
+  width: 100%;
+}
+.batch-Card .coursePeriod .months .monthsOfCourse {
+  display: block;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1;
+}
+.batch-Card .coursePeriod .months p {
+  font-size: 12px;
+}
+.batch-Card .coursePeriod .startDate {
+  color: #262627;
+  margin-bottom: 0px;
+}
+.batch-Card .coursePeriod .startDate .fa {
+  vertical-align: middle;
+  display: inline-block;
+  margin-top: -2px;
+}
+.batch-Card .coursePeriod .startDate .fa + span {
+  padding-left: 3px;
+}
+.batch-Card .coursePeriod .timePeriod {
+  color: #262627;
+  font-size: 12px;
+  display: inline-block;
+  margin: 0 auto;
+  max-width: 100%;
+  min-width: 181px;
+  text-align: center;
+}
+.batch-Card .coursePeriod .timePeriod i {
+  float: left;
+  width: 15px;
+  vertical-align: middle;
+  font-size: 15px;
+}
+.batch-Card .coursePeriod .timePeriod i + div {
+  padding-left: 5px;
+  display: table;
+  margin-right: auto;
+}
+.batch-Card .coursePeriod .timePeriod span {
+  display: block;
+}
+.batch-Card .coursePeriod .downloadBrocture {
+  padding: 6px 0 10px;
+}
+.batch-Card .coursePeriod .downloadBrocture a {
+  color: #384cb8;
+  font-size: 12px;
+  cursor: pointer;
+}
+.batch-Card .coursePeriod .downloadBrocture a .fa {
+  font-size: 23px;
+  padding-right: 8px;
+  vertical-align: middle;
+  margin-top: -2px;
+  display: inline-block;
+}
+.batch-Card .imgdiv {
+    min-height: 150px;
+    line-height: 0px;
+    border-bottom: 1px solid #cfcfcf;
+    background-size: cover;
+}
+.divider-or {
+    text-align: center;
+    text-transform: uppercase;
+    color: #333;
+    position: relative;
+    border-top: 1px solid #919191;
+    margin-top: 30px;
+    clear:both;
+}
+.cp_success{
+    font-size: 14px;
+    text-align: left;
+    margin: 10px 0px 0px 0px;
+    font-weight: bold;
+    display: none;
+}
+#billing_email_field{margin-bottom:10px;}
+.col-courses-card {
+  box-shadow: 0 0 10px #d0d0d0;
+  border: 1px solid #cfcfcf;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  padding-bottom:30px;
+  text-align: center;
+}
+#billing_email, #billing_phone{margin-bottom: 0px}
+.course_title p{font-size: 12px;line-height: 18px;}
+.course_title{padding-bottom: 10px;}
+.course_title h5{    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;}
+
+.divider-or span{
+    vertical-align: middle;
+    position: relative;
+    display: inline-block;
+    top: -18px;
+    width: 35px;
+    height: 35px;
+    background: #EEEEEE;
+    border-radius: 50%;
+    line-height: 35px;
+}
+
+#payment .place-order{
+    padding: 0;
+}
+
+@media only screen and (max-width: 1023px) {
+  .batch-Card .coursePeriod .startDate {
+    margin-bottom: 9px;
+  }
+}
+input-icon {
+  position: relative;
+}
+.course_info h3{    margin: 0px 0px 10px 0px;
+    font-size: 28px;}
+.course_info .startDate span{    font-size: 19px;
+    margin: 0px 0px 0px 10px;}
+.input-icon > i {
+  position: absolute;
+  display: block;
+  transform: translate(0, -50%);
+  top: 56%;
+font-size: 24px;
+  pointer-events: none;
+  width: 18px;
+  text-align: center;
+       font-weight: bold;
+       left:2px;
+}
+#coupondiv{
+            margin: 0px;
+    line-height: 20px;
+    padding: 10px 20px;
+}
+.totalprice{
+    text-align: right;
+    padding:0px 20px 10px 20px;
+    clear: both;
+    overflow: hidden;
+}
+.input-icon > input {
+  padding-left: 20px;
+    padding-right: 0;
+    width:100%;
+    font-size: 20px;
+    text-align: left;
+    min-height: 28px;
+    margin-top: 4px;
+}
+.totalprice.first{
+    padding-top:20px;
+    overflow: hidden;
+}
+.totalprice .pricelabel{font-size: 24px;}
+.finalamt .pricelabel{font-size: 20px !important;}
+.input-icon-right > i {
+  right: 0;
+}
+.duedate{
+      text-align: right;
+    padding: 10px 20px 0px 0px;
+    font-size: 14px;
+}
+.duedate span{font-weight: bold;}
+
+.input-icon-right > input {
+  padding-left: 0;
+  padding-right: 25px;
+  text-align: right;
+}
+#order_review_heading, .product-quantity, .payment_box, .callToactions, .create-account{display:none !important;}
+#order_review {
+    float: none !important;
+    width: 100% !important;
+}
+.yith-wcms-button{
+    background: transparent;
+    border: none;
+    border: 2px solid #f2f2f2;
+    margin: 0px;
+    border-radius: 5px;
+    padding: 10px 30px;
+}
+.yith-wcms-button:hover{border: 2px solid #f26522;background:#f26522;color:#fff;}
+.woocommerce .form-row input[type='submit']{font-size: 18px !important;}
+.woocommerce-checkout-review-order-table{width:100%;text-align:left;}
+#payment{
+    /*      display: block;
+    width: 60% !important;
+    margin: 0px auto !important;
+    */
+    text-align: center;
+    border: none !important;
+}
+#payment .payment_methods{border:none !important;}
+#payment .payment_methods li{
+display: inline-block;
+    float: left !important;
+    border:none !important;
+}
+
+
+/* Checkout Page CSS */
+.product-quantity{display:none !important;}
+    #customer_details table{
+    border: 1px solid #f2f2f2;
+    font-size: 14px;
+    margin: 20px 0px;
+	}
+	#customer_details .col-2{background: #f8f8f8;
+    padding: 10px;
+}
+	#customer_details thead{    background: #f2f2f2;}
+	.woocommerce-billing-fields, .woocommerce-billing-fields span, .woocommerce-billing-fields a, .select2-container .select2-choice {font-family:'te-font';}
+	.woocommerce-billing-fields input, .demo-row .cupdateprice{
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid #e3e3e3;
+    width: 100%;
+    font-size: 14px;
+    min-height: 38px;
+    -moz-transition: 300ms linear;
+    -o-transition: 300ms linear;
+    -webkit-transition: 300ms linear;
+    -ms-transition: 300ms linear;
+    transition: 300ms linear;
+    margin-bottom: 20px;
+    padding: 0px;
+    font-family:'te-font';
+    color:#333;
+}
+.cupdateprice{
+	    margin: 10px 0px;
+	        padding: 0px 10px;
+}
+.select2-container .select2-choice{font-size:14px;}
+.cupdateprice{    font-size: 32px !important;
+    padding-top: 14px !important;
+}
+#payment{padding:20px 0px 0px 0px;}
+#payment .payment_methods{border:none;}
+#payment .payment_methods li{float:left;border:none;}
+#payment .payment_methods li .payment_box{display:none !important;}
+#payment .payment_methods li label{margin-left:10px;}
+#order_review, #order_review_heading{    margin: 0px 0px 20px 0px;
+    padding: 0px;  border: none;}
+    .woocommerce-billing-fields h3{    margin: 0px 0px 20px 0px;}
+#talentedge-checkout-coupon .checkout_coupon .form-row-first input[type="text"]{border:none !important;}
+.amount_pay{padding-top:20px;}
+.choose .cradio{
+	    border: 1px solid #f2f2f2;
+    padding:10px;
+}
+.choose .active{
+    background: #f2f2f2;
+}
+.choose .cradio span{    padding-left: 30px;cursor: pointer;}
+.choose .cradio input{    margin-left: 5px;}
+.choose .emidiv{
+	margin-left:0px;
+}
+.choose .center{padding:0px;}
+.woocommerce #talentedge-checkout-coupon .form-row input[type='submit']{
+background-color: #f26522;
+}
+#payment .place-order .button{
+    background-color: #f26522;
+    color: #ffffff;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    display: inline-block;
+    margin: 15px 5px 0;
+    font-size: 14px !important;
+    font-weight: 500;
+    border: 2px solid #f26522;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    -moz-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    -webkit-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+#payment .place-order .button:hover{
+	  box-shadow: 0 0px 0px #983100;
+    -moz-transition: all 100ms linear;
+    -o-transition: all 100ms linear;
+    -webkit-transition: all 100ms linear;
+    -ms-transition: all 100ms linear;
+    transition: all 100ms linear;
+    background-color: #f26522;
+}
+
+/* WIxard CSS */
+/* ~~ Font family declaration ~~ */
+.wizard {
+  margin: 20px auto;
+  background: #fff; }
+
+.wizard .nav-tabs {
+  position: relative;
+  margin: 0px auto;
+  margin-bottom: 0;
+  border-bottom: none; }
+
+.wizard > div.wizard-inner {
+  position: relative; }
+
+.wizard .nav-tabs > li a:hover,
+.wizard .nav-tabs > li a:focus {
+  color: #fff;
+  border: none; }
+
+.wizard .nav-tabs > li.active > a,
+.wizard .nav-tabs > li.active > a:hover,
+.wizard .nav-tabs > li.active > a:focus {
+  color: #fff;
+  cursor: default;
+  border: 0;
+  border-bottom-color: transparent;
+  background: none; }
+
+span.round-tab {
+  width: 40px;
+  height: 40px;
+  line-height: 37px;
+  display: inline-block;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #0B8FBF;
+  z-index: 2;
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  margin-top: -20px;
+  text-align: center;
+  font-size: 18px; color:#234796;}
+
+span.round-tab i {
+  color: #555555; }
+
+.wizard li.active span.round-tab {
+  background: #fff;
+  border: 2px solid #234796;
+color: #234796;
+    font-size: 18px;
+}
+
+.wizard li.active span.round-tab i {
+  color: #5bc0de; }
+
+.wizard .nav-tabs > li {
+  width: 33.33%;
+  background-color: #0b8fbf;text-align: left; }
+  .wizard .nav-tabs > li.active {
+    background: #234796; }
+
+.btn-normal {
+  box-shadow: none; padding:10px 25px 12px 25px;}
+
+.wizard .nav-tabs > li a {
+  margin: 12px auto;
+  border-radius: 100%;
+  padding: 0;
+  color: #fff;
+  background: none;
+  border: none; }
+  .wizard .nav-tabs > li a:hover {
+    background: none; }
+  .wizard .nav-tabs > li a span.text-tab-title {
+    vertical-align: middle;
+    display: inline-block;
+    padding-left: 30px; }
+
+.wizard .tab-pane {
+  position: relative;
+}
+
+.checkout_login{
+    margin-bottom: 10px;
+}
+.list-inline li{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#step3 .list-inline .none{
+    visibility: hidden;
+    max-width: 167px;
+}
+@media (max-width: 1023px) {
+    form.checkout.woocommerce-checkout .col-centered{
+        width: 100%;
+        padding: 0;
+    }
+    .payment_options .cards .col-md-3 img{
+        margin: 0 auto;
+    }
+    .payment_options .cards .col-md-3{
+        width: 48%;
+        float: left;
+    }
+    .payment_options .cards .col-md-3:nth-child(2n){
+        float: right;
+    }
+    .payment_options .card{
+        border-color: #ebebeb;
+    }
+}
+@media (max-width: 991px) {
+    .wizard .nav-tabs > li a,
+    .wizard .nav-tabs > li.active a{
+        margin: 0;
+        color: #333;
+    }
+    .wizard .nav-tabs > li,
+    .wizard .nav-tabs > li.active{
+        background: none;
+    }
+    .wizard .nav-tabs > li a span.text-tab-title{
+        padding-left: 0;
+        vertical-align: top;
+        display: block;
+        margin-top: 8px;
+    }
+    .wizard .nav-tabs > li a:hover, .wizard .nav-tabs > li a:focus{
+        color:  #333 !important;
+    }
+    span.round-tab{
+        left: 0;
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+        line-height: 63px;
+        position: relative;
+        top: 0;
+        margin-top: 0;
+    }
+    .checkout_1 .batch-Card{
+        margin-bottom: 25px;
+        max-width: 280px;
+    }
+}
+@media (min-width: 668px) and (max-width: 736px){
+    .col-courses-card{
+        float: left;
+    }
+    .woocommerce-billing-fields{
+        float: right;
+    }
+    .course_image{
+        width: 240px;
+        float: left;
+        margin-bottom: 25px;
+    }
+    #checkoutdiv{
+        float: right;
+    }
+}
+@media (max-width: 667px){
+    .col-courses-card{
+        margin-right: auto;
+        margin-left: auto;
+        float: none;
+        max-width: 280px;
+    }
+    .course_image{
+        margin-right: auto;
+        margin-left: auto;
+        float: none;
+        margin-bottom: 25px;
+        max-width: 250px;
+        padding: 0;
+    }
+    #checkoutdiv{
+        width: 100%;
+        float: none;
+    }
+}
+
+@media (max-width: 585px) {
+  .wizard {
+    height: auto !important; }
+    .wizard li.active:after {
+      content: " ";
+      position: absolute;
+      left: 35%; }
+      .wizard .nav-tabs > li a span.text-tab-title{
+        font-size: 13px;
+      }
+}
+@media (max-width: 567px) {
+    .form-row-first,
+    .form-row-last{
+        width: 100%;
+        float: none;
+    }
+    .payment_options .cards .col-md-3{
+        width: 100%;
+    }
+}
+
+.navbar-nav>li{
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nav .open>a,
+.nav .open>a:focus,
+.nav .open>a:hover{
+    background-color: #fff;
+}
+.navbar-nav>li>.dropdown-menu{
+    padding: 0;
+}
+
+.clogo{
+    max-width: 210px;
+    float: left;
+}
+.clogo a{
+    display: inline-block;
+}
+.clogo img{
+    max-width: 100%;
+}
+
+.auth_service-btn > li{
+    margin-top: 19px;
+}
+.auth_service-btn > li > a:hover{
+    background-color: #fff;
+}
+.auth_service-btn > li > a{
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+}
+.checkout_header .navbar-right{
+    margin: 0 !important;
+    float: right;
+}
+
+@media only screen and (max-width: 768px){
+    .clogo{
+        max-width: 170px;
+    }
+    .auth_service-btn > li{
+        margin-top: 15px;
+    }
+}
+
+.select2-container .select2-choice > .select2-chosen{
+    color: #333;
+}
+
+.right.icon-down_arrow {
+    position: relative;
+    color: green;
+    float: right;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid green;
+    display: inline-block;
+    line-height: 29px;
+    text-align: center;
+}
+#course_coupon.applied-success {
+    background: #fff !important;
+    border: none !important;
+    color: green;
+    padding-left: 0;
+    margin: 0;
+}
+
+
+
+
+/* ******** IDFC POPUP ***********/
+#privilege_member .modal-dialog, #admission_batch .modal-dialog, #payment_gateway_inner-container{
+	margin: 3% auto 0;
+}
+.modal-dialog {
+    width: 600px;
+}
+.modal-content {
+    background-color: #fff;
+    border-radius: 0;
+}
+#privilege_member .modal-content {
+    float: left;
+    border: none;
+}
+button.close{
+	background-image: url(../../images/close-icon.png);
+	background-repeat: no-repeat;
+	height: 25px;
+	opacity: 1;
+	position: absolute;
+	right: 14px;
+	top: 14px;
+	width: 25px;
+	z-index: 999999;
+	outline: none;
+}
+.privilege_member_inner-container{
+	background-color: #fff;
+	padding: 0 0 25px;
+	float: left;
+}
+.privilege_member_inner_top{
+	padding: 0 45px 25px;
+	float: left;
+}
+.privilege_member_inner_top h1{
+	color: #f26522;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 28px;
+    margin: 0;
+    padding: 40px 15px 25px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.privilege_member_inner_top p{
+	color: #262525;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 16px;
+	margin: 0;
+	padding: 0 15px 30px;
+}
+.privilege_popup_form{
+	width: 100%;
+	float: left;
+	margin: 0 0 18px;
+	padding: 0 30px;
+}
+.privilege_popup_form_input{
+	float: left;
+    position: relative;
+}
+.privilege_popup_form_input input{
+	border: 1px solid #ccc;
+    color: #a7a7a7;
+    float: left;
+    font-size: 19px;
+    height: 58px;
+    line-height: 19px;
+    font-weight: 400;
+    margin: 2px 0 0;
+    outline: medium none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+.continue_btn{
+	background-color: #f26522;
+    border: 1px solid #f28a3f;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    color: #fff;
+    display: block;
+    font-size: 22px;
+    line-height: 22px;
+    margin: 0 auto;
+    outline: medium none;
+    padding: 20px 0;
+    position: relative;
+    width: 80%;
+}
+.privilege_member_inner_top .terms{
+	color: #8e8e8e;
+	font-size: 15px;
+	line-height: 15px;
+	font-weight: 400;
+	float: left;
+	padding: 0 45px;
+	margin: 25px 0 0;
+}
+.privilege_member_inner_bottom{
+	border-top: 1px solid #dedede;
+	padding: 25px 70px 0;
+}
+@media only screen and (max-width: 767px){
+	.privilege_member_inner-container{
+		padding-bottom: 15px;
+	}
+	.modal-dialog {
+		width: auto;
+	}
+	.privilege_member_inner_top h1{
+		font-size: 24px;
+		line-height: 24px;
+		padding: 25px 0;
+	}
+	.privilege_member_inner_top p{
+		padding: 0 0 15px;
+		line-height: 18px;
+	}
+	.privilege_member_inner_top{
+		padding: 0 15px 15px;
+	}
+	.privilege_popup_form{
+		padding: 0;
+	}
+	.privilege_popup_form_input input{
+		font-size: 16px;
+
+	}
+	.privilege_member_inner_top .terms{
+		padding: 0 15px;
+		margin-top: 15px;
+	}
+	.privilege_member_inner_bottom{
+		padding: 15px 15px 0;
+	}
+	.continue_btn{
+		width: 90%;
+	}
+}
+@media only screen and (min-width: 600px)and (max-width: 767px){
+	.modal-dialog {
+		width: 480px;
+	}
+}
+/*code for admission popup*/
+.admission_batch_inner-container{
+	background-color: #fff;
+	padding: 0 35px 35px;
+	float: left;
+	width: 100%;
+}
+.admission_batch_inner-container h1{
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 24px;
+	color: #234b91;
+	display: block;
+	margin: 0;
+	padding: 35px 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+button.admission_close{
+	background-image: url(../../images/close-btn-lite.png);
+	background-repeat: no-repeat;
+	height: 35px;
+	opacity: 1;
+	position: absolute;
+	right: -18px;
+	top: -18px;
+	width: 35px;
+	z-index: 999999;
+	outline: none;
+	border: none;
+	background-color: transparent;
+}
+.admission_batch_inner-container h2{
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 20px;
+	color: #424242;
+	display: block;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.popup_btn_container{
+	width: 100%;
+	padding: 35px 25px 25px;
+}
+.confirm_btn, .reject_btn{
+	background-color: #f36523;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	font-size: 22px;
+	line-height: 22px;
+	color: #fff;
+	text-align: center;
+	padding: 15px;
+	width: 200px;
+	border: 0;
+}
+.reject_btn{
+	background-color: #444;
+}
+.confirm_btn span, .reject_btn span{
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+}
+@media only screen and (max-width: 767px){
+	button.admission_close{
+		right: 5px;
+		top: 5px;
+	}
+	.admission_batch_inner-container{
+		padding: 0 15px 15px;
+	}
+	.admission_batch_inner-container h1{
+		padding: 35px 0 15px;
+	}
+	.admission_batch_inner-container h2{
+		font-size: 16px;
+	}
+	.popup_btn_container{
+		padding: 15px 0 0;
+	}
+	.confirm_btn, .reject_btn{
+		margin: 0 auto;
+		display: block;
+	}
+	.confirm_btn{
+		margin-bottom: 15px;
+	}
+}
+/*code for admission popup*/
+/*code for payment popup*/
+.payment_gateway_inner-container{
+	background-color: #fff;
+	padding: 0 0 20px;
+	float: left;
+	width: 100%;
+}
+.payment_gateway_inner-container_top{
+	padding: 0 35px 20px;
+}
+.payment_gateway_inner-container_top p{
+	color: #161616;
+	font-size: 20px;
+	line-height: 28px;
+	text-align: center;
+	margin: 0;
+	padding: 60px 0 45px;
+}
+.payment_confirmation_btn_cont{
+	overflow: hidden;
+	padding-bottom: 60px;
+}
+.cancel_btn{
+	background-color: #707070;
+    border: 1px solid #707070;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    color: #fff;
+    display: block;
+    float: left;
+    font-size: 22px;
+    line-height: 22px;
+    outline: medium none;
+    padding: 20px 0;
+    position: relative;
+    width: 80%;
+}
+.img-right{
+	float: right;
+}
+@media only screen and (max-width: 767px){
+	.payment_gateway_inner-container_top {
+    	padding: 0 15px 15px;
+	}
+	.payment_gateway_inner-container_top p{
+		font-size: 16px;
+		line-height: 22px;
+		padding: 40px 0 25px;
+	}
+	.cancel_btn{
+		width: 90%;
+		margin: 15px auto 0;
+		float: none;
+		display: block;
+	}
+	.payment_confirmation_btn_cont{
+		padding-bottom: 20px;
+	}
+}
+
+.modal-content .payment_confirmation_btn_cont #payment{padding:0px;}
+.modal-content .payment_confirmation_btn_cont #payment .place-order .button{
+	    background-color: #f26522;
+    border: 1px solid #f28a3f;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    color: #fff;
+    display: block;
+    font-size: 22px !important;
+    line-height: 22px;
+    margin: 0 auto;
+    outline: medium none;
+    padding: 20px 0;
+    position: relative;
+    width: 80%;
+    margin-top: -65px !IMPORTANT;
+}
+/* IDFC popup*/
+/* ********************** JET POPUP ************* */
+#privilege_member .modal-dialog{
+	margin: 3% auto 0;
+}
+#privilege_member .modal-content {
+    float: left;
+    border: none;
+}
+.privilege_member_inner-container{
+	background-color: #fff;
+	padding: 0 0 25px;
+	float: left;
+}
+.privilege_member_inner_top{
+	padding: 0 45px 25px;
+	float: left;
+}
+.privilege_member_inner_top h1{
+	color: #f26522;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 28px;
+    margin: 0;
+    padding: 40px 15px 25px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.privilege_member_inner_top p{
+	color: #262525;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 16px;
+	margin: 0;
+	padding: 0 15px 30px;
+}
+.privilege_popup_form{
+	width: 100%;
+	float: left;
+	margin: 0 0 18px;
+	padding: 0 30px;
+}
+.privilege_popup_form_input{
+	float: left;
+    position: relative;
+}
+.privilege_popup_form_input input{
+	border: 1px solid #ccc;
+    color: #a7a7a7;
+    float: left;
+    font-size: 19px;
+    height: 58px;
+    line-height: 19px;
+    font-weight: 400;
+    margin: 2px 0 0;
+    outline: medium none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+.privilege_member_inner_top .terms{
+	color: #8e8e8e;
+	font-size: 15px;
+	line-height: 15px;
+	font-weight: 400;
+	float: left;
+	padding: 0 45px;
+	margin: 25px 0 0;
+}
+.privilege_member_inner_bottom{
+	border-top: 1px solid #dedede;
+	padding: 25px 70px 0;
+}
+@media only screen and (max-width: 767px){
+	.privilege_member_inner-container{
+		padding-bottom: 15px;
+	}
+
+	.privilege_member_inner_top h1{
+		font-size: 24px;
+		line-height: 24px;
+		padding: 25px 0;
+	}
+	.privilege_member_inner_top p{
+		padding: 0 0 15px;
+		line-height: 18px;
+	}
+	.privilege_member_inner_top{
+		padding: 0 15px 15px;
+	}
+	.privilege_popup_form{
+		padding: 0;
+	}
+	.privilege_popup_form_input input{
+		font-size: 16px;
+
+	}
+	.privilege_member_inner_top .terms{
+		padding: 0 15px;
+		margin-top: 15px;
+	}
+	.privilege_member_inner_bottom{
+		padding: 15px 15px 0;
+	}
+
+}
+
+#applyjetcoupon {
+    cursor: pointer;
+    border: 1px solid #666;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+        font-size: 14px;
+}
+/* JET POPUP */
+
+
+/*code for checkout page popup*/
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url('../fonts/Montserrat-Light.eot');
+    src: url('../fonts/Montserrat-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-Light.woff2') format('woff2'),
+        url('../fonts/Montserrat-Light.woff') format('woff'),
+        url('../fonts/Montserrat-Light.ttf') format('truetype'),
+        url('../fonts/Montserrat-Light.svg#Montserrat-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url('../fonts/Montserrat-Medium.eot');
+    src: url('../fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+        url('../fonts/Montserrat-Medium.woff') format('woff'),
+        url('../fonts/Montserrat-Medium.ttf') format('truetype'),
+        url('../fonts/Montserrat-Medium.svg#Montserrat-Medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.up_change_pass_popup_inner{
+	background: url(../images/change-pass-bg.jpg) no-repeat left top;
+	height: 404px;
+	background-color: #fff;
+	padding: 0;
+	float: left;
+	width: 100%;
+}
+#up_change_pass .up_change_pass_modal{
+	margin: 10%  auto 0;
+}
+button.up_change_passclose {
+    background-image: url(../images/close-pop-change-pass-icn.png);
+    background-repeat: no-repeat;
+    height: 33px;
+    opacity: 1;
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    width: 43px;
+    z-index: 999999;
+    outline: none;
+    background-color: transparent;
+    border:none;
+}
+.up_change_pass_popup_form{
+	float: left;
+	width: 100%;
+	margin: 0 0 10px;
+}
+.up_change_pass_popup_form_input{
+	position: relative;
+	float: left;
+}
+.up_change_pass_popup_form_input input{
+	background-color: #ebebeb;
+	border: none;
+	color: #767677;
+	float: left;
+	font-family: 'Montserrat-Light';
+	font-size: 16px;
+	height: 48px;
+	line-height: 16px;
+	margin: 0;
+	outline: medium none;
+	padding: 15px;
+	width: 100%;
+}
+.up_change_pass_popup_inner h2{
+	font-family: 'Montserrat-Light';
+	font-size: 21px;
+	line-height: 21px;
+	color: #282828;
+	margin-bottom: 10px;
+  font-weight: 400;
+}
+.up_change_pass_popup_inner h2.up_change_pass_mar_btm30{
+	margin-bottom: 30px;
+}
+.up_change_pass_popup_inner h2.up_change_pass_mar_top80{
+	margin-top: 80px;
+}
+
+.btn-change_blue_pass, .btn-assess_blue_confirm{
+	background-color: #0468ff;
+	border-radius: 0;
+	font-size: 18px;
+	font-family: 'Montserrat-Medium';
+	line-height: 18px;
+	padding: 17px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 160px;
+	margin: 10px 0 0;
+  color:#fff;
+}
+.up_change_pass_popup_inner h2.up_change_pass_blue-head{
+	color: #0059b4;
+	font-family: 'Montserrat-Medium';
+  font-weight: 500;
+}
+.no-padding-left{
+	padding-left: 0;
+}
+.btn-change_blue_pass i{
+	display: inline-block;
+	padding-left: 5px;
+}
+.btn-change_blue_pass:hover, .btn-change_blue_pass:focus, .btn-change_blue_pass:hover:focus,
+.btn-assess_blue_confirm:hover, .btn-assess_blue_confirm:focus, .btn-assess_blue_confirm:hover:focus {
+	color: #fff;
+}
+@media screen and (min-width: 768px) {
+.up_change_pass_modal{
+	width:828px;
+	margin: 2%  auto 0;
+}
+}
+
+/*code for checkout page popup*/
+/* Assesment Test Popup */
+.assess_eligibilty_pop_inner{
+	background: url(../images/assessment-eligibility-popup-bg.jpg) no-repeat left top;
+	height: 404px;
+	background-color: #fff;
+	padding: 0;
+	float: left;
+	width: 100%;
+}
+.assess_eligibilty_pop_inner h2{
+	font-family: 'Montserrat-Light';
+	font-size: 21px;
+	line-height: 32px;
+	color: #282828;
+	margin-bottom: 10px;
+  font-weight: 400;
+}
+.assess_eligibilty_pop_inner h2 span{
+	font-family: 'Montserrat-Medium';
+}
+.assess_eligibilty_pop_inner h2.assess_eligibilty_mar30{
+	margin: 30px 0 45px;
+}
+.assess_eligibilty_pop_inner h2.assess_eligibilty_mar_top80{
+	margin-top: 80px;
+}
+.btn-assess_blue_confirm{
+	width: 98px;
+	margin: 0;
+}
+.btn-assess_gray_reject{
+	background-color: #bfbfbf;
+	border-radius: 0;
+	color: #161515;
+	font-size: 18px;
+	font-family: 'Montserrat-Medium';
+	line-height: 18px;
+	padding: 17px;
+	text-align: center;
+	text-transform: capitalize;
+	width: 124px;
+	margin: 0;
+}
+.btn-assess_gray_reject:hover, .btn-assess_gray_reject:focus, .btn-assess_gray_reject:hover:focus {
+	color: #161515;
+}
+
+.assess_eligibilty_complete_pop_inner{
+	background: url(../images/assessment-eligibility-complete-popup-bg.jpg) no-repeat left top;
+	height: 334px;
+	background-color: #fff;
+	padding: 0;
+	float: left;
+	width: 100%;
+}
+.assess_eligibilty_complete_pop_inner h2{
+	font-family: 'Montserrat-Light';
+	font-size: 20px;
+	line-height: 28px;
+	color: #282828;
+	font-weight: 400;
+}
+.assess_eligibilty_complete_pop_inner h2.assess_eligibilty_complete_head_mar60{
+	margin: 60px 0 30px;
+}
+.assment-complete-call{
+	color: #343434;
+	font-family: 'Montserrat-Medium';
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+}
+.assment-complete-mail-mar-top10{
+	margin-top: 10px;
+}
+.assment-complete-mail{
+	margin-top: 10px;
+	color: #004a8c;
+	font-family: 'Montserrat-Medium';
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+}
+.assment-complete-mail a{
+	color: #004a8c;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 991px) {
+.up_change_pass_popup_inner, .assess_eligibilty_pop_inner,.assess_eligibilty_complete_pop_inner{
+	background: #fff;
+	height: auto;
+	padding-bottom: 20px;
+}
+.up_change_pass_popup_inner h2.up_change_pass_mar_top80,
+.assess_eligibilty_pop_inner h2.assess_eligibilty_mar_top80 {
+    margin-top: 20px;
+}
+.up_change_pass_popup_inner h2.up_change_pass_mar_btm30 {
+    margin-bottom: 20px;
+}
+.assess_eligibilty_pop_inner h2.assess_eligibilty_mar30,
+.assess_eligibilty_complete_pop_inner h2.assess_eligibilty_complete_head_mar60{
+	margin: 20px 0;
+}
+}
+/* Assesment Test Popup */
+
+.woocommerce-checkout .gform_wrapper .gform_button{
+  display: none;
+}
+
+.pass_error{
+  color: #ff0000;
+font-family: 'Montserrat-Light';
+line-height: 25px;
+font-size: 14px;
+display: none;
+}

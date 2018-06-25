@@ -1,0 +1,683 @@
+/* ~~ Font family declaration ~~ */
+h1 {
+  font-size: 50px;
+  color: #ffffff;
+  font-family: "Oswald", sans-serif;
+  line-height: 1.4;
+  font-weight: bold;
+  max-width: 730px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+.white {
+  color: #ffffff !important;
+}
+
+p {
+  color: #717171;
+}
+
+.black-clr {
+  color: #000000;
+}
+
+.text-blue {
+  color: #244895;
+}
+
+.margin-top-45 {
+  margin-top: 45px;
+}
+
+.margin-bottom-45 {
+  margin-bottom: 45px;
+}
+
+.margin-top-25 {
+  margin-top: 25px;
+}
+
+.margin-bottom-25 {
+  margin-bottom: 25px;
+}
+
+.gray_bg {
+  background: #f6f6f6 !important;
+}
+
+.blue_bg {
+  background-color: #244895 !important;
+}
+
+.darkOrange {
+  color: #ff6600;
+}
+
+.lightOrange {
+  color: #ffac0a;
+}
+
+.lightOrange_bg {
+  background-color: #ffac0a;
+}
+
+.pad-LR-35 {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 25px;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.border-line {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+.border-line:after {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 36px;
+  height: 2px;
+  background-color: #244895;
+  content: "";
+  display: inline-block;
+}
+.border-line.border-center:after {
+  left: 50%;
+  margin-left: -18px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Banner Section 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.coverImg {
+  position: relative;
+}
+.coverImg .zIndex2 {
+  position: relative;
+  z-index: 2;
+}
+
+.overlay {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.te-banner-top {
+  background: #244895;
+  min-height: 150px;
+  color: #ffffff;
+}
+.te-banner-top .left-te {
+  padding: 26vh 0 25vh;
+}
+.te-banner-top .left-te .banner-components {
+  padding-bottom: 0;
+}
+.te-banner-top .left-te .banner-components p {
+  color: #fdf9f9;
+  margin-top: 12px;
+  line-height: 1.4;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.te-banner-top .left-te .banner-components h1 {
+  margin: 0 auto 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .te-banner-top .left-te {
+    padding: 50px 0 50px;
+  }
+  .te-banner-top .left-te h3 {
+    font-size: 18px;
+  }
+  .te-banner-top .left-te h1 {
+    font-size: 35px;
+  }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    leadership Grid section
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.tab-pane h2 {
+  font-size: 24px;
+}
+
+.offerSection .tab-pane {
+  padding: 20px;
+  min-width: 100%;
+  width: 100% !important;
+  border: none;
+  border-top: none;
+}
+.offerSection .tab-pane p {
+  margin-bottom: 15px;
+}
+.offerSection .tab-pane p:last-child {
+  margin-bottom: 0px;
+}
+.offerSection .nav-tabs.nav-justified {
+  border: none;
+}
+.offerSection .nav-tabs.nav-justified li {
+  vertical-align: top;
+  border-bottom: 1px solid #ebebeb;
+}
+.offerSection .nav-tabs.nav-justified li a {
+  color: #6e6e6e;
+  margin-right: 0 !important;
+  border: none;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  -webkit-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  vertical-align: top;
+  padding: 0 0 10px;
+  display: inline-block;
+}
+.offerSection .nav-tabs.nav-justified li a span {
+  display: inline-block;
+  text-align: center;
+  font-size: 18px;
+  position: relative;
+}
+.offerSection .nav-tabs.nav-justified li a span:after {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  margin-left: -20px;
+  width: 44px;
+  height: 2px;
+  background-color: #244895;
+  content: "";
+  display: inline-block;
+  display: none;
+}
+.offerSection .nav-tabs.nav-justified li a:hover, .offerSection .nav-tabs.nav-justified li a:focus {
+  background: none;
+  border: none;
+  outline: none;
+}
+.offerSection .nav-tabs.nav-justified li.active a {
+  color: #244895;
+  border-right: none;
+  font-weight: bold;
+}
+.offerSection .nav-tabs.nav-justified li.active a span:after {
+  display: block;
+}
+
+.downArrow {
+  display: none;
+}
+
+@media only screen and (max-width: 991px) {
+  .offerSection .tab-pane {
+    border-top: 1px solid #f5f5f5;
+  }
+  .offerSection .tab-content .accordion-link {
+    background: #f3f3f3;
+    border: 1px solid #f3f3f3;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    -webkit-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    position: relative;
+  }
+  .offerSection .tab-content .tab-pane {
+    margin-top: -10px;
+    padding: 0px;
+  }
+  .offerSection .tab-content .tab-pane img {
+    padding-top: 10px;
+  }
+
+  .downArrow {
+    display: block;
+  }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    leadership Grid section
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+ul.list-contact {
+  width: 100%;
+  overflow: hidden;
+}
+ul.list-contact li {
+  padding-top: 8px;
+  display: table;
+  width: 50%;
+  float: left;
+  padding-bottom: 25px;
+  padding-top: 15px;
+  min-height: 166px;
+}
+ul.list-contact li:nth-child(odd) {
+  padding-right: 15px;
+}
+ul.list-contact li .logo-favicon {
+  padding-right: 20px;
+}
+ul.list-contact li .logo-favicon img {
+  max-width: 50px;
+}
+ul.list-contact li .cell {
+  display: table-cell;
+  vertical-align: top;
+  font-size: 14px;
+}
+ul.list-contact li h5 {
+  color: #244895;
+  margin-bottom: 5px;
+  min-height: 25px;
+  line-height: 1.2;
+  font-size: 20px;
+}
+ul.list-contact li .contact_no a {
+  color: #244895;
+}
+
+@media only screen and (min-width: 568px) and (max-width: 666px) {
+  .contact_no a {
+    display: block;
+  }
+}
+@media only screen and (max-width: 567px) {
+  ul.list-contact li {
+    width: 100%;
+    min-height: inherit;
+  }
+  ul.list-contact li:nth-child(odd) {
+    padding-right: 0;
+  }
+  ul.list-contact li .logo-favicon img {
+    max-width: 30px;
+  }
+  ul.list-contact li .logo-favicon + .cell {
+    padding-right: 15px;
+    font-size: 14px;
+  }
+  ul.list-contact li .logo-favicon + .cell h5 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .offerSection .tab-pane p {
+    margin-bottom: 5px;
+  }
+
+  .tab-pane {
+    padding-top: 15px;
+  }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gform style 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.form-wrapper .gform_wrapper {
+  max-width: 100%;
+  padding: 0 15px 15px 15px;
+  border: 1px solid #ebebeb;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  max-width: 350px;
+  margin: 0 auto 0 auto;
+}
+
+#gform_15,
+#gform_16 {
+  margin-top: 15px;
+  /* error message */
+}
+#gform_15 ul,
+#gform_16 ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  width: 100%;
+}
+#gform_15 ul.gfield_checkbox,
+#gform_16 ul.gfield_checkbox {
+  text-align: left;
+  margin: 5px 0;
+}
+#gform_15 .gform_body,
+#gform_16 .gform_body {
+  text-align: center;
+  margin: 0;
+}
+#gform_15 .gform_body .gfield_label,
+#gform_16 .gform_body .gfield_label {
+  display: none;
+}
+#gform_15 .gform_body .gfield,
+#gform_16 .gform_body .gfield {
+  padding: 0;
+  margin: 0 0 12px;
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+#gform_15 .gform_body .gfield:first-child,
+#gform_16 .gform_body .gfield:first-child {
+  padding-left: 0px;
+}
+#gform_15 .gform_body .gfield.description_subscribe,
+#gform_16 .gform_body .gfield.description_subscribe {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+#gform_15 .gform_body .gfield.gfield_error,
+#gform_16 .gform_body .gfield.gfield_error {
+  background: none !important;
+  margin-bottom: 0 !important;
+  border: none;
+}
+#gform_15 .gform_body .gfield:last-child,
+#gform_16 .gform_body .gfield:last-child {
+  margin-bottom: 0px;
+}
+#gform_15 .gform_body .ginput_container,
+#gform_16 .gform_body .ginput_container {
+  position: relative;
+  overflow: hidden;
+  margin-top: 0;
+}
+#gform_15 .gform_body .ginput_container input,
+#gform_15 .gform_body .ginput_container textarea,
+#gform_16 .gform_body .ginput_container input,
+#gform_16 .gform_body .ginput_container textarea {
+  min-height: 40px;
+  padding: 0 5px;
+  color: #333;
+  border: none;
+  border-bottom: 1px solid #dedddd;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  -webkit-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 0;
+  width: 100%;
+}
+#gform_15 .gform_body .ginput_container input:focus,
+#gform_15 .gform_body .ginput_container textarea:focus,
+#gform_16 .gform_body .ginput_container input:focus,
+#gform_16 .gform_body .ginput_container textarea:focus {
+  box-shadow: none;
+  border-bottom-color: #244895;
+  outline: none;
+}
+#gform_15 .gform_body .ginput_container input::-webkit-input-placeholder,
+#gform_15 .gform_body .ginput_container textarea::-webkit-input-placeholder,
+#gform_16 .gform_body .ginput_container input::-webkit-input-placeholder,
+#gform_16 .gform_body .ginput_container textarea::-webkit-input-placeholder {
+  color: #adadad;
+}
+#gform_15 .gform_body .ginput_container input:-moz-placeholder,
+#gform_15 .gform_body .ginput_container textarea:-moz-placeholder,
+#gform_16 .gform_body .ginput_container input:-moz-placeholder,
+#gform_16 .gform_body .ginput_container textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: #adadad;
+}
+#gform_15 .gform_body .ginput_container input::-moz-placeholder,
+#gform_15 .gform_body .ginput_container textarea::-moz-placeholder,
+#gform_16 .gform_body .ginput_container input::-moz-placeholder,
+#gform_16 .gform_body .ginput_container textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #adadad;
+}
+#gform_15 .gform_body .ginput_container input:-ms-input-placeholder,
+#gform_15 .gform_body .ginput_container textarea:-ms-input-placeholder,
+#gform_16 .gform_body .ginput_container input:-ms-input-placeholder,
+#gform_16 .gform_body .ginput_container textarea:-ms-input-placeholder {
+  color: #adadad;
+}
+#gform_15 .gform_body .ginput_container textarea,
+#gform_16 .gform_body .ginput_container textarea {
+  height: 100px;
+  border: 1px solid #dedddd;
+  margin-top: 18px;
+  color: #333;
+}
+#gform_15 .gform_body .ginput_container textarea:focus,
+#gform_16 .gform_body .ginput_container textarea:focus {
+  border-color: #dedddd;
+}
+#gform_15 .gform_body .ginput_container select,
+#gform_16 .gform_body .ginput_container select {
+  background: url(../images/arrow-down-grey.png) no-repeat;
+  background-position: 96% center;
+  padding-right: 30px;
+  border: none;
+  border-bottom: 1px solid #dedddd;
+  color: #333;
+  width: 100%;
+  min-height: 40px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+#gform_15 .gform_body .ginput_container select:hover, #gform_15 .gform_body .ginput_container select:focus,
+#gform_16 .gform_body .ginput_container select:hover,
+#gform_16 .gform_body .ginput_container select:focus {
+  outline: none;
+}
+#gform_15 .gform_body .ginput_container select option,
+#gform_16 .gform_body .ginput_container select option {
+  color: #333;
+  background: #fff;
+}
+#gform_15 .gform_body .ginput_container_checkbox li label,
+#gform_16 .gform_body .ginput_container_checkbox li label {
+  position: relative;
+  padding-left: 29px;
+  color: #363636;
+  cursor: pointer;
+}
+#gform_15 .gform_body .ginput_container_checkbox li label a,
+#gform_16 .gform_body .ginput_container_checkbox li label a {
+  color: #244895;
+}
+#gform_15 .gform_body .ginput_container_checkbox li label:after, #gform_15 .gform_body .ginput_container_checkbox li label:before,
+#gform_16 .gform_body .ginput_container_checkbox li label:after,
+#gform_16 .gform_body .ginput_container_checkbox li label:before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: inline-block;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
+  -ms-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+#gform_15 .gform_body .ginput_container_checkbox li label:after,
+#gform_16 .gform_body .ginput_container_checkbox li label:after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border: 1px solid #969696;
+  -moz-transition: 300ms linear;
+  -o-transition: 300ms linear;
+  -webkit-transition: 300ms linear;
+  -ms-transition: 300ms linear;
+  transition: 300ms linear;
+}
+#gform_15 .gform_body .ginput_container_checkbox li label:before,
+#gform_16 .gform_body .ginput_container_checkbox li label:before {
+  display: none !important;
+  content: "\e929";
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  z-index: 2;
+  top: 2px;
+  left: 2px;
+}
+#gform_15 .gform_body .ginput_container_checkbox li input[type="checkbox"],
+#gform_16 .gform_body .ginput_container_checkbox li input[type="checkbox"] {
+  margin-top: 0px;
+  display: none;
+}
+#gform_15 .gform_body .ginput_container_checkbox li input[type="checkbox"] + label:hover:after,
+#gform_16 .gform_body .ginput_container_checkbox li input[type="checkbox"] + label:hover:after {
+  border-color: #2FAEF8;
+}
+#gform_15 .gform_body .ginput_container_checkbox li input[type="checkbox"]:checked + label:after,
+#gform_16 .gform_body .ginput_container_checkbox li input[type="checkbox"]:checked + label:after {
+  background-color: #2FAEF8;
+  border-color: #2FAEF8;
+  -moz-transition: 300ms linear;
+  -o-transition: 300ms linear;
+  -webkit-transition: 300ms linear;
+  -ms-transition: 300ms linear;
+  transition: 300ms linear;
+}
+#gform_15 .gform_body .ginput_container_checkbox li input[type="checkbox"]:checked + label:before,
+#gform_16 .gform_body .ginput_container_checkbox li input[type="checkbox"]:checked + label:before {
+  display: block !important;
+}
+#gform_15 .gform_body .ginput_container_checkbox li label,
+#gform_16 .gform_body .ginput_container_checkbox li label {
+  font-size: 13px;
+  max-width: 100%;
+}
+#gform_15 .gform_body .ginput_container_checkbox li label:before,
+#gform_16 .gform_body .ginput_container_checkbox li label:before {
+  top: 0px;
+}
+#gform_15 .gform_body .ginput_container_checkbox li label:after,
+#gform_16 .gform_body .ginput_container_checkbox li label:after {
+  border-color: #dedddd;
+  top: -2px;
+}
+#gform_15 .gform_footer,
+#gform_16 .gform_footer {
+  margin-top: 0;
+  padding-top: 0;
+  text-align: center;
+  padding-bottom: 0px;
+}
+#gform_15 .gform_footer input[type="submit"],
+#gform_16 .gform_footer input[type="submit"] {
+  background-color: #f26522;
+  color: #ffffff;
+  padding: 12px 35px;
+  border: 0px;
+  border-radius: 5px;
+  min-width: 150px;
+  max-width: 260px;
+  margin-top: 0;
+  font-size: 14px;
+  display: block;
+  margin: 15px auto 5px auto;
+  text-transform: uppercase;
+}
+#gform_15 .gform_footer input[type="submit"]:hover,
+#gform_16 .gform_footer input[type="submit"]:hover {
+  text-decoration: none;
+}
+#gform_15 .gform_heading,
+#gform_16 .gform_heading {
+  margin: 0;
+}
+#gform_15 .gform_heading span,
+#gform_16 .gform_heading span {
+  margin: 0px;
+}
+#gform_15 div.validation_error,
+#gform_16 div.validation_error {
+  color: #de2525;
+  line-height: 1.3;
+  font-weight: normal;
+  font-size: 14px;
+  text-align: left;
+  border: none;
+  margin: 0 0 10px;
+  padding: 0;
+  display: none;
+}
+#gform_15 .gfield_description,
+#gform_16 .gfield_description {
+  padding-top: 0;
+}
+#gform_15 .validation_message,
+#gform_16 .validation_message {
+  color: #de2525;
+  line-height: 1.3;
+  font-weight: normal;
+  font-size: 14px;
+  text-align: left;
+  background: none;
+}
+
+@media only screen and (max-width: 991px) {
+  .form-wrapper .gform_wrapper {
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 567px) {
+  #gform_15 .gform_footer input[type="submit"],
+  #gform_16 .gform_footer input[type="submit"] {
+    margin-top: 30px;
+  }
+  #gform_15 .gform_body .gfield,
+  #gform_16 .gform_body .gfield {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+}

@@ -1,0 +1,787 @@
+<?php
+if (!defined('sugarEntry')) {
+    define('sugarEntry', true);
+}
+require_once 'include/entryPoint.php';
+require_once('modules/ACL/ACLController.php');
+?>
+<!DOCTYPE html>
+<html>
+		<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<title>Exam Booking Manager</title>
+				<!--<script type="text/javascript" src="cache/include/javascript/sugar_grp1_jquery.js?v=wUfeT5IQUbwii78MflriMw"></script>
+				<script type="text/javascript" src="cache/include/javascript/sugar_grp1_yui.js?v=wUfeT5IQUbwii78MflriMw"></script>
+				<script type="text/javascript" src="cache/include/javascript/sugar_grp1.js?v=wUfeT5IQUbwii78MflriMw"></script>
+				<script type="text/javascript" src="include/javascript/calendar.js?v=wUfeT5IQUbwii78MflriMw"></script>
+				<script type="text/javascript" src="custom/modules/Leads/include/js/popup.js"></script>
+				<link href="themes/SuiteR/css/bootstrap.min.css" rel="stylesheet">
+					<link href="themes/SuiteR/css/footable.core.css" rel="stylesheet" type="text/css" />
+					 <link rel="stylesheet" type="text/css" href="include/javascript/qtip/jquery.qtip.min.css" />
+					 <link rel="stylesheet" type="text/css" href="cache/themes/SuiteR/css/yui.css?v=wUfeT5IQUbwii78MflriMw" />
+					 <link rel="stylesheet" type="text/css" href="include/javascript/jquery/themes/base/jquery.ui.all.css" />
+					 <link rel="stylesheet" type="text/css" href="cache/themes/SuiteR/css/deprecated.css?v=wUfeT5IQUbwii78MflriMw" />
+					 <link rel="stylesheet" type="text/css" href="cache/themes/SuiteR/css/style.css?v=wUfeT5IQUbwii78MflriMw" />
+					<link rel="stylesheet" type="text/css" href="themes/SuiteR/css/colourSelector.php"> -->
+				<style type="text/css">
+				.modalContentpop th, .modalContentpop td {
+					border: none;
+					padding: 0;
+
+
+				}
+				.modalContentpop .label-td{width:28%; white-space: nowrap;}
+				.dumbBoxWrap table label{color:#000; font-size:16px; font-weight:bold;}
+				.dumbBoxWrap{font-family:Arial, Helvetica, sans-serif}
+				.modalContentpop {
+					background-color: #fff;
+					border-bottom-right-radius: 0px ;
+					border-bottom-left-radius: 0px ;
+					padding: 10px 30px ;
+					overflow: auto;
+					min-height:none ;
+					border:1px solid #d7d7d7;
+					border-radius: 0 0 4px 4px;
+				}
+				hr{border:1px solid #d7d7d7; border-bottom:0px none;}
+				.modalContentpop input[type=text]{
+					width: 100%;
+					box-sizing:border-box;
+					margin:0;
+					font-size:12px;
+					padding:7px 10px;
+					border:2px solid #d7d7d7;
+					border-radius:5px;
+				}
+
+				.enroll-table{ width: 76%;  margin: auto;}
+				.modalContentpop input[type=text]:focus{box-shadow:0 0 4px #d7d7d7; outline:0px none;}
+				.modalContentpop select {
+					width: 100%;
+				}
+				.modalContentpop textarea {
+					width: 100%;
+				}
+				.dumbBoxpop {
+					width: 80% ;
+					position: relative;
+					margin: 0 auto;
+					background-color: white ;
+					padding:0px;
+					border: 0px solid #009688;
+					border-radius: 0px ;
+					background-color:#f5f2f2;
+				}
+				.modalHeaderpop h4 {
+					margin: 0 ;
+					font-size: 17px;
+					color: #333;
+				}
+				.closeModalpop {
+					top: 7px ;
+				}
+				.head_textpop {
+					display: inline-block;
+					max-width: 100%;
+					margin-top: 8px;
+					font-weight: 700;
+					font-size:14px;
+				}
+				.modalHeaderpop {
+
+					background: #f5f5f5 none repeat scroll 0 0 ;
+					border-top-left-radius: 0px ;
+					border-top-right-radius: 0px ;
+					border: 1px solid #ddd;
+					text-align: -webkit-center;
+					text-align: center;
+					padding: 15px ;
+					border-bottom:0px none;
+					border-radius:4px 4px 0 0;
+				}
+				.vertical-offsetpop {
+					width: 85% ;
+				}
+
+				.buttonpop {
+					background-color: #ef5350 ;
+					margin: 10px 0px ;
+					padding: 10px 115px ;
+					font-size: 16px ;
+				}
+				.button {
+					background-color: #0356ad ;
+					margin: 10px 0px ;
+					padding: 9px 10px ;
+					font-size: 12px;
+					color:#fff;
+					border:1px solid  #0356ad; border-radius:4px;
+					box-sizing: border-box; width: 100%;
+					text-transform:uppercase
+				}
+				.button:hover{border:1px solid  #0356ad; background-color: transparent;color:#0356ad; cursor:pointer;}
+				.text {
+					margin:  7px 0px ;
+					padding: 6px 21px ;
+					font-size: 20px  ;
+				}
+				.list-content-table {font-size:13px; display:flex; flex-direction:row; margin-top:20px; border-top:1px solid #e7e7e7; padding-top:20px; width:100%; flex-wrap:wrap;}
+				.list-content-table .block{ margin-bottom:15px; color:#999; width:33%;}
+				.list-content-table .block:first-child{ margin-bottom:0;}
+				.list-content-table strong{font-size:13px; margin-right:10px; color:#333}
+				.search-form-table{border:1px solid #e7e7e7;}
+				.search-form-table th{font-size:12px; background-color:#cecece; color:#333; padding:10px;}
+				.search-form-table td{font-size:12px; color:#333; padding:10px; vertical-align: middle;}
+				.search-form-table select{font-size:12px; padding:5px; margin:0;}
+				.search-form-table td input[type="checkbox"]{ margin:0 5px 0 0;}
+
+				.actions-buttons{ display:flex; width:100%; justify-content:flex-end; margin-top:20px;}
+				.actions-buttons .button{width:auto; margin-left:15px;  text-decoration:none;}
+				.actions-buttons .button:first-child{ margin-left:0;}
+				.admit-card-title{ font-size:13px;}
+				.admit-card-title a{color:#0356ad; text-decoration:underline}
+				.admit-card-title a:hover{ text-decoration:none}
+
+				.confirmation-dialog{ position:fixed; width:300px; height:124px; margin-top:-62px; margin-left:-150px; left:50%; top:50%; border: 1px solid #ddd; border-radius: 5px; box-shadow:0 0 5px #ddd; z-index: 220001; display:none;}
+				.confirmation-dialog .confirmation-container{ background-color:#ebebeb; padding:30px 20px 20px; position:relative;}
+				.confirmation-dialog  .confirmation-container .close-link{ position:absolute; top:-8px; right:-8px; background-color:#000; color:#fff; width:22px; height:22px; border-radius:100%; font-size: 11px; display: flex;  align-items: center; justify-content: center; text-decoration:none;}
+				.confirmation-dialog  .confirmation-container .close-link:hover{ background-color:#fff; color:#000;}
+				.confirmation-dialog .confirmation-container .content{ color:#666; font-size: 13px; min-height:50px;}
+				.confirmation-dialog .confirmation-container .content-action{ display:flex; width:100%; align-items:center; justify-content: flex-end;}
+				.confirmation-dialog .confirmation-container .content-action .button{width:auto; margin:0; margin-left:15px; padding: 5px 10px; font-size: 11px;}
+				.confirmation-dialog .confirmation-container .content-action .button:first-child{ margin-left:15px;}
+				.mask{background-color:rgba(0,0,0,0.5); position:fixed; top:0; right:0; bottom:0; left:0; z-index: 220000; display:none;}
+
+				.guidelines-wrapper{ display:flex; width:100%; flex-direction:column; margin-top:20px;}
+        .guidelines-wrapper .block{font-size: 12px;  color: #999; display: flex;}
+        .guidelines-wrapper .block span{color:#333; margin-right: 10px;font-weight: bold;}
+        .guidelines-wrapper .block strong{color:#333; margin:0 5px; font-weight:normal;}
+				.guidelines-wrapper .title{font-size:13px; margin-bottom:10px; font-weight: bold;}
+				.guidelines-wrapper ul{ margin:0; padding:0; display:flex; flex-direction:column;}
+				.guidelines-wrapper ul li{ margin:10px 0 0 ; padding:0; font-size:12px; color:#999; list-style-type:none; line-height: 20px;}
+				.guidelines-wrapper ul li:first-child{margin-top:0;}
+				</style>
+				<script type="text/javascript">
+				Calendar.setup ({
+				   inputField : "date_of_prospect_date_d",
+				   daFormat : "%Y-%m-%d %I:%M%P",
+				   button : "date_of_prospect_trigger_d",
+				   singleClick : true,
+				   dateStr : "",
+				   step : 1,
+				   weekNumbers:false,
+				});
+
+				Calendar.setup ({
+				   inputField : "date_of_callback_date_d",
+				   daFormat : "%Y-%m-%d %I:%M%P",
+				   button : "date_of_callback_trigger_d",
+				   singleClick : true,
+				   dateStr : "",
+				   step : 1,
+				   weekNumbers:false,
+				});
+
+
+				Calendar.setup ({
+				   inputField : "date_of_followup_date_d",
+				   daFormat : "%Y-%m-%d %I:%M%P",
+				   button : "date_of_followup_trigger_d",
+				   singleClick : true,
+				   dateStr : "",
+				   step : 1,
+				   weekNumbers:false,
+				});
+
+				</script></head>
+		<body>
+				<div class="dumbBoxWrap" id="atomBox">
+							<div class="dumbBoxOverlay"></div>
+								<div class="dumbBox dumbBoxpop">
+									<div class="modalHeader modalHeaderpop">
+										<h4>Exam Booking Manager</h4>
+											</div>
+												<div class="modalContent modalContentpop">
+														<span id="call_status" style="color:red">&nbsp;</span>
+														<form name="search_form" id="search_form" class="search_form" method="post" action="">
+                                <table width="100%" cellspacing="0" cellpadding="0" border="0" class="enroll-table">
+                                     <tbody>
+                                            <tr>
+                                                <td class="label-td">
+                                                    <label for="batch_basic">Enter Enrollment Number :</label>
+                                                </td>
+                                                <td width="20">&nbsp;</td>
+                                                <td>
+                                                    <input name="enroll_id" type="text" class="text"  value="" id='enroll_id' required>
+                                                </td>
+                                            		<td width="20">&nbsp;</td>
+                                                <td>
+                                                    <input tabindex="2" title="Search" onclick="SUGAR.savedViews.setChooser();" class="button" type="submit" name="search_form" value="Submit" id="search_enrollid"></td>
+                                                    <!--<td width="20">&nbsp;</td>
+                                                    <td><input tabindex="2" title="Clear" onclick="SUGAR.searchForm.clear_form(this.form); return false;" class="button" type="button" name="clear" id="search_form_clear" value="Clear Enroll ID"></td>-->
+                                            </tr>
+                                    </tbody>
+                                </table>
+						</form>
+                        <div class="guidelines-wrapper">
+                        	<!--<div class="title">Guidelines</div>
+                        	<ul>
+                            	<li>Evalution of performance of distance learners is very important and sensitive matter because they are far away from the teachers and<br/>get very little opportunity to interact with them face to face.</li>
+                                <li>The school of distance education witll follow two-tier system of evaluation to asses the performance of its students as mentioned.</li>
+                                <li>Choices of exams are being captured  now.</li>
+                            </ul>
+                          -->
+
+                          <?php //echo $exam_description;
+                          if($exam_description != ''){
+                                  echo '<div class="title">Guidelines</div>';
+                                  echo '<div class="block">'.$exam_description.'</div>';
+                                }else{
+                                  echo '<div class="block"><span>Note: </span>Please enter your <strong>Enrolment No.</strong> to find further guidelines and instructions and <strong>updates</strong> about Examination</div>';
+                                }
+                          ?>
+
+                        </div>
+
+<?php
+			if(isset($_POST['search_form']) && !empty($_POST['search_form']) && !empty($_POST['enroll_id'])){
+					global $db;
+					if($_POST['enroll_id']!=""){
+						$enrollID=$_POST['enroll_id'];
+						$_SESSION['registration_no']=$_POST['enroll_id'];
+
+						$sqls="SELECT s.`name`,s.email,s.id AS studentid,s.mobile,sb.added_specialization,b.id as batch_id,b.name as course,sb.id,sb.te_pr_programs_id_c as program,sb.current_sems AS currentsemid,csem.name AS currentsemname FROM `te_student` AS s INNER JOIN te_student_te_student_batch_1_c as ssbr ON ssbr.te_student_te_student_batch_1te_student_ida=s.id INNER JOIN te_student_batch as sb ON sb.id=ssbr.te_student_te_student_batch_1te_student_batch_idb INNER JOIN te_ba_batch AS b ON b.id=sb.te_ba_batch_id_c INNER JOIN te_te_semester AS csem ON sb.current_sems = csem.id WHERE s.deleted=0 AND s.`registration_no`='".$enrollID."'";
+
+								$studentObj =$db->query($sqls);
+								$studentifo=array();
+								while($Srow =$db->fetchByAssoc($studentObj)){
+									  $studentifo[]=$Srow;
+									  $studentID =$Srow['studentid'];
+									  $program_id=$Srow['program'];
+									  $currenrsemID =$Srow['currentsemid'];
+									  $_SESSION['student']=$Srow['studentid'];
+
+								}
+					//print_r($studentifo);die;
+								/* fetch Booked Subject */
+									if(!empty($studentifo)){
+
+													$DupSql="SELECT exm.id,exm.exam_status,exm.subject,sem.name AS semname FROM `te_exammanager` AS exm INNER JOIN te_te_subject_te_te_semester_c AS semsubrel ON exm.subject=semsubrel.te_te_subject_te_te_semesterte_te_subject_idb INNER JOIN te_te_semester AS sem ON semsubrel.te_te_subject_te_te_semesterte_te_semester_ida=sem.id WHERE (exm.deleted=0) AND (exm.te_student_id_c='".$studentID."') AND (exm.exam_status IN ('Active','Pass'))";
+														$DupObj =$db->query($DupSql);
+															$BookedSubject = [];
+															while($Duprow =$db->fetchByAssoc($DupObj)){
+																  $BookedSubject[]=$Duprow['subject'];
+															}
+
+													/* Query 3 for */
+													/*
+                          $examsql="SELECT essr.`te_examschedules_te_te_semesterte_examschedules_idb` AS scheduleid ,examdate_rel.te_examschb597hedules_idb AS dateid,exam_dates.name AS subject,exam_dates.te_te_subject_id_c,exam_dates.exam_date,exam_dates.exam_time FROM `te_examschedules_te_te_semester_c` AS essr INNER JOIN te_examschedules AS es ON es.id=essr.`te_examschedules_te_te_semesterte_examschedules_idb` INNER JOIN te_examschedules_te_exam_date_schedules_1_c AS examdate_rel ON examdate_rel.te_examschedules_te_exam_date_schedules_1te_examschedules_ida=essr.`te_examschedules_te_te_semesterte_examschedules_idb` INNER JOIN te_exam_date_schedules AS exam_dates ON exam_dates.id=examdate_rel.te_examschb597hedules_idb WHERE essr.`te_examschedules_te_te_semesterte_te_semester_ida` IN('".$currentsemID."') AND es.deleted=0 AND es.status='Active' ORDER BY exam_dates.exam_date ASC ";
+													$examsql="SELECT s1.name AS subjectname,t1.te_in_institutes_id_c,t1.start_date AS startdate,t1.end_date AS enddate,tedel.subjects AS subjectID,tedel.course,tedel.start_date AS datelist,tedel.exam_slots,tedel.batch FROM `te_exam` AS t1 INNER JOIN te_exams_details_te_exam_c AS trel ON t1.id=trel.te_exams_details_te_examte_exam_ida INNER JOIN te_exams_details AS tedel ON trel.te_exams_details_te_examte_exams_details_idb =tedel.id INNER JOIN te_te_subject As s1 ON s1.id=tedel.subjects WHERE tedel.semeters In('".$currenrsemID."') AND t1.status=1";
+                          */
+														$examsql="SELECT s1.name AS subjectname,t1.te_in_institutes_id_c,t1.start_date AS startdate,t1.end_date AS enddate,tedel.subjects AS subjectID,tedel.course,tedel.start_date AS datelist,tedel.exam_slots,tedel.batch, t1.allow_student_submit_choices AS allow_student, t1.description AS exam_description FROM `te_exam` AS t1 INNER JOIN te_exams_details_te_exam_c AS trel ON t1.id=trel.te_exams_details_te_examte_exam_ida INNER JOIN te_exams_details AS tedel ON trel.te_exams_details_te_examte_exams_details_idb =tedel.id INNER JOIN te_subjects_master As s1 ON s1.id=tedel.subjects WHERE tedel.semeters In('".$currenrsemID."') AND t1.status=1 AND tedel.deleted=0 GROUP BY s1.id";
+														$examObj =$db->query($examsql);
+															$examdetals=array();
+															$subjectdetals=array();
+															while($examrow =$db->fetchByAssoc($examObj)){
+																  $examdetals[]=$examrow;
+																  $subjectdetals[]=$examrow['subjectID'];
+																  $datelist=$examrow['datelist'];
+																 # $end_date=$examrow['enddate'];
+																  $slotslist=$examrow['exam_slots'];
+																  $allow_student=$examrow['allow_student'];
+																  $exam_description=$examrow['exam_description'];
+
+																}
+																  if($datelist!=''){
+																  $dropdowndatelist=(explode(",",$datelist));
+																  }
+																  if($slotslist!=''){
+																  $dropdownslotlist=(explode(",",$slotslist));
+																  }
+
+
+									}
+									if(empty($studentifo)){
+
+														echo '<script> alert("Wrong Id Or Record Not Found In dataBase Please Check")</script>';
+										}
+
+						}
+											?>
+											<div  class="block-wrapper list view table footable-loaded footable default list-content-table">
+
+																			<!-- Student Personal information Display -->
+															<?php foreach($studentifo as $info){
+
+																	/** Query to get course name */
+																	$course_info="select `name` from te_pr_programs where id='".$info['program']."'";
+																	$get_course_info=$db->query($course_info);
+																	$course_row =$db->fetchByAssoc($get_course_info);
+
+																?>
+
+
+
+                                                <div class="block"><strong>Name-</strong><?php echo $info['name']?></div>
+                                                <div class="block"><strong>Email-</strong><?php echo $info['email']?></div>
+                                                <div class="block"><strong>Course-</strong><?php echo $course_row['name']?></div>
+                                            	<div class="block"><strong>Mobile-</strong><?php echo $info['mobile']?></div>
+                                                <div class="block"><strong>Specialization-</strong><?php echo $info['added_specialization']?></div>
+                                                <div class="block"><strong>Current Semsester-</strong><?php echo $info['currentsemname']?></div>
+
+
+
+
+																	</div><?php  }
+					} /* isset form*/
+
+          /* Booking Form Start */
+					if(isset($_POST['Lock-choice']) && $_POST['Lock-choice']=="Lock Choices"){
+						global $db;
+            $status_var = $_POST['status_var'];
+            if($status_var == 0){
+						$sql = "INSERT INTO te_exammanager (id,subject,city,state,exam_date,date_entered,te_student_id_c,exam_status,name,exam_time) VALUES";
+							$postvalus=array();
+							/*for($i=0; $i < count($_POST['subjectid']);$i++){
+							$postvalus[] = "('".create_guid()."','".$_POST['subjectid'][$i]."','".$_POST['city'][$i]."','".$_POST['state'][$i]."','".$_POST['date'][$i]."','".date('Y-m-d H:i:s')."','".$_SESSION['studentsessionid']."')";
+							}*/
+							for($i=0; $i < count($_POST['subjectid']);$i++){
+
+								$update_data="select subject from te_exammanager where subject='".$_POST['subjectid'][$i]."' AND te_student_id_c='".$_SESSION['student']."' And exam_status='fail'";
+								$data=$db->query($update_data);
+
+								if($data->num_rows){
+									$update_query_manager="Update te_exammanager set exam_status='booked' where subject='".$_POST['subjectid'][$i]."' AND te_student_id_c='".$_SESSION['student']."' And exam_status='fail'";
+									$update=$db->query($update_query_manager);
+								}
+
+								$postvalus[] = "('".create_guid()."','".$_POST['subjectid'][$i]."','".$_POST['city'][$i]."','".$_POST['state'][$i]."','".$_POST['date'][$i]."','".date('Y-m-d H:i:s')."','".$_SESSION['student']."','Active','".$_SESSION['registration_no']."','".$_POST['slots'][$i]."')";
+							}
+							$sql .= join(',', $postvalus);
+							$QueryInS=$GLOBALS['db']->Query($sql);
+							if($QueryInS){
+								unset($_SESSION['studentsessionid']);
+								unset($_SESSION['student']);
+								echo '<script> alert("You have Sucessfully Locked your Exam Thanks !");callPage(); function callPage(){ window.location.href="index.php?module=te_ExamManager&action=index"} </script>';
+								exit();
+								}
+
+              }
+              if($status_var == 1){
+                $postvalus=array();
+
+                for($i=0; $i < count($_POST['subjectid']);$i++){
+
+
+                  $sql = "UPDATE te_exammanager set subject='".$_POST['subjectid'][$i]."', city='".$_POST['city'][$i]."', name='".$_SESSION['registration_no']."', exam_time='".$_POST['slots'][$i]."',
+                  state='".$_POST['state'][$i]."', exam_date='".$_POST['date'][$i]."', date_modified='".date('Y-m-d H:i:s')."', te_student_id_c='".$_SESSION['student']."', exam_status='Active' where id='".$_POST['exam_row_id'][$i]."'";
+                  $QueryUpd = $db->query($sql);
+                }
+
+
+                if($QueryUpd){
+                  unset($_SESSION['studentsessionid']);
+                  unset($_SESSION['student']);
+                  echo '<script> alert("You have Sucessfully Locked your Exam Thanks !");callPage(); function callPage(){ window.location.href="index.php?module=te_ExamManager&action=index"} </script>';
+                  exit();
+                  }
+              }
+						}
+
+            // Save choices first time
+            if(isset($_POST['Save-choice']) && $_POST['Save-choice']=="Save Choice"){
+  						global $db;
+              $status_var = $_POST['status_var'];
+              if($status_var == 0){
+                $sql = "INSERT INTO te_exammanager (id,subject,city,state,exam_date,date_entered,te_student_id_c,exam_status,name,exam_time) VALUES";
+                  $postvalus=array();
+
+                  for($i=0; $i < count($_POST['subjectid']);$i++){
+
+                    $update_data="select subject from te_exammanager where subject='".$_POST['subjectid'][$i]."' AND te_student_id_c='".$_SESSION['student']."' And exam_status='fail'";
+                    $data=$db->query($update_data);
+
+                    if($data->num_rows){
+                    	$update_query_manager="Update te_exammanager set exam_status='booked' where subject='".$_POST['subjectid'][$i]."' AND te_student_id_c='".$_SESSION['student']."' And exam_status='fail'";
+                    	$update=$db->query($update_query_manager);
+                    }
+
+                    $postvalus[] = "('".create_guid()."','".$_POST['subjectid'][$i]."','".$_POST['city'][$i]."','".$_POST['state'][$i]."','".$_POST['date'][$i]."','".date('Y-m-d H:i:s')."','".$_SESSION['student']."','Saved','".$_SESSION['registration_no']."','".$_POST['slots'][$i]."')";
+                  }
+                  $sql .= join(',', $postvalus);
+                  $QueryInS=$GLOBALS['db']->Query($sql);
+                  if($QueryInS){
+                    unset($_SESSION['studentsessionid']);
+                    unset($_SESSION['student']);
+                    echo '<script> alert("You have Sucessfully Saved your Exam Thanks !");callPage(); function callPage(){ window.location.href="index.php?module=te_ExamManager&action=index"} </script>';
+                    exit();
+                    }
+              }
+                if($status_var == 1){
+
+                    $postvalus=array();
+
+                    for($i=0; $i < count($_POST['subjectid']);$i++){
+
+
+                      $sql = "UPDATE te_exammanager set subject='".$_POST['subjectid'][$i]."', city='".$_POST['city'][$i]."', name='".$_SESSION['registration_no']."', exam_time='".$_POST['slots'][$i]."',
+                      state='".$_POST['state'][$i]."', exam_date='".$_POST['date'][$i]."', date_modified='".date('Y-m-d H:i:s')."', te_student_id_c='".$_SESSION['student']."', exam_status='Saved' where id='".$_POST['exam_row_id'][$i]."'";
+                      $QueryUpd = $db->query($sql);
+                    }
+
+
+                    if($QueryUpd){
+                      unset($_SESSION['studentsessionid']);
+                      unset($_SESSION['student']);
+                      echo '<script> alert("You have Sucessfully Saved your Exam Thanks !");callPage(); function callPage(){ window.location.href="index.php?module=te_ExamManager&action=index"} </script>';
+                      exit();
+                      }
+
+                }
+
+  					} ?>
+
+						<hr>
+            <?php //echo  '$allow_student'.$allow_student; ?>
+            <?php if( $allow_student == 1 ){ ?>
+						<form name="search_form2" id="search_form2" class="search_form2" method="post" action="">
+          <?php  if(!empty($examdetals)){
+            ?>
+												<table id="tableID" cellpadding="0" cellspacing="0" width="100%" border="0" class="search-form-table list view table footable-loaded footable default ">
+														<tr>
+															<th data-hide="phone" class="footable-visible footable-first-column">
+																<strong>Subjects</strong>
+															</th>
+
+															<th  data-hide="phone" class="footable-visible footable-first-column">
+																<strong>Exam Dates</strong>
+															</th>
+															<th  data-hide="phone" class="footable-visible footable-first-column">
+																<strong>Exam Slots</strong>
+															</th>
+															<th  data-hide="phone" class="footable-visible footable-first-column">
+																<strong>State</strong>
+															</th>
+															<th  data-hide="phone" class="footable-visible footable-first-column">
+																<strong>City</strong>
+															</th>
+														</tr>
+
+														<?php /* Indian Staet Display Here */
+
+														$city_list=array();
+														$indiastate=$indiastate[]=$GLOBALS['app_list_strings']['indian_states'];
+														$cities=$cities[]=$GLOBALS['app_list_strings']['cities_list'];
+
+														foreach($cities as $key_city=>$city){
+															$statecode=explode('_',$key_city);
+															$code=$statecode[0];
+
+															$city_list[$code][]=$city;
+														}
+														foreach($examdetals as $k_val=>$values) {
+                              echo '<tr class="oddListRowS1">';
+														$sql="select `id`, `exam_status`,`subject`, `city`, `state`, `exam_date`, `exam_time` from te_exammanager where te_student_id_c='".$studentID."' && subject='".$values['subjectID']."'";
+														$exam_status=$db->query($sql);
+
+														if($exam_status->num_rows>0){
+
+														while($Srow =$db->fetchByAssoc($exam_status)){
+
+															if($Srow['exam_status']!='Active' && $Srow['exam_status']!='Pass' && $Srow['exam_status']!='booked'){?>
+                              <?php  if($Srow['exam_status'] == 'Saved'){
+                                  $checkCount = 1;
+                                }else{
+                                  $checkCount = 0;
+                                } ?>
+                                <input type="hidden" name="status_var" value="<?php echo $checkCount; ?>" />
+                                <input type="hidden" value="<?php echo $Srow['id']; ?>" name="exam_row_id[]" />
+																<td type="relate" field="total_leads" class="inlineEdit footable-visible footable-last-column">
+																	<input type="checkbox" id="<?php echo $values['subjectID']?>_check" name="subjectid[]" value="<?php echo $values['subjectID']; ?>" checked class="text" required><span><?php echo $values['subjectname']; ?></span>
+																</td>
+
+													<td  type="relate" field="batch" class="inlineEdit footable-visible footable-last-column">
+														<select name="date[]" id="<?php echo $values['subjectID']; ?>_date" class="text" required>
+																<option  value="" >Select Date</option>
+																<?php foreach($dropdowndatelist as $key){?>
+																<option  value="<?php echo $key ?>" <?php if($Srow['exam_date'] == $key){ echo 'selected'; }?> ><?php echo $key ?></option>
+																<?php } ?>
+														</select>
+													</td>
+													<td type="relate" field="total_leads" class="inlineEdit footable-visible footable-last-column">
+														<select name="slots[]"  id="<?php echo $values['subjectID']; ?>_slot" class="text" data="slots" required>
+															<option  value="" >Select Slots</option>
+															<?php foreach($dropdownslotlist as $key){ ?>
+															<option  value="<?php echo $key ?>" <?php if($Srow['exam_time'] == $key){ echo 'selected'; }?> ><?php echo $key ?></option>
+
+															<?php }?>
+														</select>
+														<script>
+
+															$('#<?php echo $values['subjectID']; ?>_slot').change(function () {
+
+																var date=$('#<?php echo $values['subjectID']; ?>_date').val();
+
+																var time = $(this).find(':selected')[0].value;
+																 var c=0;
+																<?php foreach($examdetals as $k=>$val) { ?>
+
+																	var data_time=$('#<?php echo $val['subjectID']; ?>_slot').val();
+																	var data_date=$('#<?php echo $val['subjectID']; ?>_date').val();
+
+																	if(time==data_time && date==data_date){
+																		c++;
+																	}
+																<?php } ?>
+
+
+																if(c>1){
+																	alert("Same time and date not allowed!!");
+																	$(this).val('');
+																}
+
+																});
+															</script>
+													</td>
+													<td type="relate" field="total_leads" class="inlineEdit footable-visible footable-last-column">
+														<select name="state[]" id="<?php echo $values['subjectID']; ?>_state" class="text state" required>
+															<option  value="" >Select State</option>
+														<?php foreach($indiastate as $key=>$statedata){ ?>
+															<option value="<?php echo $key ?>"  <?php if($Srow['state'] == $key){ echo 'selected'; }?>><?php echo $statedata?></option>
+														<?php } ?>
+														</select>
+													</td>
+
+													<td type="relate" field="total_leads" class="inlineEdit footable-visible footable-last-column">
+														<select name="city[]" id="<?php echo $values['subjectID']; ?>_city" class="text city" required>
+															<option  value="" >Select City</option>
+                                 <?php if($Srow['city'] ){ echo '<option value="'.$Srow['city'].'" selected>'.$Srow['city'].'</option>'; }?>
+															<script>
+															$('#<?php echo $values['subjectID']; ?>_state').change(function () {
+																var key = $(this).find(':selected')[0].value;
+																var $newdiv1 = "<div id='object1'></div>" ;
+																<?php foreach($city_list as $key=>$val){?>
+
+																     if(key=='<?= $key?>'){
+																		 <?php foreach($val as $k=>$v){?>
+
+																		   $newdiv1 +='<option value="<?php echo $v ?>"><?php echo $v?></option>';
+
+																		 <?php }?>
+																			$("#<?php echo $values['subjectID']; ?>_city").html(" ");
+																			$("#<?php echo $values['subjectID']; ?>_city").html($newdiv1);
+
+																	 }
+																	<?php }?>
+
+																});
+															</script>
+
+														</select>
+													</td>
+															<?php }
+															else if($Srow['exam_status']=='Active'){
+																$sub[]= $values['subjectname'];
+																$sub_id[]=$values['subjectID'];
+															}
+														}
+														}
+														else{?>
+														<td type="relate" field="total_leads" class="inlineEdit footable-visible footable-last-column">
+														<input type="checkbox" id="<?php echo $values['subjectID']?>_check" name="subjectid[]" value="<?php echo $values['subjectID']; ?>" checked class="text" required><span><?php echo $values['subjectname']; ?></span>
+													</td>
+													<!-- <td align="left" valign="top" type="relate" field="vendor" class="inlineEdit footable-visible footable-last-column">{$subject_info.$key}</td>
+													<input type="hidden" value="{$key}" name="subjectid[]"/> -->
+													<td align="left" valign="top" type="relate" field="batch" class="inlineEdit footable-visible footable-last-column">
+														<select name="date[]" id="<?php echo $values['subjectID']; ?>_date" class="text" required>
+																<option  value="" >Select Date</option>
+																<?php foreach($dropdowndatelist as $key){?>
+																<option  value="<?php echo $key ?>" ><?php echo $key ?></option>
+																<?php } ?>
+														</select>
+													</td>
+													<td type="relate" field="total_leads" class="inlineEdit footable-visible footable-last-column">
+														<select name="slots[]" id="<?php echo $values['subjectID']; ?>_slot" class="text" required>
+															<option  value="" >Select Slots</option>
+															<?php foreach($dropdownslotlist as $key){ ?>
+															<option  value="<?php echo $key ?>" ><?php echo $key ?></option>
+															<?php }?>
+														</select>
+														<script>
+															$('#<?php echo $values['subjectID']; ?>_slot').change(function () {
+
+																var date=$('#<?php echo $values['subjectID']; ?>_date').val();
+
+																var time = $(this).find(':selected')[0].value;
+																 var c=0;
+																<?php foreach($examdetals as $k=>$val) { ?>
+
+																	var data_time=$('#<?php echo $val['subjectID']; ?>_slot').val();
+																	var data_date=$('#<?php echo $val['subjectID']; ?>_date').val();
+
+																	if(time==data_time && date==data_date){
+																		c++;
+																	}
+																<?php } ?>
+
+
+																if(c>1){
+																	alert("Same time and date not allowed!!");
+																	$(this).val('');
+																}
+
+																});
+														</script>
+													</td>
+													<td type="relate" field="total_leads" class="inlineEdit footable-visible footable-last-column">
+														<select name="state[]" id="<?php echo $values['subjectID']; ?>_state"  class="text state" required>
+															<option  value="" >Select State</option>
+														<?php foreach($indiastate as $key=>$statedata){ ?>
+															<option value="<?php echo $key ?>"><?php echo $statedata?></option>
+														<?php } ?>
+														</select>
+													</td>
+
+													<td type="relate" field="total_leads" class="inlineEdit footable-visible footable-last-column">
+														<select name="city[]" id="<?php echo $values['subjectID']; ?>_city" class="text city" required>
+															<option  value="" >Select City</option>
+
+															<script>
+															$('#<?php echo $values['subjectID']; ?>_state').change(function () {
+																var key = $(this).find(':selected')[0].value;
+																var $newdiv1 = "<div id='object1'></div>" ;
+																<?php foreach($city_list as $key=>$val){?>
+
+																     if(key=='<?= $key?>'){
+																		 <?php foreach($val as $k=>$v){?>
+
+																		   $newdiv1 +='<option value="<?php echo $v ?>"><?php echo $v?></option>';
+
+																		 <?php }?>
+																			$("#<?php echo $values['subjectID']; ?>_city").html(" ");
+																			$("#<?php echo $values['subjectID']; ?>_city").html($newdiv1);
+
+																	 }
+																	<?php }?>
+
+																});
+															</script>
+														</select>
+													</td>
+													<?php
+														}
+													?>
+													</tr>
+													<script>
+													$('#<?php echo $values['subjectID']?>_check').click(function(){
+
+														if($(this).is(":not(:checked)")){
+															$('#<?php echo $values['subjectID']?>_date').attr('disabled','true');
+															$('#<?php echo $values['subjectID']?>_slot').attr('disabled','true');
+															$('#<?php echo $values['subjectID']?>_state').attr('disabled','true');
+															$('#<?php echo $values['subjectID']?>_city').attr('disabled','true');
+															$('#<?php echo $values['subjectID']?>_date').removeAttr('required');
+															$('#<?php echo $values['subjectID']?>_slot').removeAttr('required');
+															$('#<?php echo $values['subjectID']?>_state').removeAttr('required');
+															$('#<?php echo $values['subjectID']?>_city').removeAttr('required');
+															$(this).removeAttr('required');
+														}
+														else{
+
+															$('#<?php echo $values['subjectID']?>_date').removeAttr('disabled');
+															$('#<?php echo $values['subjectID']?>_slot').removeAttr('disabled');
+															$('#<?php echo $values['subjectID']?>_state').removeAttr('disabled');
+															$('#<?php echo $values['subjectID']?>_city').removeAttr('disabled');
+														}
+
+													});
+													</script>
+													<?php	}
+													foreach($studentifo as $info){
+
+														/** Query to get course name */
+														$course_info="select `name` from te_pr_programs where id='".$info['program']."'";
+														$get_course_info=$db->query($course_info);
+														$course_row =$db->fetchByAssoc($get_course_info);
+
+														$enroll_id=$_POST['enroll_id'];
+														$student_name=$info['name'];
+														$course_name=$course_row['name'];
+														$batch_id=$info['batch_id'];
+														$current_sem=$info['currentsemname'];
+													}
+													if(count($sub)>0){?>
+														<h3 class="admit-card-title">This subject <?php echo implode(',',$sub)?> has been booked Now...Proceed to Generate <a href="index.php?entryPoint=admitcardEntryPoint&studentID=<?php echo $studentID ?>&enrollno=<?php echo $enroll_id?>&s_name=<?php echo $student_name?>&c_name=<?php echo $course_name?>&sem=<?php echo $current_sem?>&batch=<?php echo $batch_id?>" class="admit_card" id="admit_card" value="<?php  echo implode(',',$sub_id)?>" data="<?php echo $studentID ?>" target="_blank">Admit card</a></h3>
+                            <style>
+                            #tableID, .actions-buttons{
+                              display:none;
+                            }
+                            </style>
+													<?php }?>
+
+													<script>
+													$("#a").click(function(){
+
+														var subjectID=$(this).attr("value");
+														var studentID=$(this).attr("data");
+
+														$.ajax({
+														  url: "index.php?entryPoint=admitcardEntryPoint",
+														  type: "POST",
+														  data: {
+															"source":"admit_card",
+															"subjectID":subjectID,
+															"studentID":studentID
+														  },
+														  success: function(msg){
+
+																 $("#admit_card").attr('href','http://localhost/srmpune/index.php?entryPoint=admitcardEntryPoint&msg='+msg+'&enrollno=<?php echo $enroll_id?>&s_name=<?php echo $student_name?>&c_name=<?php echo $course_name?>&sem=<?php echo $current_sem?>')
+																	.attr('download', '')
+																		.attr('target', '_blank');
+														  }
+													   });
+													});
+
+													</script>
+
+													</table>
+                                                    <div class="actions-buttons">
+													<input tabindex="2" title="Search" onclick="SUGAR.savedViews.setChooser();" class="button" type="submit" name="Save-choice" value="Save Choice" id="search_form2">
+													<input tabindex="2" title="Search" onclick="SUGAR.savedViews.setChooser();" class="button" type="submit" name="Lock-choice" value="Lock Choices" id="search_form3">
+
+													</div>
+<?php } ?>
+							</form>
+            <?php } ?>
+
+
+
+    <div class="confirmation-dialog">
+    		<div class="confirmation-container">
+            	<a href="javascript:void(0)" class="close-link">X</a>
+            	<div class="content">Please Note Choices once locked, can not be changed</div>
+            	<div class="content-action">
+                	<button class="button">Cancel</button>
+                    <button class="button">Confirm</button>
+                </div>
+    		</div>
+    </div>
+    <div class="mask"></div>
+<!--
+<script>
+	jQuery(document).ready(function(e) {
+        jQuery('.lock-choices').click(function(){
+
+			jQuery('.confirmation-dialog').show();
+			jQuery('.mask').show();
+
+		})
+		jQuery('.close-link').click(function(){
+
+			jQuery('.confirmation-dialog').hide();
+			jQuery('.mask').hide();
+
+		})
+    });
+</script>
+-->

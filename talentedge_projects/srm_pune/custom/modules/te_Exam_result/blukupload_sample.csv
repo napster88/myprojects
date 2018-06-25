@@ -1,0 +1,10 @@
+University,Enrollment ID,Batch_code,Exam Month/Date,Course,Semester ,Subject_code,Exam_name,Exam Scores
+Chennai Super Kings Campus,KM05,MB01,05/25/2018,M.tech,Msem01 ,ALG,Written,60
+Chennai Super Kings Campus,KM05,MB01,05/25/2018,M.tech,Msem01 ,ALG,Project,40
+Chennai Super Kings Campus,KM05,MB01,05/25/2018,M.tech,Msem01,ALG,Viva,40
+Chennai Super Kings Campus,KM05,MB01,05/25/2018,M.tech,Msem01,PST,Written,78
+Chennai Super Kings Campus,KM05,MB01,05/25/2018,M.tech,Msem01,PST,Project,40
+Chennai Super Kings Campus,KM05,MB01,05/25/2018,M.tech,Msem01,PST,Viva,40
+Chennai Super Kings Campus,KM06,MB01,05/25/2018,M.tech,Msem02,RST,Written,78
+Chennai Super Kings Campus,KM06,MB01,05/25/2018,M.tech,Msem02,RST,Project,40
+Chennai Super Kings Campus,KM06,MB01,05/25/2018,M.tech,Msem02,RST,Viva,40

@@ -1,0 +1,857 @@
+@import './colors';
+@import './mixin';
+@mixin checkBox {
+    label {
+        position: relative;
+        padding-left: 27px;
+        color: #363636;
+        cursor: pointer;
+        &:after,
+        &:before {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: inline-block;
+            @include transition(0.25s ease-in-out);
+        }
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background: #fff;
+            border: 1px solid #969696;
+            @include transition(300ms linear);
+        }
+        &:before {
+            display: none !important;
+            content: "\e929";
+            color: #fff;
+            display: inline-block;
+            font-size: 14px;
+            font-family: 'icomoon' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            z-index: 2;
+            top: 2px;
+            left: 2px;
+        }
+    }
+    input[type="checkbox"] {
+        margin-top: 0px;
+        display: none;
+        & + label {
+            &:hover {
+                // color: $orange;
+                &:after {
+                	border-color: #2FAEF8;
+                }
+            }
+        }
+        &:checked {
+            + label {
+                // color: $orange;
+                &:hover {
+                    // color: $orange;
+                }
+                &:after {
+                	background-color: #2FAEF8;
+                	border-color: #2FAEF8;
+                	@include transition(300ms linear);
+                }
+                &:before {
+                    display: block !important;
+                }
+            }
+        }
+    }
+}
+
+.redir_btn {
+    display: inline-block;
+    @include orange-btn(#2d4791);
+    text-transform: uppercase;
+    @include border-radius(3px);
+    font-size: 14px;
+    padding: 11px 15px;
+    font-weight: bold;
+    min-width:120px;
+    text-align: center;
+    &:hover {
+        background-color: #2d4791;
+        color: #fff;
+    }
+}
+
+// course-listing sass
+.contain-search {
+    padding-top: 0;
+    padding-bottom: 35px;
+}
+
+.user_search_course{
+    padding-top: 45px;
+    p{
+        color: $colorGrey;
+        margin-bottom: 10px;
+    }
+    .redir_btn-a a{
+        display: inline-block;
+        @include orange-btn($orange);
+        text-transform: uppercase;
+        @include border-radius(5px);
+        font-size: 14px;
+        padding: 14px 15px 12px 15px;
+        width: 185px;
+        text-align: center;
+    }
+}
+.overFlow_filter{
+    max-height: 133px;
+    overflow-y: auto;
+    margin-bottom: 25px;
+}
+
+.university-list-widget{
+	.col-university-card{
+		margin-bottom: 25px;
+		&:last-child{
+			margin-bottom: 0px;
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px){
+    .university-list-widget {
+        padding-top: 54px;
+    }
+}
+@media only screen and (min-width: 1025px){
+    .te_university_list{
+        padding-left: 70px;
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .user_search_course .redir_btn-a{
+        text-align: left;
+    }
+}
+
+.wrapCard {
+    box-shadow: 0 0 10px #d0d0d0;
+    position: relative;
+}
+
+/*/ ~~~~~~~~~~~ university card style ~~~~~~~~~~~ */
+.col-university-card{
+	box-shadow: 0 0 10px #d0d0d0;
+    position: relative;
+    @include border-radius(5px);
+    .leftCover {
+	    position: static;
+	}
+    .universityCover{
+    	text-align: center;
+    	img{
+    		position: absolute;
+    		top: 50%;
+    		@include transform(translateX(-50%) translateY(-50%));
+    		max-width: 125px;
+    	}
+    }
+    .instituteDetail{
+		border-bottom: 1px solid #ebebeb;
+		padding-bottom: 10px;
+		padding-top: 15px;
+		color: #2d4791;
+		h2{
+			font-weight: bold;
+			font-size: 20px;
+		}
+		h4{
+			color: #262627;
+			font-weight: bold;
+			font-size: 14px;
+			.fa{
+				font-size: 35px;
+			    color: #2d4791;
+			    padding-right: 12px;
+			    vertical-align: middle;
+			    margin-top: -6px;
+			    display: inline-block;
+			}
+			margin-bottom: 15px;
+			&:last-child{
+				margin-bottom: 0px;
+			}
+		}
+		.institute_details{
+			padding-right: 10px;
+		}
+	}
+	.courseAvail{
+		color: #262627;
+		padding-top: 10px;
+		position: relative;
+        min-height: 90px;
+		h3{
+			font-weight: bold;
+			line-height: 1;
+			text-transform: uppercase;
+		}
+		.redir_btn{
+			position: absolute;
+			bottom: 15px;
+			right: 0px;
+			font-weight: 500;
+            &:hover,
+            &:focus{
+                color: #fff;
+            }
+		}
+		ul{
+			padding-right: 145px;
+			padding-bottom: 10px;
+			li{
+				margin-top: 8px;
+				margin-bottom: 5px;
+				position: relative;
+				padding-left: 23px;
+                background-image: url("../images/arrow_sup.png");
+                background-repeat: no-repeat;
+                background-position: 0 7px;
+                background-size: 10px;
+				&:first-child {
+                    padding-right: 10px;
+                }
+                // &:after {
+                //     position: absolute;
+                //     top: 7px;
+                //     left: 0px;
+                //     content: '';
+                //     background: #2d4791;
+                //     display: block;
+                //     width: 8px;
+                //     height: 8px;
+                //     @include border-radius(50%);
+                //     z-index: -1;
+                // }
+                a{
+                	color: #262627;
+                	font-size: 13px;
+                }
+			}
+		}
+	}
+}
+
+.lazyLoad, .popular_course{
+    display: inline-block;
+    padding: 14px 35px 12px 35px;
+    background-color: #2d4791;
+    color: #ffffff;
+    @include border-radius(3px);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    min-width: 150px;
+    margin-top: 35px;
+    &:hover, &:focus{
+        color: $white;
+    }
+}
+.popular_course{
+    background-color: $orange;
+    display: none;
+    position: relative;
+    top: 35px;
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+    .col-university-card {
+        .courseAvail{
+            min-height: 120px;
+        }
+    }
+}
+// media query for card
+// iPad and till 1180
+@media only screen and (max-width: 1180px) and (min-width: 1024px) {
+    .col-university-card {
+    	.instituteDetail{
+    		.left,
+    		.right{
+    			width: 100%;
+    		}
+    		.right{
+    			h4{
+    				width: 50%;
+    				float: left;
+    				margin: 8px 0 0px 0;
+    			}
+    		}
+    	}
+    	.courseAvail {
+    		ul {
+    			li{
+    				width: 100%;
+    				float: none;
+    			}
+    		}
+    	}
+    }
+}
+
+// below iPad
+@media only screen and (max-width: 1023px) {
+    .col-university-card {
+    	.instituteDetail{
+    		.left,
+    		.right{
+    			width: 100%;
+    		}
+    		.right{
+    			h4{
+    				width: 50%;
+    				float: left;
+    				margin: 8px 0 0px 0;
+    			}
+    		}
+    	}
+    	.courseAvail {
+    		ul {
+    			li{
+    				width: 100%;
+    				float: none;
+                    margin: 0;
+    			}
+    		}
+    	}
+    }
+}
+
+// below iPhone6 plus
+@media only screen and (max-width: 735px) {
+    
+}
+
+// below iPhone6 make single card
+@media only screen and (max-width: 666px) {
+    .col-university-card .courseAvail ul{
+    	padding-right: 0px;
+    	padding-bottom: 60px;
+        li{
+            margin: 5px 0;
+        }
+    }
+}
+@media only screen and (max-width: 567px) {
+    .col-university-card {
+    	.leftCover,
+    	.wrapCard {
+    		width: 100%;
+    	}
+    	.wrapCard{
+    		box-shadow: none;
+    		border-top: 1px solid #d0d0d0;
+    	}
+    	.courseAvail ul{
+    		padding-right: 0px;
+	    	padding-bottom: 60px;
+	    }
+	    .universityCover {
+	    	a{
+	    		display: inline-block;
+	    		line-height: 0;
+	    	}
+	    	img{
+	    		position: relative;
+	    		top: 0;
+	    		@include transform(none);
+	    		padding: 20px 0;
+	    	}
+	    }
+	    .instituteDetail {
+	    	.right h4{
+	    		width: 100%;
+	    		float: none;
+	    		margin-top: 14px;
+	    		.fa{
+	    			font-size: 30px;
+	    		}
+	    	}
+	    }
+	    .courseAvail {
+	    	ul{
+	    		padding-bottom: 0px;
+	    	}
+	    	.redir_btn{
+	    		position: relative;
+	    		right: auto;
+	    		bottom: 0;
+	    		display: table;
+	    		margin: 5px auto 14px auto;
+	    	}
+	    }
+    }
+}
+
+
+.overScroll{
+    max-height: 162px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+.filter-widget {
+    .reset,
+    .filterIcon {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #2f2f2f;
+        border-bottom: 1px solid #2f2f2f;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+    h3 {
+        color: #5e5e5e;
+        font-weight: bold;
+        font-size: 20px;
+        border-bottom: 1px solid #5e5e5e;
+        padding: 5px 0;
+        .close {
+            font-size: 37px;
+            margin-top: -8px;
+        }
+    }
+    ul {
+        margin-top: 11px;
+        max-height: 150px;
+        overflow-y: auto;
+        li {
+            margin: 0px 0 10px 0;
+        }
+    }
+    label {
+        color: $colorTitle;
+        font-size: 14px;
+    }
+    .redir_btn-a a {
+        display: block;
+        @include orange-btn($orange);
+        text-transform: uppercase;
+        @include border-radius(3px);
+        font-size: 14px;
+        padding: 16px 15px;
+        width: 175px;
+        margin: 15px auto 0;
+    }
+}
+
+.callActionFilter{
+    button{
+        background-color: $orange !important;
+        @include border-radius(0);
+        display: inline-block;
+        font-family: $te-font;
+        font-size: 13px !important;
+        text-transform: uppercase;
+        font-weight: normal !important;
+        padding: 10px 20px 8px 20px;
+        color: #fff !important;
+        border: none !important;
+        outline: none;
+        @include transition(all 200ms linear);
+        position: relative;
+        float: none;
+        text-shadow: none;
+        min-width: 150px;
+        @include opacity(1);
+        text-shadow: none;
+        line-height: 1.2;
+        margin: 5px 5px !important;
+        &:hover{
+            @include transition(all 100ms linear);
+            color: $white;
+            @include opacity(1);
+            background-color: $blueBg;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1180px){
+    .te_faculty_list {
+        li{
+            margin-left: 0;
+            width: 50%;
+        }
+        .courseCover{
+            margin: 0 auto;
+            float: none;
+        }
+        .wrapCard{
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+        }
+    }
+    .contain-search{
+        padding-top: 20px;
+    }
+}
+
+
+@media only screen and (min-width: 1024px){
+    .filterIcon {
+        display: none !important;
+    }
+    .filter-widget h3 .close {
+        display: none !important;
+    }
+    .callActionFilter{
+        display: none;
+    }
+    .filter-list {
+        display: block !important;
+    }
+    .filter-widget {
+        padding: 0 15px 0 0;
+    }
+}
+@media only screen and (max-width: 1023px){
+    .overScroll{
+        max-height: inherit;
+        overflow-y: auto;
+        overflow-x: auto;
+        margin-top: 15px;
+        height: auto !important;
+        margin-bottom: 25px;
+    }
+    .filter-widget .redir_btn-a,
+    .reset {
+        display: none !important;
+    }
+    .callActionFilter{
+        display: block;
+        text-align: center;
+        .reset{
+            display: inline-block !important;
+        }
+    }
+    .filter-list{
+        display: none;
+        max-width: 560px;
+        background: #fff;
+        margin: 0 auto;
+        padding: 15px !important;
+        ul{
+            max-height: none;
+        }
+    }
+    .filterIcon{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .te_faculty_list {
+        li{
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+    .contain-search{
+        padding-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 567px){
+    .te_faculty_list {
+        li{
+            width: 100%;
+            margin-bottom: 25px;
+            &:last-child{
+                margin-bottom: 0px;
+            }
+        }
+        .courseCover{
+            margin: 0 auto;
+            float: none;
+        }
+        .wrapCard{
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+        }
+    }
+}
+
+
+
+
+
+// might like style
+.te-Popular-courses{
+    padding: 0px 0 35px 0;
+    h2{
+        @include title-h2(#141414, $oswalt, $titleSize);
+        line-height: 1.4;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
+}
+
+@media only screen and (max-width: 767px){
+	.te-Popular-courses{
+		padding-bottom: 0px;
+		h2{
+			font-size: 25px;
+		}
+	}
+}
+
+.popularCourseCard{
+    padding: 15px 0;
+    margin-top: 20px;
+    ul{
+        li{
+            padding-left: 10px;
+            padding-right: 10px;
+            &.open {
+                // box-shadow: 0 0px 5px #bfbfbf;
+                position: relative;
+                .bottom_course{
+                    // display: none;
+                    // padding: 11px 15px;
+                }
+                .left{
+                    padding-right: 0px;
+                    padding-left: 0px;
+                    // line-height: 0px;
+                }
+                .right{
+                    padding: 15px;
+                    // position: static;
+                    display: block;
+                    box-shadow: 0 2px 4px #bfbfbf;
+                    h3{
+                        font-size: 18px;
+                        line-height: 1.2;
+                        color: $black;
+                        margin-bottom: 7px
+                    }
+                    h4{
+                        color: #8d8d8d;
+                        font-size: 16px;
+                        margin-bottom: 7px;
+                    }
+                    p{
+                        color: $black;
+                    }
+                    .knowMore-btn{
+                        position: absolute;
+                        right: 15px;
+                        bottom: 15px;
+                        a{
+                            @include orange-btn($blueBg);
+                            padding-left: 25px;
+                            padding-right: 25px;
+                            display: inline-block;
+                            font-size: $baseSize;
+                            color: $white;
+                            &:hover{
+                                background:$blueBg; 
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+        .cardBig{
+            background: $white;
+            max-height: 335px;
+            min-height: 334px;
+        }
+    }
+    .cardSmall{
+        box-shadow: 0 0px 3px #bfbfbf;
+        background-color: $white;
+        .bottom_course{
+            padding: 11px 15px;
+            min-height: 66px;
+        }
+        h3{
+            font-size: 18px;
+            line-height: 1.2;
+            color: $black;
+            margin-bottom: 7px;
+            a{
+                color: $black;
+                display: block  !important;
+                &:hover{
+                    color: $blueBg;
+                }
+            }
+        }
+        h4{
+            color: #8d8d8d;
+            font-size: 16px;
+            margin-bottom: 7px;
+        }
+        img{
+            line-height: 0px;
+        }
+        .right{
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 100%;
+            min-width: 390px;
+            background-color: $white;
+            z-index: 1;
+            bottom: 0px;
+        }
+    }  
+}
+
+
+
+
+// might like style end
+input[type="text"] {
+    border: 1px solid transparent;
+    padding: .5em;
+    border-radius: 2px;
+}
+
+input[type="text"]:focus {
+    outline: 0 none;
+    border-color: #68b8c4;
+}
+
+.controls button {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.controls {
+    // background: #333;
+    // padding: 2%;
+}
+
+fieldset {
+    // display: inline-block;
+    // vertical-align: top;
+    // margin: 0 1em 0 0;
+    // background: #666;
+    // padding: .5em;
+    // border-radius: 3px;
+}
+
+
+.checkbox {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 15px;
+    margin: 0px;
+    @include checkBox();
+}
+
+.checkbox input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    margin: 0;
+    opacity: 0;
+    z-index: 3;
+}
+
+
+.container .mix {
+    display: none;
+}
+
+
+/**
+ * Fail message styles
+ */
+
+.university-list-widget .fail-message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: 150ms;
+    -moz-transition: 150ms;
+    transition: 150ms;
+}
+
+.university-list-widget .fail .fail-message {
+    opacity: 1;
+    pointer-events: auto;
+}
+.university-list-widget .fail {
+    .fail-message {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .lazyLoad{
+        display: none;
+    }
+    .popular_course{
+        display: inline-block;
+    }
+}
+
+.university-list-widget .fail-message:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.university-list-widget .fail-message span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.university-list-widget.fail .fail-message {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* only for ie 10 */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .col-university-card .universityCover img{
+        left: 115px;
+    }
+}
+

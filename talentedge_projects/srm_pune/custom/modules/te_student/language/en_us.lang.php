@@ -1,0 +1,11 @@
+<?php
+// created: 2017-12-15 18:04:23
+$mod_strings = array (
+  'LBL_TE_STUDENT_TE_STUDENT_DISPOSITION_1_FROM_TE_STUDENT_DISPOSITION_TITLE' => 'Student Notes',
+  'LBL_TE_STUDENT_TE_STUDENT_BATCH_1_FROM_TE_STUDENT_BATCH_TITLE' => 'Student Batch',
+  'LBL_TE_STUDENT_TE_STUDENT_PAYMENT_1_FROM_TE_STUDENT_PAYMENT_TITLE' => 'Student Payment',
+  'LBL_EDITVIEW_PANEL1' => 'Address ',
+  'LBL_EDITVIEW_PANEL2' => 'LMS ',
+  'LBL_STATUS' => 'Status',
+  'EXAM BOOK STATUS' => 'Exam Book Status',
+);

@@ -1,0 +1,147 @@
+@import './colors';
+@import './mixin';
+
+/* ~~~~~~~~~~~~~ askpro persion ~~~~~~~~~~~~~ */
+.facultyContext{
+    .facultyDesig{
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 15px;
+        margin-bottom:22px;
+    }
+    p{
+        color: #8d8d8d;
+        margin-bottom: 15px;
+        font-size: 15px;
+        line-height: 1.4;
+    }
+    h4{
+        color: $blueBg;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+    h3{
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $blueBg;
+    }
+    h5{
+        font-weight: bold;
+    }
+}
+.facultyDetail{
+    padding-top: 35px;
+    .facultyPerson{
+        padding-bottom: 25px;
+        .cover{
+            -webkit-filter: grayscale(1);
+            -ms-filter: grayscale(1);
+            -o-filter: grayscale(1);
+            -moz-filter: grayscale(1);
+            filter: grayscale(1);
+            width: 200px;
+            height: 200px;
+            @include border-radius(50%);
+            background-size: cover;
+            background-position: center;
+        }
+        img{
+            -webkit-filter: grayscale(1);
+            -ms-filter: grayscale(1);
+            -o-filter: grayscale(1);
+            -moz-filter: grayscale(1);
+            filter: grayscale(1);
+            max-width: 100%;
+            @include border-radius(50%);
+            max-width: 220px;
+        }
+    }
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Faculty videos style 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.facultyVideo{
+    max-width: 760px;
+    margin: 25px auto 25px auto;
+    h6{
+        color: $colorTitle;
+        margin-bottom: 15px;
+    }
+}
+
+.playVideo{
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    .fa{
+        font-size: 75px;
+        color: $white;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        @include transform(translateY(-50%));
+        @include opacity(0.6);
+    }
+    &:hover{
+        .fa{
+            @include opacity(1); 
+        }  
+    }
+}
+
+.wrapVideo{
+    margin: 0 25px;
+    position: relative;
+    min-height: 340px;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .overLay{
+        position: absolute;
+        content: '';
+        display: block;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 2;
+    }        
+}
+
+@media only screen and (max-width: 767px){
+    .facultyContext{
+        width: 100%;
+        .facultyDesig{
+            text-align: center;
+        }
+    }
+    .facultyPerson{
+        width: 100%;
+        text-align: center;
+    }
+    .wrapVideo{
+        min-height: 190px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

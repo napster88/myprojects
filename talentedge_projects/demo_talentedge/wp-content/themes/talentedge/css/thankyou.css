@@ -1,0 +1,855 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url("../fonts/icomoon.eot?62rqbk");
+    src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.svg#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.icon-partnership:before {
+    content: "\e943"
+}
+
+.icon-business-management:before {
+    content: "\e926"
+}
+
+.icon-Brand-management:before {
+    content: "\e944"
+}
+
+.icon-data-anaylsis2:before {
+    content: "\e945"
+}
+
+.icon-alert:before {
+    content: "\e946"
+}
+
+.icon-Live-Intractive:before {
+    content: "\e947"
+}
+
+.icon-arrow:before {
+    content: "\e900"
+}
+
+.icon-calendar:before {
+    content: "\e901"
+}
+
+.icon-call:before {
+    content: "\e902"
+}
+
+.icon-certificate-course:before {
+    content: "\e903"
+}
+
+.icon-chat:before {
+    content: "\e904"
+}
+
+.icon-clock:before {
+    content: "\e905"
+}
+
+.icon-course:before {
+    content: "\e906"
+}
+
+.icon-down-arrow:before {
+    content: "\e907"
+}
+
+.icon-download:before {
+    content: "\e908"
+}
+
+.icon-education:before {
+    content: "\e909"
+}
+
+.icon-fast-growing:before {
+    content: "\e90a"
+}
+
+.icon-finace:before {
+    content: "\e90b"
+}
+
+.icon-help:before {
+    content: "\e90c"
+}
+
+.icon-hrm2:before {
+    content: "\e90d"
+}
+
+.icon-last-mile:before {
+    content: "\e90e"
+}
+
+.icon-left-_arrow:before {
+    content: "\e90f"
+}
+
+.icon-linked-in:before {
+    content: "\e910"
+}
+
+.icon-marketing:before {
+    content: "\e911"
+}
+
+.icon-my-course:before {
+    content: "\e912"
+}
+
+.icon-our-purpose:before {
+    content: "\e913"
+}
+
+.icon-our-usp:before {
+    content: "\e914"
+}
+
+.icon-our-visoin:before {
+    content: "\e915"
+}
+
+.icon-play_button:before {
+    content: "\e916"
+}
+
+.icon-profile:before {
+    content: "\e917"
+}
+
+.icon-rapid:before {
+    content: "\e918"
+}
+
+.icon-refer-and-earn:before {
+    content: "\e919"
+}
+
+.icon-technology:before {
+    content: "\e91a"
+}
+
+.icon-well-paid-jobs:before {
+    content: "\e91b"
+}
+
+.icon-back_arrow:before {
+    content: "\e91c"
+}
+
+.icon-batches:before {
+    content: "\e91d"
+}
+
+.icon-bell:before {
+    content: "\e91e"
+}
+
+.icon-call-copy:before {
+    content: "\e91f"
+}
+
+.icon-call2:before {
+    content: "\e920"
+}
+
+.icon-career:before {
+    content: "\e921"
+}
+
+.icon-cases:before {
+    content: "\e922"
+}
+
+.icon-certificate-_course:before {
+    content: "\e923"
+}
+
+.icon-certificates-2:before {
+    content: "\e924"
+}
+
+.icon-classes:before {
+    content: "\e925"
+}
+
+.icon-data-anaylsis:before {
+    content: "\e927"
+}
+
+.icon-data-science:before {
+    content: "\e928"
+}
+
+.icon-down_arrow:before {
+    content: "\e929"
+}
+
+.icon-download2:before {
+    content: "\e92a"
+}
+
+.icon-email:before {
+    content: "\e92b"
+}
+
+.icon-entrepreneuship:before {
+    content: "\e92c"
+}
+
+.icon-facebook:before {
+    content: "\e92d"
+}
+
+.icon-google:before {
+    content: "\e92e"
+}
+
+.icon-graduated:before {
+    content: "\e92f"
+}
+
+.icon-hrm:before {
+    content: "\e930"
+}
+
+.icon-Info:before {
+    content: "\e931"
+}
+
+.icon-innovative_techonology:before {
+    content: "\e932"
+}
+
+.icon-learning:before {
+    content: "\e933"
+}
+
+.icon-left-arrow:before {
+    content: "\e934"
+}
+
+.icon-mail:before {
+    content: "\e935"
+}
+
+.icon-management:before {
+    content: "\e936"
+}
+
+.icon-marketing2:before {
+    content: "\e937"
+}
+
+.icon-minus:before {
+    content: "\e938"
+}
+
+.icon-play:before {
+    content: "\e939"
+}
+
+.icon-plus:before {
+    content: "\e93a"
+}
+
+.icon-project:before {
+    content: "\e93b"
+}
+
+.icon-search:before {
+    content: "\e93c"
+}
+
+.icon-selfie-scan:before {
+    content: "\e93d"
+}
+
+.icon-Tick:before {
+    content: "\e93e"
+}
+
+.icon-twitter:before {
+    content: "\e93f"
+}
+
+.icon-video:before {
+    content: "\e940"
+}
+
+.icon-weekend:before {
+    content: "\e941"
+}
+
+.icon-Suggested-course:before {
+    content: "\e942"
+}
+
+.icon-alumni:before {
+    content: "\e948"
+}
+
+.icon-virtual-classroom:before {
+    content: "\e949"
+}
+
+.icon-study-material:before {
+    content: "\e94a"
+}
+
+.icon-class-schedule:before {
+    content: "\e94b"
+}
+
+.icon-cloud-campus:before {
+    content: "\e94c"
+}
+
+.icon-case-study:before {
+    content: "\e94d"
+}
+
+.icon-alumni-network:before {
+    content: "\e94e"
+}
+
+@font-face {
+    font-family: 'te-font';
+    src: url(../fonts/te-font/te-font-Regular.ttf);
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'te-font';
+    src: url(../fonts/te-font/te-font-Bold.ttf);
+    font-weight: bold;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'te-font';
+    src: url(../fonts/te-font/te-font-Light.ttf);
+    font-weight: 600;
+    font-style: normal
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #5a5858;
+    background-position: top left;
+    font-family: "te-font";
+    min-height: 100vh
+}
+
+h1 { 
+    font-size: 40px;
+    text-transform: uppercase;
+    /*max-width: 748px;
+    line-height: 1.2;*/
+    font-weight: bold;
+    font-family: "Oswald", sans-serif;
+    margin-top: 20px;
+    margin-bottom: 0
+}
+
+h2 {
+    font-size: 35px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    margin-top: 0px
+}
+
+h3 {
+    font-size: 24px;
+    margin: 0px 0 18px;
+    font-weight: bold
+}
+
+h5 {
+    font-size: 18px
+}
+
+h6 {
+    font-size: 14px
+}
+
+.orDivider-r {
+    font-size: 28px;
+    display: inline-block;
+    margin-bottom: 5px
+}
+
+.no-leftpad {
+    padding-left: 0
+}
+
+header#header {
+    box-shadow: none !important
+}
+
+.btn-suibmit {
+    background-color: #f26522;
+    color: #ffffff;
+    padding: 12px 35px;
+    border: 0px;
+    border-radius: 5px;
+    min-width: 150px;
+    max-width: 260px;
+    margin-top: 0;
+    font-size: 14px;
+    display: block;
+    margin: 15px auto 10px auto;
+    text-transform: uppercase
+}
+
+.btn-suibmit:hover {
+    text-decoration: none
+}
+
+.callUs {
+    font-size: 18px
+}
+
+.navbar {
+    margin-top: 0;
+    margin-bottom: 0;
+    background: none !important;
+    max-width: 200px
+}
+
+.navbar .navbar-brand {
+    padding-bottom: 0px;
+    float: none
+}
+
+.askproSection .sectionBanner {
+    padding-bottom: 0;
+    padding-top: 0;
+    color: #fff
+}
+
+.askproSection .sectionBanner h3 {
+    font-size: 24px;
+    margin: 0px 0 8px;
+    font-weight: bold;
+    max-width: 560px
+}
+
+.askproSection .sectionBanner p {
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 500
+}
+
+.askproSection .sectionBanner .wrapper-btn {
+    padding: 20px 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 32px
+}
+
+.askproSection .sectionBanner .wrapper-btn a {
+    width: auto;
+    display: inline-block;
+    color: #fff;
+    margin: 5px 0
+}
+
+.askproSection .sectionBanner .wrapper-btn a:first-child .fa {
+    margin-left: 0px
+}
+
+.askproSection .sectionBanner .wrapper-btn a .fa {
+    padding-right: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+    vertical-align: sub
+}
+
+.askproSection .sectionBanner .wrapper-btn a:hover {
+    color: #fff;
+    text-decoration: none
+}
+
+.askproSection .sectionBanner p.thanku-text {
+    color: #fff;
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 1.2;
+    text-align: left
+}
+
+.linkedIn {
+    position: relative;
+    color: #dedddd
+}
+
+.linkedIn a {
+    color: #fff;
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: #0488B8;
+    padding-right: 15px;
+    padding-left: 15px
+}
+
+.linkedIn a .fa {
+    margin-right: 5px
+}
+
+@media only screen and (min-width: 992px) {
+    .askproSection .sectionBanner .wrapper-btn {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        bottom: 0
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    h1 {
+        font-size: 28px;
+        line-height: 1.3
+    }
+    h2 {
+        font-size: 25px
+    }
+    h3 {
+        font-size: 20px
+    }
+    .wrapper-btn .callUs {
+        text-align: center;
+        font-size: 16px
+    }
+    .wrapper-btn .left_center {
+        text-align: center
+    }
+}
+
+@media only screen and (max-width: 567px) {
+    .col-xss-12 {
+        width: 100%
+    }
+    .form-list {
+        padding: 0px
+    }
+    .askproSection .sectionBanner .wrapper-btn {
+        padding: 15px
+    }
+    .askproSection .sectionBanner .wrapper-btn a {
+        text-align: center;
+        display: block;
+        clear: both;
+        margin: 15px 0
+    }
+    .askproSection .sectionBanner .wrapper-btn a .fa {
+        margin-left: 0px
+    }
+}
+
+#gform_14 {
+    margin-top: 35px
+}
+
+#gform_14 ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0
+}
+
+#gform_14 .gform_body {
+    text-align: center;
+    margin: 0;
+    max-width: 100%
+}
+
+#gform_14 .gform_body .gfield_label {
+    display: none
+}
+
+#gform_14 .gform_body .gfield {
+    padding: 0;
+    margin: 0 0 18px;
+    width: 33.33%;
+    display: inline-block;
+    padding: 0 10px;
+    vertical-align: top;
+    margin-bottom: 0
+}
+
+#gform_14 .gform_body .gfield:first-child {
+    padding-left: 0px
+}
+
+#gform_14 .gform_body .gfield.description_subscribe {
+    font-size: 14px;
+    text-transform: capitalize
+}
+
+#gform_14 .gform_body .gfield.gfield_error {
+    background: none !important;
+    margin-bottom: 0 !important;
+    border: none
+}
+
+#gform_14 .gform_body .gfield:last-child {
+    margin-bottom: 0px
+}
+
+#gform_14 .gform_body .ginput_container {
+    position: relative;
+    overflow: hidden;
+    margin-top: 0;
+    -moz-border-radius: 0px;
+    -o-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+    background: none
+}
+
+#gform_14 .gform_body .ginput_container input {
+    min-height: 38px;
+    padding: 0 5px;
+    color: #f5f5f5;
+    border: none;
+    border-bottom: 1px solid #f5f5f5;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    -webkit-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+    box-shadow: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%
+}
+
+#gform_14 .gform_body .ginput_container input:hover,
+#gform_14 .gform_body .ginput_container input:focus {
+    box-shadow: none;
+    border-bottom-color: #f5f5f5;
+    outline: none
+}
+
+#gform_14 .gform_body .ginput_container input::-webkit-input-placeholder {
+    color: #f5f5f5
+}
+
+#gform_14 .gform_body .ginput_container input:-moz-placeholder {
+    color: #f5f5f5
+}
+
+#gform_14 .gform_body .ginput_container input::-moz-placeholder {
+    color: #f5f5f5
+}
+
+#gform_14 .gform_body .ginput_container input:-ms-input-placeholder {
+    color: #f5f5f5
+}
+
+#gform_14 .gform_body .ginput_container select {
+    background: url(../images/arrow-down-grey.png) no-repeat;
+    background-position: 96% center;
+    padding-right: 30px;
+    border: none;
+    border-bottom: 1px solid #f5f5f5;
+    color: #f5f5f5;
+    width: 100%;
+    min-height: 38px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    font-weight: normal
+}
+
+#gform_14 .gform_body .ginput_container select:hover,
+#gform_14 .gform_body .ginput_container select:focus {
+    outline: none
+}
+
+#gform_14 .gform_body .ginput_container select option {
+    color: #333;
+    background: #fff
+}
+
+#gform_14 .gform_body .ginput_container_checkbox li label {
+    position: relative;
+    padding-left: 29px;
+    color: #363636;
+    cursor: pointer
+}
+
+#gform_14 .gform_body .ginput_container_checkbox li label a {
+    color: #244895
+}
+
+#gform_14 .gform_body .ginput_container_checkbox li label:after,
+#gform_14 .gform_body .ginput_container_checkbox li label:before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    -webkit-transition: 0.25s ease-in-out;
+    -ms-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out
+}
+
+#gform_14 .gform_body .ginput_container_checkbox li label:after {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border: 1px solid #969696;
+    -moz-transition: 300ms linear;
+    -o-transition: 300ms linear;
+    -webkit-transition: 300ms linear;
+    -ms-transition: 300ms linear;
+    transition: 300ms linear
+}
+
+#gform_14 .gform_body .ginput_container_checkbox li label:before {
+    display: none !important;
+    content: "\e929";
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    z-index: 2;
+    top: 2px;
+    left: 2px
+}
+
+#gform_14 .gform_body .ginput_container_checkbox li input[type="checkbox"] {
+    margin-top: 0px;
+    display: none
+}
+
+#gform_14 .gform_body .ginput_container_checkbox li input[type="checkbox"]+label:hover:after {
+    border-color: #2FAEF8
+}
+
+#gform_14 .gform_body .ginput_container_checkbox li input[type="checkbox"]:checked+label:after {
+    background-color: #2FAEF8;
+    border-color: #2FAEF8;
+    -moz-transition: 300ms linear;
+    -o-transition: 300ms linear;
+    -webkit-transition: 300ms linear;
+    -ms-transition: 300ms linear;
+    transition: 300ms linear
+}
+
+#gform_14 .gform_body .ginput_container_checkbox li input[type="checkbox"]:checked+label:before {
+    display: block !important
+}
+
+#gform_14 .gform_body .ginput_container_checkbox li label {
+    font-size: 13px
+}
+
+#gform_14 .gform_footer {
+    margin-top: 0;
+    text-align: center;
+    padding-bottom: 0px
+}
+
+#gform_14 .gform_footer input[type="submit"] {
+    background-color: #f26522;
+    color: #ffffff;
+    padding: 12px 35px;
+    border: 0px;
+    border-radius: 5px;
+    min-width: 150px;
+    max-width: 260px;
+    margin-top: 0;
+    font-size: 14px;
+    display: block;
+    margin: 35px auto 5px auto;
+    text-transform: uppercase
+}
+
+#gform_14 .gform_footer input[type="submit"]:hover {
+    text-decoration: none
+}
+
+#gform_14 .gform_heading {
+    margin: 0
+}
+
+#gform_14 .gform_heading span {
+    margin: 0px
+}
+
+#gform_14 div.validation_error {
+    color: #de2525;
+    line-height: 1.3;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: left;
+    border: none;
+    margin: 0 0 10px;
+    padding: 0;
+    display: none
+}
+
+#gform_14 .gfield_description {
+    padding-top: 0
+}
+
+#gform_14 .validation_message {
+    color: #de2525;
+    line-height: 1.3;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: left;
+    background: none
+}
+
+@media only screen and (max-width: 567px) {
+    #gform_14 .gform_footer input[type="submit"] {
+        margin-top: 30px
+    }
+    #gform_14 .gform_body .gfield {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 15px
+    }
+}

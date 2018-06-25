@@ -1,0 +1,7 @@
+DirectoryIndex index.php
+RewriteEngine on
+RewriteBase /najez/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index\.php|js|img|css|captcha|robots\.txt)
+RewriteRule ^(.*)$ /najez/index.php?/$1 [L]

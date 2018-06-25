@@ -1,0 +1,9 @@
+[14-Jun-2017 09:29:23 UTC] PHP Notice:  Undefined index: req-email in /home/techconadmin/public_html/najez_html/index.php on line 801
+[14-Jun-2017 09:29:23 UTC] PHP Notice:  Undefined index: req-email in /home/techconadmin/public_html/najez_html/index.php on line 802
+[14-Jun-2017 09:29:23 UTC] PHP Notice:  Undefined variable: drivrlicfile in /home/techconadmin/public_html/najez_html/index.php on line 895
+[14-Jun-2017 09:29:23 UTC] PHP Notice:  Undefined variable: vregfile in /home/techconadmin/public_html/najez_html/index.php on line 896
+[14-Jun-2017 09:29:23 UTC] PHP Notice:  Undefined variable: vinsurfile in /home/techconadmin/public_html/najez_html/index.php on line 897
+[14-Jun-2017 09:29:23 UTC] PHP Notice:  Undefined variable: authfile in /home/techconadmin/public_html/najez_html/index.php on line 898
+[14-Jun-2017 09:29:23 UTC] PHP Notice:  Undefined variable: ibanfile in /home/techconadmin/public_html/najez_html/index.php on line 899
+[14-Jun-2017 09:30:48 UTC] PHP Notice:  Undefined index: req-email in /home/techconadmin/public_html/najez_html/index.php on line 801
+[14-Jun-2017 09:30:48 UTC] PHP Notice:  Undefined index: req-email in /home/techconadmin/public_html/najez_html/index.php on line 802
